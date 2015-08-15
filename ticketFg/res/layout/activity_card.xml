@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_full"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/ll_title"
+        style="@style/layout_vertical"
+        android:layout_weight="1.2"
+        android:gravity="center" >
+
+        <Spinner
+            android:id="@+id/spinner_fields"
+            style="@style/layout_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:entries="@array/fields"/>
+
+        <Spinner
+            android:id="@+id/spinner_count"
+            style="@style/layout_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1.4"
+            android:entries="@array/count"/>
+    </LinearLayout>
+        
+    <LinearLayout
+        android:id="@+id/ll_content"
+        style="@style/layout_vertical"
+        android:layout_weight="8" >
+
+    	<TextView
+    	    android:id="@+id/tv_info"
+    	    style="@style/layout_vertical"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="match_parent"
+    	    android:layout_marginLeft="5dp"
+    	    android:layout_marginRight="5dp"
+    	    android:background="#FFC125"
+    	    android:lineSpacingExtra="4dp"
+    	    android:text="@string/card_content_default"
+    	    android:textSize="18pt" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_bt_shuaka"
+        style="@style/layout_vertical"
+        android:layout_weight="1.8" >
+
+   	 	<Button
+   	 	    android:id="@+id/bt_card_shuaka"
+   	 	    style="@style/layout_vertical"
+   	 	    android:layout_width="match_parent"
+   	 	    android:layout_height="match_parent"
+   	 	    android:text="@string/bt_shuaka"
+   	 	    android:textSize="16pt" 
+   	 	    android:textStyle="bold"
+   	 	    android:textScaleX="2"/>
+
+   	</LinearLayout >
+   	
+    <LinearLayout
+        android:id="@+id/ll_bt_close"
+        style="@style/layout_vertical"
+        android:layout_weight="1.6">
+
+		<Button
+    	    android:id="@+id/bt_card_query"
+    	    style="@style/layout_vertical"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="match_parent"
+    	    android:text="@string/bt_query"
+    	    android:textSize="16pt" 
+    	    android:textStyle="bold"
+    	    android:textScaleX="2"/>
+    </LinearLayout >
+
+</LinearLayout >

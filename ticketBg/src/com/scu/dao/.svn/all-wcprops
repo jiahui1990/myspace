@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/TicketSystemOneCard/!svn/ver/25/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao
+END
+FieldInfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/TicketSystemOneCard/!svn/ver/6/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao/FieldInfoDAO.java
+END
+PlayDetailMoneyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/TicketSystemOneCard/!svn/ver/6/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao/PlayDetailMoneyDAO.java
+END
+SaleTimeScheduleDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/TicketSystemOneCard/!svn/ver/6/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao/SaleTimeScheduleDAO.java
+END
+SalorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/TicketSystemOneCard/!svn/ver/6/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao/SalorDAO.java
+END
+TicketDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/TicketSystemOneCard/!svn/ver/6/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao/TicketDAO.java
+END
+PlayDetailDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/TicketSystemOneCard/!svn/ver/6/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao/PlayDetailDAO.java
+END
+BaseDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/TicketSystemOneCard/!svn/ver/25/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao/BaseDAO.java
+END
+FieldMoneyXihuaDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/TicketSystemOneCard/!svn/ver/6/trunk/%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81/%E6%89%8B%E6%8C%81%E8%AE%BE%E5%A4%87/ticketBg/src/com/scu/dao/FieldMoneyXihuaDAO.java
+END

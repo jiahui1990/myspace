@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="       
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd       
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd       
+      http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd       
+      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd       
+      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+
+	<!-- 导入属性配置文件 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	<import resource="classpath:application-Context-dao.xml" />
+	<import resource="classpath:application-Context-service.xml" />
+	<import resource="classpath:application-Context-action.xml" />
+
+	<!-- 配置数据源 -->
+	<bean id="parentdataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${driverClassName}"/>
+		<!--连接池中保留的最小连接数。-->
+		<property name="minPoolSize">
+			<value>5</value>
+		</property>
+		<!--连接池中保留的最大连接数。Default: 15 -->
+		<property name="maxPoolSize">
+			<value>200</value>
+		</property>
+		<!--初始化时获取的连接数，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->
+		<property name="initialPoolSize">
+			<value>10</value>
+		</property>
+		<!--最大空闲时间,60秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+		<property name="maxIdleTime">
+			<value>600</value>
+		</property>
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement">
+			<value>5</value>
+		</property>
+		<!--
+			JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements
+			属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。
+			如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0
+		-->
+		<property name="maxStatements">
+			<value>0</value>
+		</property>
+		<!--每60秒检查所有连接池中的空闲连接。Default: 0 -->
+		<property name="idleConnectionTestPeriod">
+			<value>60</value>
+		</property>
+		<!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+		<property name="acquireRetryAttempts">
+			<value>30</value>
+		</property>
+		<!--
+			获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常。但是数据源仍有效
+			保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，那么在尝试
+			获取连接失败后该数据源将申明已断开并永久关闭。Default: false
+		-->
+		<property name="breakAfterAcquireFailure">
+			<value>false</value>
+		</property>
+		<!--
+			因性能消耗大请只在需要的时候使用它。如果设为true那么在每个connection提交的
+			时候都将校验其有效性。建议使用idleConnectionTestPeriod或automaticTestTable
+			等方法来提升连接测试的性能。Default: false
+		-->
+		<property name="testConnectionOnCheckout">
+			<value>false</value>
+		</property>
+	</bean>
+	
+	
+<!-- 	<bean name="parentdataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+<property name="driverClassName" value="${jdbc_OracledriverClassName}"/>
+
+		初始化连接大小
+		<property name="initialSize" value="0" />
+		连接池最大使用连接数量
+		<property name="maxActive" value="20" />
+		连接池最大空闲
+		<property name="maxIdle" value="20" />
+		连接池最小空闲
+		<property name="minIdle" value="0" />
+		获取连接最大等待时间
+		<property name="maxWait" value="60000" />
+
+
+		<property name="poolPreparedStatements" value="true" /> <property 
+			name="maxPoolPreparedStatementPerConnectionSize" value="33" />
+
+		<property name="poolPreparedStatements" value="true" /> <property name="maxPoolPreparedStatementPerConnectionSize" 
+			value="33" />
+
+		<property name="validationQuery" value="${validationQuery}" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="testWhileIdle" value="true" />
+
+		配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		配置一个连接在池中最小生存的时间，单位是毫秒
+		<property name="minEvictableIdleTimeMillis" value="25200000" />
+
+		打开removeAbandoned功能
+		<property name="removeAbandoned" value="true" />
+		1800秒，也就是30分钟
+		<property name="removeAbandonedTimeout" value="4800" />
+		关闭abanded连接时输出错误日志
+		<property name="logAbandoned" value="true" />
+
+		监控数据库
+		<property name="filters" value="stat" />
+		<property name="filters" value="mergeStat" />
+	</bean>
+	
+	
+	
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+   <property name="driverClass" value="${jdbc.driverClass}" />
+   <property name="jdbcUrl" value="${jdbc.jdbcUrl}" />
+   <property name="user" value="${jdbc.user}" />
+   <property name="password" value="${jdbc.password}" />
+   <property name="minPoolSize" value="${jdbc.miniPoolSize}" />
+   <property name="maxPoolSize" value="${jdbc.maxPoolSize}"/>  
+   <property name="initialPoolSize" value="${jdbc.initialPoolSize}"/>
+   <property name="maxIdleTime" value="${jdbc.maxIdleTime}"/>
+   <property name="acquireIncrement" value="${jdbc.acquireIncrement}"/>
+  
+   <property name="acquireRetryAttempts" value="${jdbc.acquireRetryAttempts}"/>
+   <property name="acquireRetryDelay" value="${jdbc.acquireRetryDelay}"/>
+   <property name="testConnectionOnCheckin" value="${jdbc.testConnectionOnCheckin}"/>
+   <property name="automaticTestTable" value="${jdbc.automaticTestTable}"/>
+   <property name="idleConnectionTestPeriod" value="${jdbc.idleConnectionTestPeriod}"/>
+   <property name="checkoutTimeout" value="${jdbc.checkoutTimeout}"/>
+
+</bean> -->
+
+	
+	
+
+	<!-- 多数据源配置 -->
+	<bean name="MYSQL" parent="parentdataSource">
+		<property name="jdbcUrl" value="${jdbc_url}" />
+		<property name="user" value="${jdbc_username}" />
+		<property name="password" value="${jdbc_password}" />
+	</bean>
+	<!-- <bean name="Oracle" parent="parentdataSource">
+		<property name="jdbcUrl" value="${jdbc_Oracleurl}" />
+		<property name="user" value="${jdbc_Oracleusername}" />
+		<property name="password" value="${jdbc_Oraclepassword}" />
+	</bean>
+		<bean name="ORACLE231" parent="parentdataSource">
+		<property name="jdbcUrl" value="${jdbc_Oracleurl1}" />
+		<property name="user" value="${jdbc_Oracleusername1}" />
+		<property name="password" value="${jdbc_Oraclepassword1}" />
+	</bean> -->
+<!-- 	<bean name="SQLSERVER" parent="parentdataSource">
+		<property name="url" value="${jdbc_SQLSERVERurl}" />
+		<property name="driverClassName" value="${jdbc_SQLSERVERdriverClassName}"/>
+		<property name="username" value="${jdbc_SQLSERVERusername}" />
+		<property name="password" value="${jdbc_SQLSERVERpassword}" />
+	</bean> -->
+	<!-- 多数据源映射 -->
+	<bean id="dynamicDataSource" class="javacommon.dataAdapter.DynamicDataSource" >      
+    <!-- 通过key-value的形式来关联数据源 -->      
+    <property name="targetDataSources">      
+        <map>      
+         <entry value-ref="MYSQL" key="MYSQL"></entry>    
+           <!--  <entry value-ref="Oracle" key="Oracle"></entry>      
+           <entry value-ref="ORACLE231" key="ORACLE231"></entry>      --> 
+        <!--     <entry value-ref="SQLSERVER" key="SQLSERVER"></entry>       -->
+        </map>      
+    </property>      
+    <property name="defaultTargetDataSource" ref="MYSQL" />      
+</bean>
+	
+	
+	<bean id="dataSource" class="com.p6spy.engine.spy.P6DataSource"   
+                                 destroy-method="clone">  
+       <constructor-arg>  
+           <ref local="dynamicDataSource"/>  
+       </constructor-arg>  
+  </bean>  
+
+	<!-- log4jdbc可以将数据源执行的sql将占位符?替换成字符,并以日志打印出来. log4j配置: log4j.logger.jdbc.sqltiming=INFO 如oracle示例: 原来的sql: select 
+		* from user where birth_date = ? and username = ? and age > ? 转换后sql: select * from user where birth_date = to_date('2010-08-13','yyyy-mm-dd') 
+		and username = 'badqiu' and age > 20 -->
+
+
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingLocations">
+			<list>
+				<value>classpath*:com/ggy/baby/*/*/model/hbm/*.hbm.xml</value>
+				<value>classpath*:com/ggy/baby/*/model/hbm/*.hbm.xml</value>
+				<value>classpath*:javacommon/base/model/hbm/*.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!-- 常用数据库方言 MySQL5Dialect,SQLServerDialect,OracleDialect,SybaseDialect,DB2Dialect,HSQLDialect -->
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.dialect">${hibernate_dialect}</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.query.substitutions">true 1, false 0</prop>
+				<prop key="hibernate.default_batch_fetch_size">4</prop>
+			</props>
+		</property>
+	</bean>
+	 
+	<!--Hibernate TransactionManager -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>

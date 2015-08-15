@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="baseDao" class="javacommon.base.dao.BaseDao"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="msgtipDao" class="javacommon.base.dao.impl.MsgtipDaoImpl" parent="baseDao" />
+	<bean id="globalvariableDao" class="javacommon.base.dao.impl.GlobalvariableDaoImpl" parent="baseDao" />
+	<bean id="userTerminalDao" class="com.ggy.baby.login.dao.impl.UserTerminalDaoImpl" parent="baseDao" />
+	<bean id="usersDao" class="com.ggy.baby.login.dao.impl.UsersDaoImpl" parent="baseDao" />
+	<bean id="userRoleDao" class="com.ggy.baby.login.dao.impl.UserRoleDaoImpl" parent="baseDao" />
+	<bean id="phoneCodeDao" class="com.ggy.baby.login.dao.impl.PhoneCodeDaoImpl" parent="baseDao" />
+	<bean id="viewMonitorDao" class="com.ggy.baby.monitorManage.dao.impl.ViewMonitorDaoImpl" parent="baseDao" />
+	<bean id="monitorDao" class="com.ggy.baby.monitorManage.dao.impl.MonitorDaoImpl" parent="baseDao" />
+	<bean id="kindergartenDao" class="com.ggy.baby.monitorManage.dao.impl.KindergartenDaoImpl" parent="baseDao" />
+	<bean id="kindergartenAreaDao" class="com.ggy.baby.monitorManage.dao.impl.KindergartenAreaDaoImpl" parent="baseDao" />
+	<bean id="viewUserAreaDao" class="com.ggy.baby.userManage.dao.impl.ViewUserAreaDaoImpl" parent="baseDao" />
+	<bean id="userAreaDao" class="com.ggy.baby.userManage.dao.impl.UserAreaDaoImpl" parent="baseDao" />
+	<bean id="userKinderDao" class="com.ggy.baby.userManage.dao.impl.UserKinderDaoImpl" parent="baseDao" />
+</beans>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.action.extension" value="action,do,,"/>
+	<constant name="struts.configuration.xml.reload" value="true"/>
+	<!-- <constant name="struts.multipart.saveDir" value="/tmp"></constant>-->
+	
+    <package name="default" namespace="/" extends="struts-default">
+    
+    	<interceptors>
+			<interceptor name="methodInterceptor" class="com.scu.interceptor.MethodInterceptor"/>
+			<interceptor-stack name="method-operate">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="methodInterceptor"></interceptor-ref>
+            </interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="method-operate"></default-interceptor-ref>
+		
+	  <!--   <interceptors>
+		<interceptor-stack name="appStack">
+		    <interceptor-ref name="alias" />
+		    <interceptor-ref name="servletConfig" />
+		    <interceptor-ref name="i18n" />
+		    <interceptor-ref name="chain" />
+		   <interceptor-ref name="fileUpload" />
+		    <interceptor-ref name="checkbox" />
+		    <interceptor-ref name="exception" />
+	   </interceptor-stack>
+	  </interceptors>
+	  <default-interceptor-ref name="appStack" />-->
+			
+    	
+    	<global-results>
+    		<result name="commonResults">/login.jsp</result>
+    		<!-- 优先匹配局部result -->
+    	</global-results>
+    	
+        <action name="*_*" class="{1}" method="{2}">
+        	<!-- user -->
+            <result name="loginSuc">/index.jsp</result>
+            <result name="loginFail">/login.jsp</result>
+            <result name="logout">/login.jsp</result>
+        </action>
+        
+    </package>
+    
+</struts>

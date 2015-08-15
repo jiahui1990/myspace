@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<com.jve.util.view.guide.viewPager.JazzyViewPager
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/jve_id_guide_viewPager"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" />
+	<TextView 
+	    android:id="@+id/jve_id_click_skipBtn"
+	    android:background="@drawable/button_selector"
+	    android:layout_width="50dp"
+	    android:layout_height="25dp"
+	    android:layout_gravity="right"
+	    android:gravity="center"
+	    android:layout_marginTop="25dp"
+	    android:layout_marginRight="20dp"
+	    android:textSize="14sp"
+	    android:text="@string/jve_str_public_skip"
+	    android:textColor="@color/jve_color_white"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom|center_horizontal">
+
+        <View
+            android:id="@+id/jve_id_v_dot0"
+            style="@style/jve_style_dot"
+            android:background="@drawable/dot_focused" />
+
+        <View
+            android:id="@+id/jve_id_v_dot1"
+            style="@style/jve_style_dot" />
+
+        <View
+            android:id="@+id/jve_id_v_dot2"
+            style="@style/jve_style_dot" />
+        <View
+            android:id="@+id/jve_id_v_dot3"
+            style="@style/jve_style_dot" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,545 @@
+package com.ggy.baby.app.action;
+
+import java.util.Date;
+
+import javacommon.base.action.BaseAction;
+import javacommon.base.model.GlobalVariable;
+import javacommon.javautil.TimeService;
+
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.ggy.baby.login.model.Users;
+import com.ggy.baby.login.pageModel.LoginIn;
+import com.ggy.baby.login.pageModel.LoginOut;
+import com.ggy.baby.login.service.ILoginService;
+import com.ggy.baby.personalCenter.pageModel.PersonalCenterIn;
+import com.ggy.baby.personalCenter.pageModel.PersonalCenterOut;
+import com.ggy.baby.personalCenter.service.IPersonalCenterService;
+
+/**
+ * 手机端app调用 Action
+ * @author Chencong
+ *
+ */
+public class AppAction extends BaseAction {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6263991011991027620L;
+
+	/**
+	 * 登陆service
+	 */
+	private ILoginService loginService;
+	/**
+	 * 个人中心service
+	 */
+	private IPersonalCenterService personalCenterService;
+	
+	/**
+	 * 手机传递参数
+	 */
+	private String param;
+	/**
+	 * 参数的json对象
+	 */
+	private JSONObject paramJson;	
+	
+	public IPersonalCenterService getPersonalCenterService() {
+		return personalCenterService;
+	}
+
+	public void setPersonalCenterService(
+			IPersonalCenterService personalCenterService) {
+		this.personalCenterService = personalCenterService;
+	}
+
+	public ILoginService getLoginService() {
+		return loginService;
+	}
+
+	public void setLoginService(ILoginService loginService) {
+		this.loginService = loginService;
+	}
+
+	public String getParam() {
+		return param;
+	}
+	
+	public void setParam(String param) {
+		this.paramJson = JSONObject.parseObject(param);
+		this.param = param;
+	}
+
+	public String invoke(){		
+		String msgId = paramJson.getString("msgID");
+		
+		JSONObject resultJson = new JSONObject();
+		
+		switch (msgId) {
+		case "sys_login":
+			resultJson = login();
+			break;
+		case "online":
+			resultJson = online();
+			break;
+		case "sys_logoff":
+			resultJson = logoff();
+			break;
+		case "confirm_online":
+			resultJson = confirmOnline();
+			break;
+		case "login_sendphonecode":
+			resultJson = sendLoginPhoneCode();
+			break;
+		case "updateUserInfo":
+			resultJson = updateUserInfo();
+			break;
+		case "getDevList":
+			
+			break;
+		//获取用户还剩多少时间过期
+		case "getPeriodFromUser":
+			resultJson = getPeriodFromUser();
+			break;
+		//设置用户密码
+		case "setPwdFromTel":
+			resultJson = setPwdFromTel();
+			break;
+		//发送找回密码手机验证码
+		case "setPwd_sendphonecode":
+			resultJson = sendSetPwdPhoneCode();
+			break;
+		//找回密码验证手机验证码
+		case "setPwd_vertifycode":
+			resultJson = vertifySetPwdPhoneCode();
+			break;
+		case "getUserInfo":
+			resultJson = getUserInfo();
+			break;
+		//获取安卓版本信息
+		case "android_version":
+			
+			break;
+		default:
+			break;
+		}
+		
+		
+		super.writeJson(resultJson);
+		
+		return null;
+	}
+	/**
+	 * 找回密码验证手机验证码
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject vertifySetPwdPhoneCode() {
+		LoginIn in = new LoginIn();
+		generateVertifySetPwdPhoneCode(in);
+		
+		LoginOut out = new LoginOut();
+		try {
+			out = loginService.vertifyForgotPassCode(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject object = new JSONObject();
+		object.put("ret", out.getJumpInfo().getFlag());
+		object.put("ret_info", out.getJumpInfo().getInfo());
+		
+		return object;
+	}
+
+	/**
+	 * 设置用户密码
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject setPwdFromTel() {
+		LoginIn in = new LoginIn();
+		generateSetPwdFromTelIn(in);
+
+		LoginOut out = new LoginOut();
+		try {
+			out = loginService.modifyPassword(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject object = new JSONObject();
+		object.put("ret", out.getJumpInfo().getFlag());
+		object.put("ret_info", out.getJumpInfo().getInfo());
+		
+		return object;
+	}
+
+
+	/**
+	 * 发送找回密码手机验证码
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject sendSetPwdPhoneCode() {
+		LoginIn in = new LoginIn();
+		generateSendSetPwdPhoneCodeIn(in);
+		
+		LoginOut out = new LoginOut();
+		try {
+			out = loginService.sendForgotPassCode(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject object = new JSONObject();
+		object.put("ret", out.getJumpInfo().getFlag());
+		object.put("ret_info", out.getJumpInfo().getInfo());
+		
+		return object;
+	}
+
+	/**
+	 * 获取用户还剩多少时间过期
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject getPeriodFromUser() {
+		PersonalCenterIn in = new PersonalCenterIn();
+		generateGetUserInfoIn(in);
+		
+		PersonalCenterOut out = new PersonalCenterOut();
+		try {
+			out = personalCenterService.getUserInfo(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject object = new JSONObject();
+		if(out.getJumpInfo().getIsSuccess().equals("MDGV1")){
+			Date expireDate = TimeService.stringToDate(out.getUsers().getExpireTime());
+			
+			Long temp = expireDate.getTime() - (new Date()).getTime();
+			Long period = temp/1000;			
+
+			object.put("ret_info", period);
+		}else{
+			object.put("ret_info", out.getJumpInfo().getInfo());
+		}
+		
+		object.put("ret", out.getJumpInfo().getFlag());
+		
+		return object;
+	}
+
+	/**
+	 * 更新用户信息
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject updateUserInfo() {
+		PersonalCenterIn in = new PersonalCenterIn();
+		generateUpdateUserInfoIn(in);
+		
+		PersonalCenterOut out = new PersonalCenterOut();
+		try {
+			out = personalCenterService.updateUsers(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject object = new JSONObject();
+		object.put("ret", out.getJumpInfo().getFlag());
+		object.put("ret_info", out.getJumpInfo().getInfo());
+		
+		return object;
+	}
+
+	/**
+	 * 获取用户信息
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject getUserInfo() {
+		PersonalCenterIn in = new PersonalCenterIn();
+		generateGetUserInfoIn(in);
+		
+		PersonalCenterOut out = new PersonalCenterOut();
+		try {
+			out = personalCenterService.getUserInfo(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject object = new JSONObject();
+		
+		if(out.getJumpInfo().getIsSuccess().equals("MDGV1")){
+			object.put("ret_info", out.getUsers());
+		}else{
+			object.put("ret_info", out.getJumpInfo().getInfo());
+		}
+		object.put("ret", out.getJumpInfo().getFlag());
+		
+		return object;
+	}
+
+	/**
+	 * 注销
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject logoff() {
+		LoginIn in = new LoginIn();
+		generateLogoffIn(in);
+		
+		LoginOut out = new LoginOut();
+		try {
+			getAppliction().removeAttribute(getCurrentUserId().toString());
+			getSession().removeAttribute(getGlobalvariable(new GlobalVariable("MDGV5")).getContent());
+			
+			out.getJumpInfo().setFlag("MSG6015");
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("ret", out.getJumpInfo().getFlag());
+		jsonObject.put("ret_info", out.getJumpInfo().getInfo());
+		
+		return jsonObject;
+	}
+	/**
+	 * 获取当前是否在线
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject online() {
+		LoginIn in = new LoginIn();		
+		generateOnlineIn(in);
+		
+		LoginOut out = new LoginOut();
+		try {
+			Object macObj = getAppliction().getAttribute(getCurrentUserId().toString());
+			if(macObj==null){
+				out.getJumpInfo().setFlag("MSG4011");
+			}else{
+				if(macObj.toString().equals(in.getMac())){
+					out.getJumpInfo().setFlag("MSG0001");
+				}else{
+					out.getJumpInfo().setFlag("MSG4011");
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject jsonObject = new JSONObject();
+		
+		jsonObject.put("ret", out.getJumpInfo().getFlag());
+		
+		
+		return jsonObject;
+	}
+
+	/**
+	 * 登录时有其他设备在线，确认登陆。
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject confirmOnline() {
+		LoginIn in = new LoginIn();
+		generateConfirmOnlineIn(in);
+
+		LoginOut out = new LoginOut();
+		try {
+			out = loginService.confirmOnline(in);
+			
+			if(out.getJumpInfo().getIsSuccess().equals("MDGV1")){
+				getAppliction().setAttribute(out.getUsers().getId().toString(), in.getMac());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("ret", out.getJumpInfo().getFlag());
+		
+		return jsonObject;
+	}
+
+	/**
+	 * 发送登陆时的手机验证码
+	 * 
+	 * 
+	 * 
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject sendLoginPhoneCode() {
+		LoginIn in = new LoginIn();
+		in.getUsers().setUsername(paramJson.getString("userName"));
+		
+		LoginOut out = new LoginOut();
+		try {
+			out = loginService.sendPhoneCode(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+			out.getJumpInfo().setFlag("MSG4001");
+		}
+		
+		JSONObject object = new JSONObject();
+		object.put("ret", out.getJumpInfo().getFlag());
+		object.put("ret_info", out.getJumpInfo().getInfo());
+		
+		return object;
+	}
+
+	/**
+	 * app登陆
+	 * @author Chencong
+	 * @return
+	 */
+	private JSONObject login() {
+		LoginIn in = new LoginIn();
+		generateLoginIn(in);
+		
+		LoginOut out = loginService.appLogin(in);
+		
+		JSONObject object = new JSONObject();
+		
+		if(out.getJumpInfo().getFlag().equals("MSG6003")){
+			//设置用户和视频列表到ret_info中
+			JSONObject ret_info = new JSONObject();
+			ret_info.put("monitor", out.getViewMonitorList());
+			ret_info.put("user", out.getUsers());
+			object.put("ret_info", ret_info);
+			
+			String macKey = out.getUsers().getId().toString();
+			Object mac = getAppliction().getAttribute(macKey);
+			Object macTime = getAppliction().getAttribute(macKey+"time");
+			if(mac!=null&& !mac.equals(in.getMac())){
+				if(macTime!=null){
+					Long macTimeVal = Long.valueOf(macTime.toString());
+					if(System.currentTimeMillis()-macTimeVal<=10*1000){
+						out.getJumpInfo().setFlag("MSG4006");
+					}else{
+						getAppliction().setAttribute(macKey, in.getMac());
+					}
+				}else{
+					getAppliction().setAttribute(macKey, in.getMac());						
+				}
+			}else{
+				getAppliction().setAttribute(macKey, in.getMac());
+			}
+		}else{
+			object.put("ret_info", out.getJumpInfo().getInfo());			
+		}
+		
+		object.put("videoAccountUsername", out.getVideoAccountUsername());
+		object.put("videoAccountPassword", out.getVideoAccountPassword());
+		object.put("ret", out.getJumpInfo().getFlag());
+		return object;
+	}
+	/**
+	 * 构建登陆in参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateLoginIn(LoginIn in) {
+		in.getUsers().setUsername(paramJson.getString("userName"));
+		in.getUsers().setPassword(paramJson.getString("passwd"));
+		in.setMac(paramJson.getString("mac"));
+		in.setPhoneCode(paramJson.getString("phoneCode"));
+	}
+
+	/**
+	 * 构建保持在线in参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateOnlineIn(LoginIn in) {
+		in.setUsers(new Users(paramJson.getLong("userId")));
+		in.setMac(paramJson.getString("mac"));
+	}
+
+	/**
+	 * 构建确认登陆in参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateConfirmOnlineIn(LoginIn in) {
+		in.setUsers(new Users(paramJson.getLong("userId")));
+		in.setMac(paramJson.getString("mac"));
+	}
+	/**
+	 * 构建注销in参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateLogoffIn(LoginIn in) {
+		in.setUsers(new Users(paramJson.getLong("userId")));
+		
+	}
+
+	/**
+	 * 构建获取用户信息In参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateGetUserInfoIn(PersonalCenterIn in) {
+		in.setUsers(new Users(paramJson.getLong("userId")));		
+	}
+
+	/**
+	 * 构建更新用户信息In参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateUpdateUserInfoIn(PersonalCenterIn in) {
+		in.setUsers(new Users(paramJson.getLong("userId")));
+		in.getUsers().setNickName(paramJson.getString("nickName"));
+		in.getUsers().setPassword(paramJson.getString("passwd"));
+		in.getUsers().setTelphone(paramJson.getString("telphone"));
+		
+	}
+	/**
+	 * 构建发送找回密码手机验证码 In参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateSendSetPwdPhoneCodeIn(LoginIn in) {
+		in.setPhone(paramJson.getString("telphone"));
+	}
+	/**
+	 * 构建验证找回手机验证码 In参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateVertifySetPwdPhoneCode(LoginIn in) {
+		in.setPhone(paramJson.getString("telphone"));
+		in.setPhoneCode(paramJson.getString("phoneCode"));
+		
+	}
+	/**
+	 * 构建找回密码 设置密码 In参数
+	 * @author Chencong
+	 * @param in
+	 */
+	private void generateSetPwdFromTelIn(LoginIn in) {
+		in.setPhone(paramJson.getString("telphone"));
+		in.setUsername(paramJson.getString("username"));
+		in.setPassword(paramJson.getString("passwd"));		
+		
+	}
+}

@@ -1,0 +1,1544 @@
+@charset "utf-8";
+/*
+cugasjgoijqeggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+	DUMART BY AIDEN LIU
+	VERSION ALPHA 1.0
+
+	CONTENTS ----------
+
+		1.BODY
+		2.DEFAULT STYLING
+		3.HEADINGS
+		4.LINKS
+		5.IMAGES
+		6.LAYOUT
+		7.HEADER/BRANDING&NAVIGATION
+			7.1 BRANDING
+			7.2 SEARCH
+			7.3 NAVIGATION
+		8.SLECTCENTER
+		8.INFO
+		9.SITEINFO/FOOTER
+		10.GLOBAL ELEMENTS
+			10.1 CAPTIONED IMAGE
+			10.2 ELEVATION
+			10.3 DISTANCE/ELEVATION PARAGRAPH
+		11.SecuritySettings
+			11.1 CONTENT PRIMARY
+		12.MembersShips
+			12.1 CONTENT PRIMARY
+		13.MyEnterprise
+			13.1 CONTENT PRIMARY
+		14.ComplainPlazza
+			14.1 CONTENT PRIMARY
+		15.ComplainPlazza
+			15.1 CONTENT PRIMARY
+		16.CloseTradingApplications
+			16.1 CONTENT PRIMARY
+		17.AgreeCloseTrading
+			17.1 CONTENT PRIMARY
+		18.AgreeCloseTrading
+			18.1 CONTENT PRIMARY
+		19.EvaluateTask
+			19.1 CONTENT PRIMARY
+		20.CreditPay
+			20.1 CONTENT PRIMARY
+		21.MyTask(creditpay)
+			21.1 CONTENT PRIMARY
+		22.Buy12dSpace
+			21.1 CONTENT PRIMARY
+		23.SevicePlazza
+			21.1 CONTENT PRIMARY
+		24.Bail
+			21.1 CONTENT PRIMARY
+		25.ComplainPlazza2
+			25.1 CONTENT PRIMARY
+		CLEAR FLOAT&FIX JUSTIFY
+		26.ApplyCheck
+			26.1 CONTENT PRIMARY
+		27.Tradinghalt
+			27.1 CONTENT PRIMARY
+		28.Tradinghalt
+			28.1 CONTENT PRIMARY
+		29.MyTrading
+			29.1 CONTENT PRIMARY
+	-------------------
+
+	COLOURS -----------
+
+		purple #5852f4
+		Dark purple #2f253d
+		blue #20b6f0
+		Cornflower blue #6e99f0
+
+	-------------------
+
+*/
+
+@import url(reset.css); /* RESET CSS */
+
+
+
+
+/*  1.BODY
+ ------------------------------------------------------------------ */
+
+ body { background:#fff url(../images/RNG/bg.png); color:#000; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:18px;}
+ body.bg2 { background:#fff url(../images/RNG/bg2.png); color:#000; font-family:Helvetica,Arial,sans-serif; font-size:14px; line-height:18px;}
+
+
+
+/*  2.DEFAULT STYLING
+ ------------------------------------------------------------------ */
+ input {border: 0;}
+ button {border:0; padding:0;}
+input:focus{border:solid 1px #20B6F0;}
+
+/*  3.HEADINGS
+ ------------------------------------------------------------------ */
+ h2{width:100%; height:43px; font: bold 14px/43px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; background:#2f253d; color:#F1E9FB;}
+
+ /*  4.LINKS
+ ------------------------------------------------------------------ */
+ a { color: #20b6f0;text-decoration: none;}
+ a:hover,
+ a:focus {text-decoration:underline;}
+
+ /*  5.IMAGES
+ ------------------------------------------------------------------ */
+
+ /*  6.LAYOUT
+ ------------------------------------------------------------------ */
+ div#header-in,
+ div#footer-in,
+ div#page { width:1100px; margin:0 auto;}
+ div#content {padding-top:82px;}
+ div#header {position:fixed; top:0; left:0; width:100%; height:64px; background:#333;z-index: 10;}
+ div#footer {position:absolute; left:0; width:100%; height:120px; margin-top:18px; background:#333;}
+
+  /*  7.HEADER/BRANDING&NAVIGATION
+ ------------------------------------------------------------------ */
+ div#header-in {height: inherit;}
+  /* 7.1 BRANDING ------------ */
+  a#logo  {display:block; float:left; width:161px;height:64px;background:url(../images/RNG/logo.png) no-repeat; text-indent:-9999px;}
+  /* 7.2 SEARCH ------------ */
+  form#hd-form {position: relative; float:left; width:395px; height:35px; margin: 14px 40px 0;}
+  input#hd-input {width:395px; height:35px; padding: 0 80px 0 5px; background:#333; border:#5852f4 solid 3px; -moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box; color:#E0E0E0;}
+  button#hd-button {position:absolute; top:0; right:0; width:74px; height:35px; font: 16px/35px "Microsoft YaHei","微软雅黑";color:#fff;background:#5852f4; cursor:pointer;}
+  button#hd-button i#s-icon {display:inline-block; width:20px; height:20px; margin-right:5px; background: url(../images/RNG/search-icon.png) no-repeat;vertical-align: text-top;}
+  /* 7.3 NAVIGATION ------------ */
+  ul#nav {float: left;}
+  ul#nav li {margin-right: 20px;}
+  ul#nav li a,
+  ul#nav li { display: inline; font: normal 14px/64px "Sim Su","宋体"; color:#fff;}
+
+  /*  8.SELECTCENTER
+ ------------------------------------------------------------------ */
+ div#select-center {position:relative; padding:17px 0; background:rgba(255,255,255,.2); margin-top:3px;}
+ div#select-center ul{ width:963px; height:122px; margin:0 auto ; text-align:justify;}
+ div#select-center ul li {display:inline-block; width:110px; height:110px; border:6px solid rgba(0,0,0,.325);border-radius: 50%;cursor: pointer;vertical-align:top;}
+ div#select-center ul li > span {display:inline-block; width:110px; height:110px; border-radius:50%; background:rgba(0,0,0,.5); vertical-align:middle; text-align:center; color:#fff;}
+ div#select-center ul li > span span {display:inline-block; width:40px; margin-top:25px; line-height:30px; vertical-align:middle; text-align:center; font:bold 20px "Microsoft YaHei","微软雅黑";}
+
+ div#select-center ul li.current {border:6px solid #82a0f2!important;}
+ div#select-center ul li.current >span {background:#fff!important; color:#82a0f2!important;}
+
+ div#select-center div.l_m {position:absolute; left:18px; top:58px; display:inline-block; width:27px; height:41px; background:url(../images/RNG/move-btn.png) no-repeat left center; cursor:pointer;}
+ div#select-center div.r_m {position:absolute; right:18px; top:58px; display:inline-block; width:27px; height:41px; background:url(../images/RNG/move-btn.png) no-repeat right center; cursor:pointer;}
+  /*  8.INFO
+ ------------------------------------------------------------------ */
+ div#info {height:252px; background:#fff;}
+  /*  9.SITEINFO/FOOTER
+ ------------------------------------------------------------------ */
+ div#footer-in a,
+ div#footer-in {font:12px/15px "Sim Su","宋体"; color:#999; text-align:center;}
+ div#footer-in p {margin-top:57px;}
+ div#footer-in ul {margin-top:13px;}
+ div#footer-in ul li {display:inline-block; height:15px; border-right:1px solid #999; padding: 0 13px;}
+ div#footer-in ul li:last-child {border:0;}
+  /*  10.GLOBAL ELEMENTS
+ ------------------------------------------------------------------ */
+ /* 10.1 CAPTIONED IMAGE ------------ */
+ /* 10.2 ELEVATIONS ------------ */
+ /* 10.2 DISTANCE/ELEVATION PARAGRAPH ------------ */
+
+ /*  11.securitySettings
+ ------------------------------------------------------------------ */
+
+ /* 11.1 CONTENT PRIMARY ------------ */
+ div#security-settings {margin-top:18px; padding:0 18px 18px; background:#fff; }
+ div#security-settings ul {margin-right:-18px; font-size:0;}
+ div#security-settings ul li {position:relative; display:block; float:left; width:335px; height:310px; margin:18px 18px 0 0;border:1px solid #e5e5e5; font-size:14px; vertical-align:top;}
+ div#security-settings ul li p.s-title {font-weight:bold; text-align:center; line-height:26px; margin-top:18px;}
+ div#security-settings ul li p.s-title span.ok {display:inline-block; width:20px; height:20px; margin-right:12px; vertical-align:middle; background:url(../images/RNG/circle_ok.png) no-repeat center center;}
+ div#security-settings ul li p.s-title span.light {display:inline-block; width:14px; height:26px; margin-right:12px; vertical-align:middle; background:url(../images/RNG/lightbulb.png) no-repeat center center;}
+ div#security-settings ul li p.s-title span.warn {color: #DF0000;}
+ div#security-settings ul li p.s-info {height:48px; text-align:center; font-family:"SimSun","宋体";margin-top:9px;vertical-align:top;}
+ div#security-settings ul li p.h23 {height:23px!important;}
+ div#security-settings ul li p.s-info span.s-detail{display: inline-block; line-height:20px; font-family:"SimSun","宋体"; letter-spacing:1px; text-align:left; vertical-align:top;}
+ div#security-settings ul li p.s-info span.s-detail span.del {display:inline-block; width:98px;text-align:left; float:right;font-size:12px;}
+ div#security-settings ul li p.s-info span.s-detail span.def {font-weight:700;}
+ div#security-settings ul li p.s-info span.rate {font-size: 0;}
+ div#security-settings ul li p.s-info span.rate span{display:inline-block; width:85px; height: 10px; background:#E5E5E5; border-left:1px solid #fff;}
+ div#security-settings ul li p.s-info span.rate span.rate1{background:#FFCB65;}
+ div#security-settings ul li p.s-explain {width:305px; margin:30px auto 0; color:#999; line-height:24px; font-family:"SimSun","宋体";}
+ div#security-settings ul li > a {display:block; position:absolute; bottom:18px; left:95px; width:145px; height:44px; background:#20b6f0; font:bold 18px/44px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; text-decoration:none;}
+ div#security-settings ul li div.s-sure {display:none; position:absolute; right:-80px; top:30px;width:163px; height:45px; border:2px solid rgba(255,255,255,.25); border-radius:3px; background:rgba(0,0,0,.5);z-index: 9;}
+ div#security-settings ul li div.s-sure a {display:block; float:left; width:67px; height:28px; background:#1FB5EF; font: 12px/28px "SimSun","宋体"; color:#fff; text-decoration:none; text-align:center; line-height:28px; float: left;}
+ div#security-settings ul li div.s-sure a:last-child {float:right;}
+ div#security-settings ul li div.s-sure div.s-sure-in {width:145px; margin: 9px auto 0;}
+/*
+ /*  12.membersShips
+ ------------------------------------------------------------------ */
+ /* 12.1 CONTENT PRIMARY ------------ */
+ div#members-ships {padding:30px 17px 90px;background:#fff;}
+ div#members-ships div.m-manage,
+ div#members-ships div.m-list {margin-bottom:12px; height:20px; font:normal 18px/20px "Microsoft YaHei","微软雅黑"; vertical-align:top;}
+ div#members-ships div a.add-icon {display:inline-block; width:20px; height:20px; margin-left:12px; background:url(../images/RNG/add-icon.png) no-repeat center top; vertical-align:middle;}
+ div#members-ships div a.add-icon:hover {background:url(../images/RNG/add-icon.png) no-repeat center bottom;}
+ div#members-ships > ul {margin-right:-21px; margin-top:-18px; font-size:0;}
+ div#members-ships > ul li {position:relative; display:block; float:left; width:336px; height:200px; margin:18px 18px 0 0; border:1px solid #E5E5E5; font-size:14px; color:#656565;}
+ div#members-ships > ul li div.m-apply-info {padding:20px 20px 0;}
+ div#members-ships > ul li div.a-chose {padding:20px;}
+ div#members-ships > ul li div.a-chosed {position:absolute; bottom:0; width:100%; height:60px; background:#f3f3f3; border-top:1px solid #E5E5E5; font: normal 14px/60px "Microsoft YaHei","微软雅黑"; text-align:center;}
+ div#members-ships > ul li > p {font-size:12px; color:#333; padding: 0 20px;}
+ div#members-ships > ul li > p.app-info {margin-top:12px;}
+ div#members-ships > ul li > p.app-info span.l {float:left;}
+ div#members-ships > ul li > p.app-info span.r {float:right;}
+ div#members-ships > ul li > p.msg {margin-top:5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+ div#members-ships > ul li div.a-chose a.agree {display:block; float:left; width:136px; height:40px; background:#1FB5EF; font:bold 16px/40px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; text-decoration:none;}
+ div#members-ships > ul li div.a-chose a.disagree {display:block; float:right; width:136px; height:40px; background:#CBCBCB; font:bold 16px/40px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; text-decoration:none;}
+ div#members-ships > ul li div.m-apply-info img { float:left; display:block; width:46px; height:46px; padding:1px; border:1px solid #ccc; background:#fff;}
+ div#members-ships > ul li div.m-apply-info div { float:left; margin-left:18px; color: #ccc;}
+ div#members-ships > ul li div.m-apply-info div p.applyer{padding-left:22px; background:url(../images/RNG/applyer.png) no-repeat;}
+ div#members-ships > ul li div.m-apply-info div p.applyer a {color:#333; font-weight:700;}
+ div#members-ships > ul li div.m-apply-info div p.a-info {margin-top:16px; font-family:"Microsoft YaHei","微软雅黑"; font-size:12px; color:#656565; line-height:12px;}
+ div#members-ships > ul li div.m-apply-info div p.a-info span.sline {display:inline-block; height:11px; width:1px; background:#656565; margin:0px 5px; vertical-align:top;}
+ div#members-ships div#m-list {margin-bottom:45px;}
+ div#members-ships div#m-list div#m-list-title { height:30px; background:#6D98EF;}
+ div#members-ships div#m-list div#m-list-title a.m-drop-btn { position: relative; float:left; display:inline-block; margin-top:6px; margin-left:7px; width:18px; height:18px; font:normal 12px/24px "Sim Sun","宋体"; color:#ccc; background: #fff url(../images/RNG/drop.png) no-repeat 5px 6px; cursor: pointer;}
+ div#members-ships div#m-list div#m-list-title div { float:left; height:18px; border-left:1px solid #fff; margin-top:6px; margin-left:10px; margin-right:185px; padding-left:8px; font:bold 14px/18px "Microsoft YaHei","微软雅黑"; color:#fff;}
+ div#members-ships div#m-list div#m-list-title a.m-drop-btn ul {display:none; width:80px; height:82px; position:absolute; top:18px; left:0;}
+ div#members-ships div#m-list div#m-list-title a.m-drop-btn:hover ul {display: block;}
+ div#members-ships div#m-list div#m-list-title a.m-drop-btn ul li { text-align:center; width:80px; height:24px; background: #fff;}
+ div#members-ships div#m-list div#m-list-title a.m-drop-btn ul li span { display:inline-block; width:8px; height:12px; margin-right:5px; background:url(../images/RNG/up-btn.png) no-repeat left center; vertical-align: text-top;}
+ div#members-ships div#m-list div#m-list-title a.m-drop-btn ul li:hover {background: #20b6f0; color:#fff;}
+ div#members-ships div#m-list div#m-list-title a.m-drop-btn ul li:hover span { background: url(../images/RNG/up-btn.png) no-repeat right center;}
+ div#members-ships div#m-list ul#m-list-info li{ height: 70px; border-bottom: 1px solid #d3d3d3;}
+ div#members-ships div#m-list ul#m-list-info li:nth-child(even) { background:#E7E7E7;}
+ div#members-ships div#m-list ul#m-list-info li img { float:left; display:block; width:46px; height:46px; margin-left:32px; margin-top:10px; padding:1px; border:1px solid #ccc; background:#fff;}
+ div#members-ships div#m-list ul#m-list-info li div.m-contact {float:left; width:150px; margin-left:18px; margin-top:10px;}
+ div#members-ships div#m-list ul#m-list-info li div.m-contact p.admin {padding-left:22px; background: url(../images/RNG/admin.png) no-repeat; vertical-align:top;}
+ div#members-ships div#m-list ul#m-list-info li div.m-contact p.mem a,
+ div#members-ships div#m-list ul#m-list-info li div.m-contact p.admin a {color:#333; font: bold 14px "SimSun","宋体";}
+ div#members-ships div#m-list ul#m-list-info li div.m-contact p.mem { padding-left:22px; background:url(../images/RNG/mem.png) no-repeat;}
+ div#members-ships div#m-list ul#m-list-info li div.m-contact p.con { margin-top:16px; padding-left:22px; background:url(../images/RNG/icon-contact.png) no-repeat; font:12px "SimSun","宋体"; vertical-align:top;}
+ div#members-ships div#m-list ul#m-list-info li div.m-contact p.con a {color:#999;}
+ div#members-ships div#m-list ul#m-list-info li div.m-income,
+ div#members-ships div#m-list ul#m-list-info li div.m-pay {float:left; width:250px; margin-left:22px; font-size:14px; line-height:70px; color:#656565;}
+ div#members-ships div#m-list ul#m-list-info li div.m-set {float:left; width:100px; margin-left:22px; margin-top:15px; font-size:12px; line-height:20px;}
+
+ /*  13.MyEnterprise
+ ------------------------------------------------------------------ */
+
+ /* 13.1 CONTENT PRIMARY ------------ */
+ div#myenterprise {padding: 0 18px 18px; background:#fff;}
+ div#myenterprise ul {margin-right:-18px;}
+ div#myenterprise ul li {display:block; float:left; width:512px; height:256px; background:#999; margin-top:20px; margin-right:20px;}
+ div#myenterprise ul li div.e-logo {display:block; float:left; width:250px; height:250px; margin-top:3px; margin-left:3px; background:#fff; border:0; text-align:center;}
+ div#myenterprise ul li div.e-logo img {vertical-align:middle;}
+ div#myenterprise ul li div.e-info {float:left; margin-left:18px; margin-top:18px; width:235px; font: 12px/20px "SimSun","宋体"; color:#fff;}
+ div#myenterprise ul li div.e-info span.e-intro {display:inline-block; width:163px; height:135px; vertical-align:top; line-height:18px;}
+ div#myenterprise ul li div.e-info a.e-btn {display:block; float:left; width:80px; height:30px; box-sizing:border-box; border: 3px solid #666; background:#fff; font: bold 14px/24px "Microsoft YaHei","微软雅黑"; text-decoration:none; text-align:center; color:#656565;}
+ div#myenterprise ul li div.e-info p a {color:#fff;}
+ div#myenterprise ul li div.e-info p a.mager {display:inline-block; padding-right:20px; height:14px; background:url(../images/RNG/icon-contact.png) no-repeat right center; line-height:14px;}
+ div#myenterprise ul li:last-child {display:block; float:left; background:#fff;}
+ div#myenterprise ul li:last-child a {display:block; float:left; width:512px; height:241px; background:#fff; border: 3px dashed #f3f3f3; box-sizing:border-box; background:url(../images/RNG/crossline.png) no-repeat center center; text-decoration:none;}
+ div#myenterprise ul li:last-child a p{font: bold 14px "Microsoft YaHei","微软雅黑"; text-align: center; margin-top: 175px; color:#f3f3f3;}
+
+ /*  14.ProductSquare
+ ------------------------------------------------------------------ */
+
+ /* 14.1 CONTENT PRIMARY ------------ */
+ div#productsquare {padding:18px; background:#fff;}
+ div#productsquare div.main-content {width:783px; float:left;}
+ div#productsquare div.main-content div#box1 {padding:30px 18px 18px;}
+ div#productsquare div.main-content div#box1 div#imagesilder {float:left; margin-right:18px;}
+ div#productsquare div.main-content div#box1 div#productinfo {width:406px; float:left; height:200px; margin-left:10px;}
+
+ div#productsquare div.main-content div#box1 div#productinfo p.productinfo-title {font: bold normal 16px/20px "Microsoft YaHei"; letter-spacing:0.5px; color:#333; border-bottom:2px solid #f3f3f3; padding-bottom:13px;}
+ div#productsquare div.main-content div#box1 div#productinfo p.productinfo-details {font: normal normal 12px/24px "SimSun"; color:#3a2f4d;}
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-price {height:75px; margin-top:18px; background:#F55F59;}
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-general {height:90px; margin-top:18px; border:1px solid #E5E5E5;}
+
+ div#productsquare div.main-content div#box1 div.star-share {font:normal 12px "Sim Sun","宋体"; color:#999; margin-top:40px;}
+ div#productsquare div.main-content div#box1 div.star-share span.star {display:inline-block; padding-left:18px; background:url(../images/icon/star.png) no-repeat left center; }
+ div#productsquare div.main-content div#box1 div.star-share span.share {display:inline-block; padding-left:18px; background:url(../images/icon/share.png) no-repeat left center; margin-left:25px;}
+
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-price p:first-child {font:bold 24px "Arial"; color:#fff; text-align:center; padding-top:8px;}
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-price p:last-child {font:normal 12px "Sim Sun","宋体"; color:#fff; text-align:center; margin-left:-65px; margin-top:12px;}
+
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-general div {width:134px; height:69px; border-right: 1px dotted #ccc; float:left; margin-top:10px; text-align:center;}
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-general div:last-child {border:0;}
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-general div p {font:normal 24px "Arial"; color:#F45F59; margin-top:11px;}
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-general div img {margin-top: 13px; margin-bottom:8px;}
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-general div p.green {color:#2fa613;}
+ div#productsquare div.main-content div#box1 div#productinfo div.productinfo-general div p:last-child {font:normal normal 12px/12px "SimSun"; color:#999;}
+ 
+
+ div#productsquare div.main-content div#box2,
+ div#productsquare div.main-content div#box3,
+ div#productsquare div.main-content div#box4,
+ div#productsquare div.main-content div#box5 {border:1px solid #E5E5E5; margin-top:18px;}
+
+ div#productsquare div.main-content div#box1 {border:1px solid #E5E5E5;}
+
+ div#productsquare div.main-content div#box2 h3,
+ div#productsquare div.main-content div#box3 h3,
+ div#productsquare div.main-content div#box4 h3,
+ div#productsquare div.main-content div#box5 h3 {height:30px; padding-left:18px; background:#6e99f0; font: normal bold 14px/30px "微软雅黑"; color:#fff;}
+
+ div#productsquare div.main-content div#box3 p,
+ div#productsquare div.main-content div#box4 p,
+ div#productsquare div.main-content div#box5 p,
+ div#productsquare div.main-content div#box2 p {font: normal 12px/30px "SimSun","宋体"; padding:12px 18px 18px;}
+
+ div#productsquare div.main-content div#box4 button,
+ div#productsquare div.main-content div#box5 a.pl-btn {display:block; background:#20b6f0; width:80px; height:35px; font:normal 18px/35px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; text-decoration:none; margin:0px auto;}
+
+ div#productsquare div.main-content div#box4 button {margin-top:30px; margin-bottom:12px;}
+ div#productsquare div.main-content div#box5 a.pl-btn {margin-top:12px; margin-bottom:20px;}
+
+ div#productsquare div.main-content div#box4 div{background:#F0F0F0; margin:12px 20px 20px; padding:18px;}
+ div#productsquare div.main-content div#box4 div p { font: normal 14px "Microsoft YaHei","微软雅黑"; color:#656565; padding:10px 0 0;}
+ div#productsquare div.main-content div#box4 div textarea {height:157px; width:100%; background:#fff; max-width:100%; box-sizing:border-box;}
+ div#productsquare div.main-content div#box4 div p span.r { float:right;}
+ div#productsquare div.main-content div#box4 div p span.l {float:left;}
+
+
+ div#productsquare div.side-Bar {width:245px; float:right; height:500px;}
+ div#productsquare div.side-Bar > div img {display:block; width:198px; height:198px; margin:0 auto;}
+ div#productsquare div.side-Bar > div:first-child p {font: 14px "Microsoft YaHei","微软雅黑"; color:#656565; text-align:center; margin-top:6px;}
+ div#productsquare div.side-Bar > div:first-child a {display:block; width:100%; height:35px; margin:0 auto; background:#1FB5EF; margin-top:10px; color:#fff; text-decoration:none; font: normal 14px/35px "Microsoft YaHei","微软雅黑"; text-align:center;}
+ div#productsquare div.side-Bar > div:last-child {margin-top:18px;}
+ div#productsquare div.side-Bar > div {background:#f3f3f3; padding:20px;}
+ div#productsquare div.side-Bar > div:last-child p {padding-bottom:20px; border-bottom: 1px dashed #999;font: bold normal 14px/14px "Microsoft YaHei";text-align: left;}
+ div#productsquare div.side-Bar > div:last-child ul li {display:block; margin-top:15px;}
+ div#productsquare div.side-Bar > div:last-child ul li img {display:block; width:48px; height:48px; float:left;}
+ div#productsquare div.side-Bar > div:last-child ul li dl a {display:block; font:normal 12px "Sim Sun","宋体"; color:#333; float:left; width:145px; margin-left:8px;}
+ div#productsquare div.side-Bar > div:last-child ul li dt a {font-weight:700; height:20px;}
+
+ /*  15.complainPlazza
+ ------------------------------------------------------------------ */
+ 
+ /* 15.1 CONTENT PRIMARY ------------ */
+ div#complainPlazza {padding:20px; margin-top:18px; background:#fff;}
+ div#complainPlazza div.main-content {width:816px; float:left;}
+ div#complainPlazza div.side-bar {width:225px; float:right; }
+ div#complainPlazza div.main-content div.industry {border:1px solid #E5E5E5;}
+ div#complainPlazza div.main-content div.industry h3 {height:30px; padding-left:18px; background:#6e99f0; font: normal bold 14px/30px "微软雅黑"; color:#fff;}
+ div#complainPlazza div.main-content div.industry > div {padding:18px;}
+ div#complainPlazza div.main-content div.industry > hr { margin:0; border:0; border-bottom: 1px solid #E5E5E5; padding:0 20px; margin: 0 20px;}
+ div#complainPlazza div.main-content div.industry div div {font: 16px "Microsoft YaHei","微软雅黑"; color:#000; float:left;}
+ div#complainPlazza div.main-content div.industry div ul {float:right; font-size:0; width:660px; margin-right:23px;} 
+ div#complainPlazza div.main-content div.industry div ul li {display:inline-block; font-size:12px; margin-left:34px;}
+ div#complainPlazza div.main-content div.industry div ul li a{color:#666;}
+ div#complainPlazza div.main-content div.industry div ul li:first-child a {color:#20b6f0;}
+ div#complainPlazza div.main-content div.search-bar {height:40px; background:#f3f3f3; margin-top:18px; border:1px solid #e5e5e5;}
+ div#complainPlazza div.main-content ul.com-list { margin-right:-25px;}
+ div#complainPlazza div.main-content ul.com-list li {position:relative; display:block; width:255px; height:441px; border:1px solid #E5E5E5; float:left; margin-right:23px; margin-top:18px;}
+ div#complainPlazza div.main-content ul.com-list li > img {display:block; width:213px; height:213px; margin: 20px auto 0; background:#ddd; border:0;}
+ div#complainPlazza div.main-content ul.com-list li p.title {padding:0 20px 0;font:bold 14px/20px "Sim Sun","宋体"; color:#666;margin-top:5px;}
+ div#complainPlazza div.main-content ul.com-list li p.comment {padding:0 20px 0;font: 12px/20px "Sim Sun","宋体"; color:#666;}
+ div#complainPlazza div.main-content ul.com-list li p.comment a {margin-left:5px;color:#6e99f0; line-height:30px;}
+ div#complainPlazza div.main-content ul.com-list li div.clearfix {position:absolute; bottom:0; width:100%; height:132px; border-top:1px solid #e5e5e5; background:#f3f3f3;}
+ div#complainPlazza div.main-content ul.com-list li div {position:relative; height:132px; border-top:1px solid #e5e5e5; background:#f3f3f3;}
+ div#complainPlazza div.main-content ul.com-list li div p.l {width:60px; height:105px; float:left; font-size:12px; text-align:center; margin-left:18px; margin-top:18px; white-space:nowrap;}
+ div#complainPlazza div.main-content ul.com-list li div p.r img,
+ div#complainPlazza div.main-content ul.com-list li div p.l img{display:block; width:58px; height:58px;}
+ div#complainPlazza div.main-content ul.com-list li div p.r {width:60px; height:105px;float:right; font-size:12px; margin-right:18px;  margin-top:18px; text-align:center; white-space:nowrap;}
+ div#complainPlazza div.main-content ul.com-list li div p span {color:#666; line-height:20px;}
+
+ div#complainPlazza div.main-content ul.com-list li div p span.red {color:#f5605a;}
+ div#complainPlazza div.main-content ul.com-list li div p span.blue {color:#126fcd;}
+
+/*sidebar*/
+ div#complainPlazza div.side-bar > div {padding:18px; border:1px solid #e5e5e5;}
+ div#complainPlazza div.side-bar > div:last-child {margin-top:18px;}
+ div#complainPlazza div.side-bar > div div.hot {width:100%; height:270px; background:#f3f3f3; margin-top: 18px;}
+ div#complainPlazza div.side-bar > div div.hot p.title {font:bold 12px/30px "Sim Sun","宋体"; color:#333; margin-left:20px;}
+ div#complainPlazza div.side-bar > div div.hot img { display:block; width:100%; height:185px;}
+ div#complainPlazza div.side-bar > div div.hot p.comment {font-size:12px; color:#656565; font: 12px/20px "Sim Sun","宋体"; margin-left:20px;}
+ div#complainPlazza div.side-bar > div div.hot p.comment a {margin-left:5px; color:#6e99f0;}
+  div#complainPlazza div.side-bar div p.comprice {font:bold 12px/30px "Sim Sun","宋体"; color:#f5605a; margin-left:10px;margin-top:3px;}
+ div#complainPlazza div.side-bar div p.title {font:bold 14px/30px "Microsoft YaHei","微软雅黑"; color:#333;}
+ div#complainPlazza div.side-bar div ul li {font:normal 12px "Sim Sun","宋体"; margin-bottom:15px;}
+ div#complainPlazza div.side-bar div ul li a {float:left;color:#6f9af0;}
+ div#complainPlazza div.side-bar div ul li span {float:right; color:#999;}
+ div#complainPlazza div.side-bar div p.more {font:normal 12px/20px "SimSun";color:#20b6f0; text-align:right; margin-top:6px;}
+  div#complainPlazza div.side-bar div p.more2 {font:normal 12px/20px "SimSun";color:#20b6f0; text-align:right; margin-top:6px;}
+ div#complainPlazza div.side-bar div > a.com {display:block; width:185px; height:42px; background:#1DB3EF; font:normal 18px/42px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; margin:10px auto 0; text-decoration:none;}
+ 
+ div#complainPlazza div.main-content div.search-bar > span {display:inline-block; height:40px; color:#666; vertical-align:top; line-height:40px; border-right:1px solid #e5e5e5; padding:0 16px; text-align:center; font:normal normal 12px/40px "SimSun";}
+ div#complainPlazza div.main-content div.search-bar > span > span {display: inline-block; height: 13px; background: url(../images/icon/icondown.png) no-repeat; width:9px; line-height:40px; vertical-align:middle; margin-left:8px; border:none; padding:0; vertical-align:text-top;}
+div#complainPlazza div.main-content div.search-bar > span > .shang {display: inline-block; height: 13px; background: url(../images/icon/iconup.png) no-repeat; width:9px; line-height:40px; vertical-align:middle; margin-left:8px; border:none; padding:0; vertical-align:text-top;}
+ .vs {font: bold 20px "Microsoft YaHei","微软雅黑"; position: absolute; width:100%; top:50px; text-align:center; color:#e5e5e5}
+/*sidebar*/
+ div#complainPlazza div.side-bar > div {padding:18px; border:1px solid #e5e5e5;}
+ div#complainPlazza div.side-bar > div:last-child {margin-top:18px;}
+ div#complainPlazza div.side-bar > div div.hot {width:100%; height:270px; background:#f3f3f3; margin-top: 18px;}
+ div#complainPlazza div.side-bar > div div.hot p.title {font:12px/16px "Sim Sun","宋体"; color:#333; margin-left:14px;}
+ div#complainPlazza div.side-bar > div div.hot img { display:block; width:100%; height:185px;}
+ div#complainPlazza div.side-bar > div div.hot p.comment {font-size:12px; color:#656565; font: 12px/20px "Sim Sun","宋体"; margin-left:20px;}
+ div#complainPlazza div.side-bar > div div.hot p.comment a {margin-left:5px; color:#6e99f0;}
+ div#complainPlazza div.side-bar div p.title {font:bold 14px "Microsoft YaHei","微软雅黑"; color:#333;}
+ div#complainPlazza div.side-bar div ul li {font:normal 12px "Sim Sun","宋体"; margin-bottom:15px;}
+ div#complainPlazza div.side-bar div ul li a {float:left;color:#6f9af0;}
+ div#complainPlazza div.side-bar div ul li span {float:right; color:#999;}
+ div#complainPlazza div.side-bar div p.more {font:normal 12px30px "SimSun";color:#20b6f0; text-align:right; }
+  div#complainPlazza div.side-bar div p.more2 {font:normal 12px30px "SimSun";color:#20b6f0; text-align:right; margin-right:15px; }
+ div#complainPlazza div.side-bar div > a.com {display:block; width:185px; height:42px; background:#1DB3EF; font:normal 18px/42px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; margin:10px auto 0; text-decoration:none;}
+ 
+  /*  16.CloseTradingApplications
+ ------------------------------------------------------------------ */
+
+ /* 16.1 CONTENT PRIMARY ------------ */
+div#closetradingapplications {background:#fff; padding:18px 14px 16px 16px;}
+div#closetradingapplications div#cta-in {border:1px solid #e5e5e5; height:954px;}
+div#closetradingapplications div#cta-in p.ts{font: 14px "Microsoft YaHei","微软雅黑"; color:#333; text-align:center; margin-top:30px;}
+div#cta-in table { position:relative; border-collapse: separate; border-spacing:0 25px; margin:20px auto 0;}
+div#closetradingapplications div#cta-in td.puttitreset table {padding:0;margin:0;border-spacing:0;}
+div#closetradingapplications div#cta-in table td table td {line-height:normal;}
+div#cta-in table th {font: 14px "Microsoft YaHei","微软雅黑"; color:#666; text-align:right;}
+div#cta-in table th.top {vertical-align:top}
+div#cta-in table td {height:41px; line-height:41px;}
+div#cta-in table td span.ts {display:block; position:absolute; width:300px; right:5px; top:292px; font: 12px/13px "Sim Sun","宋体"; color:#656565;}
+div#cta-in table td > *:first-child {margin-left:20px;}
+div#cta-in table td > iframe {margin-left:0!important;}
+div#cta-in table td > label.fir {margin-right:100px;}
+div#cta-in table td > label {margin-left:10px; font-family: "Microsoft YaHei","微软雅黑"; color:#666; white-space:nowrap;}
+div#cta-in table td  input.f_input,
+div#cta-in table td  span.f_input {display:block; width:221px; height:35px; border:1px solid #E0E0E0; margin-left:20px;padding-left:10px; background:url(107.gif) no-repeat 160px center; position:relative; margin-top:4px;background:#f5f5f5; font: 14px "Sim Su","宋体"; color:#666; line-height:35px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+div#cta-in table td > div {position:relative;}
+div#cta-in table td > div div.scroll {position:absolute; width:47px; height:208px; right:0; top:0; background:url(../images/RNG/textscrollbar.gif) no-repeat;}
+div#cta-in table td textarea { width:508px; height:203px; resize:none; border:1px solid #E0E0E0;font: 14px "Microsoft YaHei","微软雅黑"; color:#666; background:#f5f5f5; padding-right:47px;}
+div#cta-in div.choose {width:385px; margin: 0 auto;}
+
+div#cta-in div.choose button {width:120px; height:44px; font: 14px "Microsoft YaHei","微软雅黑"; background:#1FB5EF; float:left; color:#fff;}
+div#cta-in div.choose a {display:block; width:120px; height:44px; font: 14px/44px "Microsoft YaHei","微软雅黑"; background:#1FB5EF; color:#fff; float:right; text-align:center; text-decoration:none;}
+
+  /*  17.AgreeCloseTrading
+ ------------------------------------------------------------------ */
+
+ /* 17.1 CONTENT PRIMARY ------------ */
+div#agreeclosetrading {background:#fff; padding:18px 14px 16px 16px;}
+div#agreeclosetrading div#act-in {border:1px solid #e5e5e5; height:954px;}
+div#agreeclosetrading div#act-in p.ts{font: 14px "Microsoft YaHei","微软雅黑"; color:#333; text-align:center; margin-top:30px;}
+div#act-in table {position:relative; border-collapse: separate; border-spacing:0 25px; margin:20px auto 0;}
+div#act-in table th {font: 14px "Microsoft YaHei","微软雅黑"; color:#666; text-align:right;}
+div#act-in table th.top {vertical-align:top}
+div#act-in table td {height:41px; line-height:41px; }
+div#act-in table td  {height:41px; line-height:41px; }
+div#act-in table td span.ts {display:block; position:absolute; width:300px; right:5px; top:292px; font: 12px/13px "Sim Sun","宋体"; color:#656565;}
+div#act-in table td > *:first-child {margin-left:20px;}
+div#act-in table td > label.fir {margin-right:100px;}
+div#act-in table td > label {margin-left:10px; font-family: "Microsoft YaHei","微软雅黑"; color:#666;}
+div#act-in table td  input.f_input,
+div#act-in table td  span.f_input {display:block; width:221px; height:35px; border:1px solid #E0E0E0; margin-left:20px;padding-left:10px; background:url(107.gif) no-repeat 160px center; position:relative; margin-top:4px;background:#f5f5f5; font: 14px "Sim Su","宋体"; color:#666; line-height:35px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+div#act-in table td textarea {width:559px; height:208px; resize:none; border:1px solid #E0E0E0; font: 14px "Microsoft YaHei","微软雅黑"; color:#666; background:#f5f5f5}
+div#act-in div.choose {width:452px; margin: 0 auto;}
+
+div#act-in div.choose button {width:120px; height:44px; font: 14px "Microsoft YaHei","微软雅黑"; background:#1FB5EF; float:left; color:#fff;}
+div#act-in div.choose a{display:block; width:120px; height:44px; font: 14px/44px "Microsoft YaHei","微软雅黑"; background:#1FB5EF; color:#fff; text-align:center; float:left; text-decoration:none;}
+div#act-in div.choose a{margin-left:30px;}
+div#act-in div.choose a:first-child{margin-left:0;}
+  /*  18.ModifyConditions
+ ------------------------------------------------------------------ */
+
+ /* 18.1 CONTENT PRIMARY ------------ */
+div#modifyconditions {background:#fff; padding:18px 14px 16px 16px;}
+div#modifyconditions div#mc-in {border:1px solid #e5e5e5; height:1230px;}
+div#modifyconditions div#mc-in p.ts{ padding:0 30px;font: 14px "Microsoft YaHei","微软雅黑"; color:#333; text-align:center; margin-top:30px;}
+div#mc-in table {position:relative; border-collapse: separate; border-spacing:0 25px; margin:20px auto 0;}
+div#mc-in table th {font: 14px "Microsoft YaHei","微软雅黑"; color:#666; text-align:right;}
+div#mc-in table th.top {vertical-align:top}
+div#mc-in table td {height:41px; line-height:41px; }
+div#mc-in table td  {height:41px; line-height:41px; }
+div#mc-in table td span.ts {display:block; position:absolute; width:300px; right:5px; top:292px; font: 12px/13px "Sim Sun","宋体"; color:#656565;}
+div#mc-in table td > *:first-child {margin-left:20px;}
+div#mc-in table td > label.fir {margin-right:100px;}
+div#mc-in table td > label {margin-left:10px; font-family: "Microsoft YaHei","微软雅黑"; color:#666;}
+div#mc-in table td > div {position:relative;}
+div#mc-in table td > div div.scroll {position:absolute; width:47px; height:208px; right:0; top:0; background:url(../images/RNG/textscrollbar.gif) no-repeat;}
+div#mc-in table td  input.f_input,
+div#mc-in table td  span.f_input {display:block; width:221px; height:35px; border:1px solid #E0E0E0; margin-left:20px;padding-left:10px; background:url(107.gif) no-repeat 160px center; position:relative; margin-top:4px;background:#f5f5f5; font: 14px "Sim Su","宋体"; color:#666; line-height:35px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+div#mc-in table td textarea {width:559px; height:208px; resize:none; border:1px solid #E0E0E0; font: 14px "Microsoft YaHei","微软雅黑"; color:#666; background:#f5f5f5}
+div#mc-in table td textarea.short {width:508px; height:203px; padding-right:47px; resize:none; border:1px solid #E0E0E0; font: 14px "Microsoft YaHei","微软雅黑"; color:#666; background:#f5f5f5}
+div#mc-in div.choose {width:385px; margin: 0 auto;}
+
+div#mc-in div.choose button {width:120px; height:44px; font: 14px "Microsoft YaHei","微软雅黑"; background:#1FB5EF; float:left; color:#fff;}
+div#mc-in div.choose a {display:block; width:120px; height:44px; font: 14px/44px "Microsoft YaHei","微软雅黑"; background:#1FB5EF; color:#fff; float:right; text-align:center; text-decoration:none;}
+button.upfiles {display:inline-block; width:78px; height:39px; background:#1FB5EF; vertical-align:top; float:left; font: 14px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; margin-top:4px; margin-left:6px;}
+  /*  19.EvaluateTask
+ ------------------------------------------------------------------ */
+
+ /* 19.1 CONTENT PRIMARY ------------ */
+div#evaluatetask {background:#fff; padding-bottom:63px; padding-top:89px;}
+div#evaluatetask div#mc-in {border:1px solid #e5e5e5; height:1230px;}
+div#evaluatetask div#mc-in p.ts{ padding:0 30px;font: 14px "Microsoft YaHei","微软雅黑"; color:#333; text-align:center; margin-top:30px;}
+div#evaluatetask div#et-in {margin:0 auto; width:832px;}
+div#evaluatetask div#et-in div.l{ position:relative; float:left; width:219px; height:236px; border:1px solid #e5e5e5; padding:16px 6px 16px 16px; }
+div#evaluatetask div#et-in div.l hr {border:0; height:0; border-bottom: 1px dotted #D4D4D4; margin-top:12px;}
+div#evaluatetask div#et-in div.l img {width:88px; height:88px;}
+div#evaluatetask div#et-in div.l .rwbt {display:inline-block; width:113px; margin-left:13px; font:bold 13px "Microsoft YaHei","微软雅黑"; color:#434343; vertical-align:3px;}
+div#evaluatetask div#et-in div.r{float:left; margin-left:60px;}
+div#evaluatetask div#et-in div.l p.gdg {font:bold 13px "Microsoft YaHei","微软雅黑"; color:#434343; margin-top:11px;}
+div#evaluatetask div#et-in div.l p.gdg span.redb {font:bold 18px "Microsoft YaHei","微软雅黑"; color:#E50011;}
+div#evaluatetask div#et-in div.l p.gdg > span:first-child {display:inline-block; width: 68px; vertical-align:top;}
+div#evaluatetask div#et-in div.l p.gdg > span:last-child {display:inline-block; width: 151px; font-weight:300; vertical-align:top;}
+div#evaluatetask div#et-in div.r p {font: 14px "Microsoft YaHei","微软雅黑"; color:#434343; font-weight:normal; font-size:13px;}
+div#evaluatetask div#et-in div.r p label {margin-left:10px;}
+div#evaluatetask div#et-in div.r p label:first-of-type{margin-left:32px;}
+div#evaluatetask div#et-in div.r p .star {display:inline-block;  padding-left:23px; background: url(../images/RNG/star.png) no-repeat center left; font:bold 14px "Microsoft YaHei","微软雅黑"; color:#434343;}
+div#evaluatetask div#et-in div.r p .speed {display:inline-block; margin-top:13px; padding-left:23px; background: url(../images/RNG/speed.png) no-repeat center left; font:bold 14px "Microsoft YaHei","微软雅黑"; color:#434343;}
+div#evaluatetask div#et-in div.r p .sevice {display:inline-block; margin-top:17px; padding-left:23px; background: url(../images/RNG/sevice.png) no-repeat center left; font:bold 14px "Microsoft YaHei","微软雅黑"; color:#434343;}
+div#evaluatetask div#et-in div.l .page{ position:absolute; width:22px; height:22px; background:#fff url(../images/RNG/page.png) no-repeat; right:-1px; top:-1px;}
+div#evaluatetask div#et-in div.r .textarea{width:529px; margin-top:23px; height:146px; background:#E9E8E8;}
+div#evaluatetask div#et-in div.r .textarea textarea { border:0; margin-left:6px; margin-top:6px; resize:none; width:510px; height:109px;  font: 13px "SimSun","宋体"; color:#949494; background:#fff url(../images/RNG/pen.png) no-repeat 2px 2px;}
+div#evaluatetask div#et-in div.r .textarea .wxts {font: 12px "SimSun","宋体"; color:#6F6F6F; margin-left:7px; margin-top:-3px;}
+div#evaluatetask div#et-in div.r .textarea .wxts span {font:bold 13px "Microsoft YaHei","微软雅黑"; color:#303030;}
+div#evaluatetask div#et-in button.pl_btn {width:115px; height:31px; background:#20B6F0; font:bold 13px "Microsoft YaHei","微软雅黑"; color:#fff; margin-top:47px; margin-left:112px;}
+ /*  20.CreditPay
+ ------------------------------------------------------------------ */
+ /* 20.1 CONTENT PRIMARY ------------ */
+.red{color:#E50011; }
+.redb {color:#E50011; font-weight:700; font-size:18px;}
+div#pay {background:#fff; padding-top:73px; padding-bottom:40px;}
+div#pay p.title {font: bold 18px "Microsoft YaHei","微软雅黑"; color:#333; margin-top:53px; margin-left:197px;}
+div#pay p.tp,
+div#pay > table,
+div#pay > div {width:848px; margin-right:auto; margin-left:auto;}
+div#pay div.caifu {width:848px; height:88px; background: url(../images/RNG/line.gif) no-repeat center 0; margin: 0 auto;}
+div#pay div.caifu > div {float:left; margin-top:2px; margin-left:81px;}
+div#pay div.caifu > div.rcf {float:right; margin-top:2px; margin-right:88px;}
+div#pay div.caifu > div img {display:block; float:left; margin-top:5px; margin-right:25px;} 
+div#pay div.caifu > div img.rimg {display:block; float:left; margin-top:13px; margin-right:43px;} 
+div.caifu > div > div { float:left;}
+div.caifu > div > div p{ font: 14px "Microsoft YaHei","微软雅黑"; color:#333; margin-bottom:10px;}
+div.caifu > div > div p span{ font: 14px "SimSun","宋体"; color:#333;}
+div#pay > table {margin:47px auto 0;}
+div#pay > table tr th {height:37px; width:20%; font: 14px "Microsoft YaHei","微软雅黑"; color:#333; text-align:center; background:#7DCDF3;}
+div#pay > table tr td {height:34px; width:20%; font: 13px "SimSun","宋体"; color:#333; text-align:center; border-bottom:1px dotted #A0A0A0;}
+div#pay > table tr td.red{ color:#E50011;}
+div#pay p.tp {font: 13px "SimSun","宋体"; color:#333; text-align:right; margin-left:84px; margin-top:11px;}
+div#pay p.tp > span {font: bold 18px "Microsoft YaHei","微软雅黑"; color:#E50011; margin-left:-6px;}
+
+div#pay > div.fs {border: 1px solid #e5e5e5; margin-top:15px;}
+div#pay > div.fs p.zfbtn {margin-top: 16px; margin-bottom: 18px; text-align:center;}
+div#pay > div.fs div.title{height:30px; background:#6599FF; font: bold 14px/30px "Microsoft YaHei","微软雅黑"; color:#fff; padding-left:20px;}
+div#pay > div.fs div.cfzf {margin-top:36px; margin-left:58px;}
+div#pay > div.fs div.cfzf span.sycf {font: 14px "Microsoft YaHei","微软雅黑"; color:#333; margin-left:5px;}
+div#pay > div.fs div.cfzf span.cfye { position:relative; display:inline-block; width:173px; height:35px; background:#F39800 url(../images/RNG/caifuicon.png) no-repeat 8px center; font: 13px/35px "Microsoft YaHei","微软雅黑"; color:#fff; vertical-align:middle;margin-left:10px;}
+div#pay > div.fs div.cfzf span.cfye span.arrows { display:block; position:absolute; width:4px; height:8px; background: url(../images/RNG/arrows.gif) no-repeat; top:13px; left:-4px;}
+div.zff {margin-top:20px; margin-left:83px; font: 14px "Microsoft YaHei","微软雅黑"; color:#333;}
+div.zff p {margin-top:15px;}
+div.zff span {margin-left:47px;}
+div.zff span input{border: 1px solid #cd4237; height:20px; width:164px; margin-left:8px; font: 12px "SimSun","宋体"; color:#9F9F9F; padding-left:8px;}
+div.zfcard {width:687px; height:159px; border:1px solid #e5e5e5; margin:8px auto;}
+div.zfcard div.czfc{height:33px; width:inherit;}
+div.zfcard div.czfc{height:33px; background:#b3d465;}
+div.zfcard div.czfc > div{ float:left;width:171px; height:inherit; border-right:1px solid #fff; font: 14px/33px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center;}
+div.zfcard div.czfc > div.current{ background:#8FC31F;}
+div.zfcard div.czfc > div:last-child{border-right:0;}
+div#pay button.ljzf{font:bold 18px "Microsoft YaHei","微软雅黑"; color:#fff; width:120px; height:35px; background:#00B6ED; margin:0 auto;}
+div#pay div.zfcard ul.bank {margin-right:-32px; margin-left:23px;}
+div.zfcard ul.bank li {float:left;margin-right:32px; margin-top: 11px;}
+
+
+  /*  21.MyTask(creditpay)
+ ------------------------------------------------------------------ */
+
+ /* 21.1 CONTENT PRIMARY ------------ */
+ div#mytaskcp {background:#fff; padding-bottom:76px;}
+ div#mytaskcp p.ts1,
+ div#mytaskcp p.ts2 {font: normal 12px "SimSun","宋体"; color:#999;}
+ div#mytaskcp p.ts1 {margin-left:228px; margin-top:78px;}
+ div#mytaskcp p.ts1 span {margin-left:8px;}
+ div#mytaskcp p.ts2 {margin-top:6px; margin-left:296px;}
+ div#mytaskcp p.waitpay {text-align:center; margin: 87px auto 124px; font:bold 24px "Microsoft YaHei","微软雅黑"; color:#3D3C3C;}
+ div#mytaskcp a.taskcp {display:block; width:120px; height:44px; margin:0 auto; font:bold 18px/44px "Microsoft YaHei","微软雅黑"; color:#FFF; background:#1FB5EF; text-align:center; text-decoration:none;}
+ div#mytaskcp div.plog {}
+ div#mytaskcp div.plog > div{ float:left; margin-top:20px; box-sizing:border-box;}
+ div#mytaskcp div.plog > div.box1{width:515px; height:231px; margin-left:20px; background:#f9f9f9;}
+ div#mytaskcp div.box21 p.pje,
+ div#mytaskcp div.box22 p.pje{font: 14px "Microsoft YaHei","微软雅黑"; color:#666; margin-top:21px; margin-left:19px;}
+ div#mytaskcp div.box21 p.je,
+ div#mytaskcp div.box22 p.je{font: 18px "Microsoft YaHei","微软雅黑"; color:#3d3c3c; margin-top:4px; margin-left:21px;}
+ div#mytaskcp div.box21 p.je span,
+ div#mytaskcp div.box22 p.je span {font-size:24px;}
+ div#mytaskcp div.box3 p.zezf {font:bold 14px "Microsoft YaHei","微软雅黑"; color:#fff; margin-top:80px; margin-left:30px;}
+ div#mytaskcp div.box3 p.zje {font:bold 18px "Microsoft YaHei","微软雅黑"; color:#fff; margin-top:6px; margin-left:30px;}
+ div#mytaskcp div.box3 p.zje span {font-size:24px;}
+ div.box1 div.title {height:38px; background:#CBCBCB; text-align:center; font:bold 14px/38px "Microsoft YaHei","微软雅黑"; color:#fff;}
+ div.box1 div.taskcont {border:2px solid #e1e1e1; border-top:0;}
+ div.taskcont {padding-bottom:9px;}
+ div.taskcont img {display:block; float:left; margin-left:20px; margin-top:20px;}
+ div.taskcont ul {float:left; width:300px;  margin-left:23px; margin-top:9px; font: 12px "SimSun","宋体"; color:#999;}
+ div.taskcont ul li { display:block; height:22px; border-bottom: 2px dotted #ccc; margin-top:11px;}
+ div.taskcont ul li:last-child { border-bottom:0;}
+ div.taskcont ul li span { color:#3d3c3c; margin-left:6px;}
+ div.taskcont ul li a {margin-left:6px;}
+ div#mytaskcp div.plog > div.box2{width:257px; height:231px; margin-left:20px;}
+ div#mytaskcp div.plog > div div.box22,
+ div#mytaskcp div.plog > div div.box21{width:257px; height:106px;border:2px solid #e1e1e1;  box-sizing:border-box; background:#f9f9f9;}
+ div#mytaskcp div.plog > div div.box22 {margin-top:19px;}
+ div#mytaskcp div.plog > div.box3 {width:246px; height:231px; background:#ED8234; margin-left:20px;}
+
+ /*  22.Buy12dSpace
+ ------------------------------------------------------------------ */
+
+ /* 22.1 CONTENT PRIMARY ------------ */
+div#buy12dspace {background:#fff; padding-bottom:71px;}
+div#buy12dspace p.fets {font: 14px "Microsoft YaHei","微软雅黑"; color:#333; margin-left:201px}
+div#buy12dspace p.fetsb {font: 12px "SimSun","宋体"; color:#000; margin-left:201px; margin-top:23px;}
+div#buy12dspace p.fetsb button.goum{ width:84px; height:30px; font:bold 18px "Microsoft YaHei","微软雅黑"; color:#fff; margin-left:20px; background:#00B6ED; vertical-align:middle;}
+div#buy12dspace p.fets span {margin-left:5px;}
+div#buy12dspace p.fets del {margin-left:5px;}
+div#buy12dspace p.title {font: bold 18px "Microsoft YaHei","微软雅黑"; color:#333; padding-top:53px; margin-left:197px;}
+div#buy12dspace p.title img{vertical-align:-6px; margin-right:10px;}
+div#buy12dspace p.title > span{font: bold 18px "Microsoft YaHei","微软雅黑"; color:#84CBC8; margin-left:5px;}
+div#buy12dspace p.title > span span{font: bold 28px "Microsoft YaHei","微软雅黑"; color:#84CBC8;}
+div#buy12dspace p.scroll {font: 14px "Microsoft YaHei","微软雅黑"; color:#333; margin-top:83px; text-align:center;}
+div#buytime {width:679px; height:85px; border:1px solid #e5e5e5; margin:62px auto 0;}
+div#buytime label{font: bold 14px "Microsoft YaHei","微软雅黑"; color:#626262; margin-right:106px;}
+div#buytime label:last-child{margin-right:0;}
+div#buytime div.title{height:30px; background:#6599FF; font: bold 14px/30px "Microsoft YaHei","微软雅黑"; color:#fff; padding-left:20px; margin-bottom:21px;}
+
+ /*  23.SevicePlazza
+ ------------------------------------------------------------------ */
+ /* 23.1 CONTENT PRIMARY ------------ */
+ div#sevicesquare {padding:20px 20px 358px; background:#fff; margin-top:20px;}
+ div#sevicesquare div.main-content {width:783px; float:left;}
+ div#sevicesquare div.main-content div#box1 { position:relative; padding:18px 18px 71px;}
+ div#sevicesquare div.main-content div#box1 img#imagesi {width:321px; height:321px; float:left; margin-right:20px;}
+ div#sevicesquare div.main-content div#box1 div#productinfo {position:relative; width:400px; float:left; height:200px;}
+ div#sevicesquare div.main-content div#box1 div#productinfo .leftarrow {position:absolute; width:18px; height:37px; background: url(../images/RNG/leftarrow.png) no-repeat; top:7px; right:-40px;}
+
+ div#sevicesquare div.main-content div#box1 div#productinfo p.productinfo-title {font: bold normal 16px/25px "Microsoft YaHei"; letter-spacing:0.5px; color:#333;  padding-bottom:7px;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-price {height:80px; margin-top:7px; background:#F55F59;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-general {height:81px; border:1px solid #E5E5E5; border-top:0;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-opera {margin-top:20px;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-opera a {display:block; width:192px; height:44px; text-align:center; font: bold 18px/44px "Microsoft YaHei"; color:#fff; background:#1FB5EF; text-decoration:none; }
+ div#sevicesquare div.main-content div#box1 div#productinfo  p.sevicewords {font:normal 12px "Sim Sun","宋体"; color:#999; margin-top:17px;}
+ div#sevicesquare div.main-content div#box1 div#productinfo  p.sevicewords span {color:#656565; margin-left:11px;}
+
+ div#sevicesquare div.main-content div#box1 div.starshare { position:absolute; bottom:0; left:0; height:54px; width:100%; border-top:1px solid #E5E5E5; line-height:54px; font:normal 12px "Sim Sun","宋体"; color:#999; background:#fafafa;}
+ div#sevicesquare div.main-content div#box1 div.starshare span.stars {display:inline-block; padding-left:18px; background:url(../images/icon/star.png) no-repeat left center; margin-top:19px; margin-left:21px;}
+ div#sevicesquare div.main-content div#box1 div.starshare span.shensu {display:inline-block; padding-left:18px; background:url() no-repeat left center; margin-top:19px; margin-left:5px; line-height:16px;}
+ div#sevicesquare div.main-content div#box1 div.starshare span.xuzhz {display:inline-block; height:14px; padding-left:22px; background:url(../images/RNG/lookforparter.png) no-repeat left center; margin-left:25px;}
+
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-price p:first-child {font:bold 24px "Arial"; color:#fff; text-align:center; padding-top:19px;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-price p:last-child {font:normal 12px "Sim Sun","宋体"; color:#fff; text-align:center; margin-left:-65px; margin-top:2px;}
+
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-general div {width:132px; height:69px; border-right: 1px dotted #ccc; float:left; margin-top:4px; text-align:center;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-general div:last-child {border:0;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-general div p {font:normal 24px "Arial"; color:#F45F59; margin-top:12px;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-general div img {margin-top: 13px; margin-bottom:8px;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-general div p.green {color:#2fa613;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-general div p.blue {color:#B7CBF7;}
+ div#sevicesquare div.main-content div#box1 div#productinfo div.productinfo-general div p:last-child {font:normal normal 12px/12px "SimSun"; color:#999;}
+ 
+
+ div#sevicesquare div.main-content div#box2 {border:1px solid #E5E5E5; margin-top:16px;}
+  div#sevicesquare div.main-content div#box3 {border:1px solid #92B3F4; margin-top:16px;}
+
+ div#sevicesquare div.main-content div#box1 {border:1px solid #E5E5E5;}
+
+ div#sevicesquare div.main-content div#box2 h3,
+ div#sevicesquare div.main-content div#box3 h3,
+ div#sevicesquare div.main-content div#box6 h3,
+ div#sevicesquare div.main-content div#box5 h3 {height:30px; padding-left:18px; background:#6e99f0; font: normal bold 14px/30px "微软雅黑"; color:#fff;}
+
+ div#sevicesquare div.main-content div#box6 {margin-top:24px;}
+ div#sevicesquare div.main-content div#box3 p,
+ div#sevicesquare div.main-content div#box5 p,
+ div#sevicesquare div.main-content div#box2 p {font: normal 12px/30px "SimSun","宋体"; padding:8px 21px 11px; color:#333;}
+
+ div#sevicesquare div.main-content div#box5 a.pl-btn {display:block; background:#20b6f0; width:80px; height:35px; font:normal 18px/35px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center; text-decoration:none; margin:0px auto;}
+ div#sevicesquare div.main-content div#box5 table td.ftd{text-align:left;}
+ div#sevicesquare div.main-content div#box5 table td.ftd a{margin-left:20px;}
+ div#sevicesquare div.main-content div#box5 table td a.ffh,
+ div#sevicesquare div.main-content div#box6 table td a.ffh {margin-left:-34px; text-align:left;}
+ div#sevicesquare div.main-content div#box5 table th span.fth,
+ div#sevicesquare div.main-content div#box6 table th span.fth {margin-left:20px;}
+
+ div#sevicesquare div.main-content div#box5 a.pl-btn {margin-top:12px; margin-bottom:20px;}
+ div#sevicesquare div.main-content div#box6 table,
+ div#sevicesquare div.main-content div#box5 table {width:100%; margin-top:5px; vertical-align:top;}
+ div#sevicesquare div.main-content div#box6 table th,
+ div#sevicesquare div.main-content div#box5 table th {margin-top:5px; border-top:2px solid #6D99EF; background:#DBE5FB; height:30px; font:bold 12px "SimSun","宋体"; color:#333; text-align:left;}
+ div#sevicesquare div.main-content div#box6 table td.orprice {font:bold 14px Arial; color:#EB6000; text-align:left;}
+ div#sevicesquare div.main-content div#box6 table td,
+ div#sevicesquare div.main-content div#box5 table td {border-bottom:1px solid #E5E5E5; font: 12px/30px "SimSun","宋体"; text-align:left; color:#656565;}
+ div#sevicesquare div.main-content div#box5 table td.ssr {text-align:right;}
+ div#sevicesquare div.main-content div#box5 table td.ssr .rmove{margin-right:20px;}
+ div#sevicesquare div.main-content div#box5 table td span.rmove2{margin-right:30px;}
+ div#sevicesquare div.main-content div#box6 table td a {margin-left:20px;}
+ div#sevicesquare div.main-content div#box5 table td.ssl {text-align:left;}
+ div#sevicesquare div.main-content div#box6 table td a.ubsd {overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+
+  div#sevicesquare div.main-content div#box3 div.score{width:110px; height:110px; border-right:1px solid #92B3F4; float:left; font: bold 36px Arial; color:#FF6565; text-align: center;}
+  div#sevicesquare div.main-content div#box3 div.score p.totalrate{padding:0; color:#333; margin-top:15px; margin-bottom:16px; margin-left:-18px; line-height:12px;}
+  div#sevicesquare div.main-content div#box3 div.rate{float:left; line-height:12px;}
+  div#sevicesquare div.main-content div#box3 div.rate p{padding:0; line-height:0; margin-left:15px; margin-top:14px;}
+  div#sevicesquare div.main-content div#box3 div.rate p span.bar{display:inline-block; width:250px; height:12px; margin-left:6px; vertical-align:text-bottom; margin-right:22px; background:#F3F3F3; border-radius:6px;}
+  div#sevicesquare div.main-content div#box3 div.rate p img {vertical-align:bottom; margin-right:5px;}
+  div#sevicesquare div.main-content div#box3 div.rate p span.bar .pink{display:inline-block; width:80%; height:12px;vertical-align:middle; background:#F99FB9; border-radius:6px;}
+  div#sevicesquare div.main-content div#box3 div.rate p span.bar .green{display:inline-block; width:50%; height:12px;vertical-align:middle; background:#B7C99B; border-radius:6px;}
+  div#sevicesquare div.main-content div#box3 div.rate p span.bar .blue{display:inline-block; width:50%; height:12px;vertical-align:middle; background:#B7CBF7; border-radius:6px;}
+  div#sevicesquare div.main-content div#box3 div.rate p span.mark {font: 12px "Microsoft YaHei","微软雅黑"; color:#656565;}
+  div#sevicesquare div.main-content div#box3 div.rate p span.mark {font: 12px "Microsoft YaHei","微软雅黑"; color:#656565;}
+  div#sevicesquare div.main-content div.sevicecomment {background: url(../images/RNG/tablebg.gif) repeat-y left 0; width:inherit; border:1px solid #e5e5e5; margin-top:10px;}
+  div#sevicesquare div.main-content div.sevicecomment p {font: 12px "SimSun","宋体"; color:#333; margin-left:130px; margin-top:14px;}
+  div#sevicesquare div.main-content div.sevicecomment p img {vertical-align:top;}
+  div#sevicesquare div.main-content div.sevicecomment div.judger{width:108px; float:left; background:#F3F3F3; margin-top:-14px; height:100%;}
+  div#sevicesquare div.main-content div.sevicecomment div.judger img{width:60px; height:60px; margin-top:24px; margin-left:24px;}
+  div#sevicesquare div.main-content div.sevicecomment div.judger a{display:block; font: 12px Arial; text-align:center;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p > img,
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p > span {margin-left:6px;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p span.pink,
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p span.green,
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p span.blue {display:inline-block; width:181px; height:24px; vertical-align:middle; font: 12px/24px "SimSun","宋体"; color:#fff;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p span.pink {background:#F99FB9;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p span.green {background:#B7C99B;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p span.blue {background:#B7CBF7;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p.interact {text-align:right; margin-top:14px; margin-bottom:18px;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p.interact span.zan {display:inline-block; height:18px; padding-left:20px; background:url(../images/icon/zan.png) no-repeat left center; line-height:18px; cursor:pointer;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p.interact span.comme {display:inline-block; height:15px; width:27px; margin-right:20px;padding-left:20px; background:url(../images/icon/comment.png) no-repeat left center; vertical-align:middle; cursor:pointer;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p.tags span {margin-left:5px;}
+  div#sevicesquare div.main-content div.sevicecomment div.judge > p.tags span:first-child {margin-left:0;}
+
+ div#sevicesquare div.side-Bar p.sidebart {font:bold 14px "Microsoft YaHei","微软雅黑"; color:#242415; position:relative; margin-bottom:16px;}
+ div#sevicesquare div.side-Bar p.sidebart span {display:inline-block; width:120px; height:2px; background:#CBCBCB; position:absolute; right:0; top:8px;}
+ div#sevicesquare div.side-Bar p.fwsxx {font:12px "SimSun","宋体"; color:#333;}
+ div#sevicesquare div.side-Bar p.fwsxx span.pink {color:#FF6565; font-weight:700; margin-left:5px; margin-right:5px;}
+ div#sevicesquare div.side-Bar p.fwsxx span.green {color:#2FA513; font-weight:700; margin-left:5px; margin-right:5px;}
+ div#sevicesquare div.side-Bar {width:237px; float:right; height:500px;}
+ div#sevicesquare div.side-Bar > div div. {display:block; width:198px; margin:0 auto; background:#fff; padding-bottom:22px;}
+ div#sevicesquare div.side-Bar > div div.fsfg {padding-bottom:0; float:left; width:145px;}
+ div#sevicesquare div.side-Bar > div div.fsfg p:first-child {font:normal 12px/14px "Sim Sun","宋体"; color:#656565; margin-left:7px;}
+ div#sevicesquare div.side-Bar > div div.fsfg p:last-child {font:bold 14px "Sim Sun","宋体"; color:#FF6565; margin-top:5px; margin-left:5px;}
+ div#sevicesquare div.side-Bar > div div img{display:block; margin: 10px auto 0; width:165px; height:165px;}
+ div#sevicesquare div.side-Bar > div p.fwser {font:bold 14px "SimSun","宋体"; color:#333; text-align:center; margin-top:30px;}
+ div#sevicesquare div.side-Bar > div a.lxsr {display:block; width:165px; height:35px; margin:0 auto; background:#1FB5EF; margin-top:16px; color:#fff; text-decoration:none; font: normal 14px/35px "Microsoft YaHei","微软雅黑"; text-align:center;}
+ div#sevicesquare div.side-Bar > div:last-child {margin-top:18px;}
+ div#sevicesquare div.side-Bar > div.sidebar1,
+ div#sevicesquare div.side-Bar > div.sidebar2 {background:#f3f3f3; padding:20px;}
+ div#sevicesquare div.side-Bar > div:last-child p.wdqt {position:relative; font: bold normal 14px/14px "Microsoft YaHei";text-align: left; margin-top:5px; margin-bottom:20px;}
+ div#sevicesquare div.side-Bar > div:last-child p.wdqt span {display:inline-block; width:108px; height:2px; background:#CBCBCB; position:absolute; right:0; top:5px;}
+ div#sevicesquare div.side-Bar > div:last-child ul li {display:block; margin-top:15px; border-bottom:1px dashed #CBCBCB; padding-bottom:12px;}
+ div#sevicesquare div.side-Bar > div:last-child ul li img {display:block; width:48px; height:48px; float:left;}
+ div#sevicesquare div.side-Bar a.roundleft {display:block; width:77px; height:26px; margin: 20px auto 0; text-decoration:none; padding-left:7px; background:#DCDCDC url(../images/icon/roundleft.png) no-repeat 85px; padding-right:23px; font:normal 12px/26px "Sim Sun","宋体"; color:#656565}
+.seviceReply{display:none;width:631px; margin-left:130px; background:#F0F0F0; position:relative;padding:0px 0px 4px 0px;margin-bottom:15px;}
+.seviceSan{ background:url(../images/RNG/seriIcon3.png) left center no-repeat;height:15px;width:14px; position:absolute;top:-15px;right:0;}
+.seviceSans{ background:url(../images/RNG/seriIcon3.png) left center no-repeat;height:15px;width:14px; position:absolute;top:-15px;left:64px;}
+.sevicehui{border:solid 1px #d0d0d0;height:33px;width:565px;padding-left:5px;margin:0 auto; display:block;color:#999; font-family:宋体;font-size:12px;}
+.sevicekong{height:14px;}
+.sevicebtnh{width:52px;height:28px;top:60px;right:30px; position:absolute;}
+.seviceDiaborder{border:solid 1px #ccc;width:36px;height:36px;padding:1px;display:inline-block;}
+.seviceDia{border-top:dashed 1px #ddd;padding:10px 0px;width:572px;margin:0 auto;margin-top:15px; position:relative;}
+.seviceblue{color:#20B6F0;}
+.sevicep{color:#333;font:normal 12px/14px "Sim Sun","宋体";width:504px;margin-bottom:8px;margin-left:11px; line-height:20px; display:inline-block; vertical-align:top;}
+.seviceTime{ position:absolute;left:55px;font:normal 12px/14px "Sim Sun","宋体";color:#999;}
+.seviceZan{position:absolute;right:-10px;color:#333;font:normal 12px/14px "Sim Sun","宋体";}
+.seviceZan .zan{background: url("../images/icon/zan.png") no-repeat scroll left center rgba(0, 0, 0, 0);display: inline-block;height: 18px;line-height: 18px;padding-left: 20px;}
+.seviceZan .comme{display:inline-block; height:15px; width:27px; margin-right:20px;padding-left:20px; background:url(../images/icon/comment.png) no-repeat left center; vertical-align:middle;}
+.sevicequa{margin-top:47px;}
+.seviceDia{font:normal 12px/14px "Sim Sun","宋体";color:#666;}
+.f-btncolor{background:#20B6F0;color:#fff;font-weight:bold;}
+ /*  23.Bail
+ ------------------------------------------------------------------ *//*#EB6147*/
+ /* 23.1 CONTENT PRIMARY ------------ */
+ div#bail { background:#fff; padding-top:62px; padding-bottom:44px;}
+ div#bail-in {width:958px;margin:0 auto;}
+ div#bail1 {height:151px;}
+ div#bail1 .grcf {float:left; width:331px; height:100%; background: #EB6147 url(../images/RNG/fortune.png) no-repeat 92px 34px; font: bold 18px "Microsoft YaHei","微软雅黑"; color:#fff;}
+ div#bail1 .zcf {float:left; width:342px; height:100%; margin-left:12px; font: bold 18px "Microsoft YaHei","微软雅黑"; color:#fff;}
+ div#bail1 .dbj {float:left; width:261px; height:100%; background:#EDEDED; margin-left:12px; font: bold 18px "Microsoft YaHei","微软雅黑"; color:#fff;}
+ div#bail1 .dbj p {font-weight:700; color:#535353;}
+ div#bail1 .dbj p.dbjt {font-size:14px; margin-top:51px; margin-left:50px;}
+ div#bail1 .dbj p.tnum {font-size:18px;}
+ div#bail1 .dbj p.tnum span {font-size:22px; margin-left:49px; margin-top:5px;}
+ div#bail1 .zcf div {width:100%; height:69px; background:#EDEDED;}
+ div#bail1 .zcf div p{color:#535353; font-weight:normal;}
+ div#bail1 .zcf div .zje{font-size:14px; font-weight:700; padding-top:12px; margin-left:49px;}
+ div#bail1 .zcf div .num{font-size:18px; margin-left:48px;}
+ div#bail1 .zcf div .num span {font-size:22px;}
+ div#bail1 .zcf div.last {margin-top:12px;}
+ div#bail1 .grcf p { margin-top:90px; margin-left:194px;}
+ div#bail2 {height:59px; margin-top:24px; border:1px solid #E5E5E5; font:14px "Microsoft YaHei","微软雅黑"; color:#333;}
+ div#bail2 {height:59px; margin-top:24px; border:1px solid #E5E5E5; font:14px "Microsoft YaHei","微软雅黑"; color:#333;}
+ div#bail2 p {margin-left:53px; margin-top:17px;}
+ div#bail2 input,
+ div#bail3 input {border: 1px solid #cd4237; height:22px; width:138px; margin-left:3px; margin-right:5px; font: 12px "SimSun","宋体"; color:#9F9F9F; padding-left:8px; vertical-align:middle;}
+ div#bail3 {height:199px; margin-top:24px; border:1px solid #E5E5E5;}
+ div#bail3 p.zffs {height:30px; padding-left:21px; background:#6599FF; font: bold 14px/30px "Microsoft YaHei","微软雅黑"; color:#fff;}
+ div#bail3 p.cfzf { text-align:center; font:14px "Microsoft YaHei","微软雅黑"; color:#333;}
+ div#bail3 p.cfzf span.cfye{font:14px "Microsoft YaHei","微软雅黑"; color:#333; position:relative; display:inline-block; padding-right:10px; height:35px; background:#F39800 url(../images/RNG/caifuicon.png) no-repeat 8px center; font: 13px/35px "Microsoft YaHei","微软雅黑"; color:#fff; vertical-align:middle;margin-left:10px;}
+ div#bail3 p.cfzf span.cfye .arrows {display:block; position:absolute; width:4px; height:8px; background: url(../images/RNG/arrows.gif) no-repeat; top:13px; left:-4px;}
+ div#bail3 button {display:block; font:bold 18px "Microsoft YaHei","微软雅黑"; color:#fff; width:120px; height:35px; background:#00B6ED; margin:30px auto 0;}
+ div#bail3 table {margin:10px auto; font:14px "Microsoft YaHei","微软雅黑"; color:#333; border-collapse:separate; border-spacing:16px 14px;}
+ div#bail3 table .zm{font: 14px "Sim Su","宋体"; color:#666; margin-left:-15px;}
+ div#bail3 table .bank{width:135px; height:28px; margin-left:-15px;}
+ div#bail3 input.gery {border:1px solid #E0E0E0; background:#F5F5F5; height:25px;}
+ div#bail3 label {font:14px "Microsoft YaHei","微软雅黑"; color:#333;}
+ div#bail3 .tss1,
+ div#bail3 .tss2,
+ div#bail3 .tss3 {font: normal 12px/18px "SimSun","宋体"; color:#999; text-align:left;}
+ /*  25.ComplainPlazza
+ ------------------------------------------------------------------ *//*#EB6147*/
+ /* 25.1 CONTENT PRIMARY ------------ */
+ div#complainplazza {}
+ div#cpla-in {padding-top:30px; background:#fff; margin-top:19px; padding-bottom:40px;}
+ div.cta {position:absolute; top:-1px; left:-14px; width:185px; height:48px; background:#6F99EF; z-index:5; font: 26px/48px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center;}
+ div.cta:after {content:"";position:absolute; top:48px; width:0; height:0; left:-1px; border-style:solid; border-color:#4270CC transparent transparent transparent; border-width:14px 0 0 14px; z-index:4;}
+ div#cpla1,
+ div#cpla2,
+ div#cpla3,
+ div#cpla4,
+ div#cpla5 {position:relative; width:1000px; margin:0 auto; border:1px solid #E5E5E5;}
+ div#cpla2 dd,
+ div#cpla1 {font:12px "Sim Su","宋体"; color:#656565;}
+ div#cpla1 h3{font:bold 18px "Microsoft YaHei","微软雅黑"; color:#333; text-align:center; margin-top:26px;}
+ div#cpla1 .date,
+ div#cpla1 .compler {color:#333; margin-left:28px; margin-top:24px;}
+ div#cpla1 .date {margin-top:10px;}
+ div#cpla1 .date .tj{letter-spacing:3px;}
+ div#cpla1 div.article {width:947px; margin:21px auto 28px;}
+ div#cpla1 div.article p{line-height:24px; text-indent:2em;}
+ div#cpla2 {margin-top:20px; background:#F0F0F0; padding-bottom:26px;}
+ div#cpla2 img {display:block; width:200px; height:200px; margin-top:29px; margin-left:29px; float:left;}
+ div#cpla2 dl {display:block; float:left; margin-left:16px; margin-top:33px;}
+ div#cpla2 dt {font:bold 18px/24px "Microsoft YaHei","微软雅黑"; color:#333;}
+ div#cpla2 dt .red{color:#DF4541; font-weight:normal; font-family: Arial;margin-bottom:5px; margin-left:10px;}
+ div#cpla2 dd {margin-top:24px;}
+ div#cpla2 dd .neir{display:inline-block; width:674px;vertical-align:text-top; line-height:20px;}
+ div#cpla3 {position:relative; margin-top:37px; border:0;}
+ div#cpla3 .vs1{font:bold 40px Arial; color:#333; text-align:center; line-height:25px; background:url(../images/RNG/mcrossline.png) no-repeat center 7px;}
+ div#cpla3 .bssr,
+ div#cpla3 .ssr {float:left; width:280px; height:40px; background:#DE4441; position:relative;font: 18px/40px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center;}
+ div#cpla3 .bssr {float:right; background:#0067B5;}
+ div#cpla3 .bssr:after,
+ div#cpla3 .ssr:after {content:""; position:absolute; width:0; height:0; right:-18px; bottom:0; border-style:solid; border-color:transparent transparent #C73028 transparent; border-width: 0 18px 18px 0; }
+ div#cpla3 .bssr:after {left:-18px; bottom:0; border-color:transparent transparent #004B84 transparent; border-width: 0 0 18px 18px; }
+ div#cpla3 .jssr {margin-top:15px; padding-bottom:10px; background:url(../images/RNG/sline.png) repeat-y center 0;}
+ div#cpla3 .jssr .jtssr {float:left;}
+ div#cpla3 .jssr .jtbss {float:right;}
+ div#cpla3 ul.jtbss li,
+ div#cpla3 .jssr .ssrcard {width:296px; border:2px solid #DF4541; height:156px; background:#fff;}
+ div#cpla3 ul.jtbss li img,
+ div#cpla3 .jssr .ssrcard img {display:block; width:120px; height:120px; margin-top:18px; margin-left:18px; float:left;}
+ div#cpla3 ul.jtbss li dl,
+ div#cpla3 .jssr .ssrcard dl {float:right; padding-left:12px; background:#ECECEC; height:100%; width:126px;}
+ div#cpla3 ul.jtbss li dl dt a,
+ div#cpla3 .jssr .ssrcard dl  dt a {display: inline-block; padding-right:20px; font:bold 14px "Microsoft YaHei","微软雅黑"; color:#333; background: url(../images/RNG/msg.png) no-repeat center right;}
+ div#cpla3 ul.jtbss li dl dd,
+ div#cpla3 .jssr .ssrcard dl dd {font:12px "SimSun","宋体"; color:#656565; margin-top:9px;}
+ div#cpla3 .jssr .ssrcard dl dd .redb {font-weight:700; color:#FF6565; margin-right:5px; font-size:12px;}
+ div#cpla3 .jtbss dl dd .redb {font-weight:700; color:#FF6565; margin-right:5px; font-size:12px;}
+ div#cpla3 .jssr a.ccbtn {display:block; width:300px; height:40px; text-align:center; background:#DF4541; font:18px/40px "Microsoft YaHei","微软雅黑"; color:#fff; text-decoration:none; margin-top:8px;}
+ div#cpla3 ul.jtbss{float: right; /*border-left:1px solid #CBCBCB; width:50%;*/}
+ div#cpla3 ul.jtbss li {position:relative; border:2px solid #0067B5;}
+ div#cpla3 ul.jtbss li:after {content:""; position:absolute; width:12px; height:12px; background:#CBCBCB; border-radius:50%; top:45%; left:-208px;}
+ div#cpla3 ul.jtbss li:nth-child(n+2) {margin-top:7px;}
+ div#cpla3 div.zchil { margin:40px auto 0; width:418px; font:bold 40px/100px Arial; text-align:center; color:#CBCBCB;}
+ div#cpla3 div.scbar{position:relative; width:850px; height:20px; margin:20px auto 0;}
+ div#cpla3 div.scbar .rbar {float:left; height:inherit; background:#FD5956; border-right:1px solid #fff;}
+ div#cpla3 div.scbar .bbar {float:right; height:inherit; background:#007FDF;}
+ div#cpla3 div.scbar span { font:30px Aparajita; color:#999; top:-10px;}
+ div#cpla3 div.scbar span.rnum {position:absolute; left: -62px; top:-5px;}
+ div#cpla3 div.scbar span.bnum {position:absolute; right: -62px; top:-5px;}
+ div#cpla3 div.zchil div.blue,
+ div#cpla3 div.zchil div.red {float:left; width:140px;}
+ div#cpla3 div.zchil div.blue {float:right;}
+ div#cpla3 .ccomments { margin-top:50px; width:100%; bottom:0; left:0; height:210px; background:#EFEFEF; font: 14px/40px "Microsoft YaHei","微软雅黑"; color:#d6d6d6;}
+ div#cpla3 .ccomments p {width:920px; margin:15px auto 0;}
+ div#cpla3 .ccomments textarea {display:block; width:920px; height:78px; background:#fff; resize:none; margin:0 auto; border:1px solid #CBCBCB;}
+ div#cpla3 .ccomments button {display:block; width:114px; height:40px; font: bold 18px "Microsoft YaHei","微软雅黑"; color:#fff; background:#1FB5EF; margin:15px auto; cursor:pointer;}
+ div.zchil div.blue div.num,
+ div.zchil div.red div.num{height:59px; background:#FB6663; text-align:center; font:30px/59px Arial; color:#fff; border-radius:6px 6px 0 0;}
+ div.zchil div.blue div.num {background:#2092EA;}
+ div.zchil div.blue a.name,
+ div.zchil div.red a.name{display:block; height:40px; margin-top:3px; background:#E44A46; text-align:center; font:bold 18px/40px "Microsoft YaHei","微软雅黑"; color:#fff; border-radius: 0 0 6px 6px; text-decoration:none;}
+ div.zchil div.blue a.name {background:#0177D1;}
+ div#cpla4 {margin-top:60px;background:#EFEFEF;}
+ div#cpla4 .chenshu {width:916px; margin:88px auto 0; position:relative;}
+ div#cpla4 .chenshus {width:916px; margin:44px auto 0; position:relative;}
+ div#cpla4 .chenshu .avatar {position:absolute; top:-29px; left:0;}
+ div#cpla4 .chenshus .avatar {position:absolute; top:-29px; right:0;}
+ div#cpla4 .chenshu .avatar a,
+ div#cpla4 .chenshus .avatar a{font:14px/30px "SimSun","宋体"; color:#1FB5EF;}
+ div#cpla4 .chenshu .avatar a:last-child,
+ div#cpla4 .chenshus .avatar a:last-child{display:block; width:60px; height:60px;}
+ div#cpla4 a.hotcom {display:block; width:120px; height:26px; background:#DCDCDC; margin:30px auto; font: 12px/26px "SimSun","宋体"; color:#656565; text-align:center; text-decoration:none;}
+ div#cpla4 .csbr {position:relative; width:831px; border:2px solid #F56761; float:right; background: #fff;}
+ div#cpla4 .csbl {position:relative; width:831px; border:2px solid #0177D1; float:left; background:#fff;}
+ div#cpla4 .csbr .brarrow {position:absolute; width:19px; height:32px; background:url(../images/RNG/rbarrow.png) no-repeat center left; left:-18px; top:12px;}
+ div#cpla4 .csbl .barrow {position:absolute; width:19px; height:28px; background:url(../images/RNG/barrow.png) no-repeat center right; right:-16px; top:12px;}
+ div#cpla4 .csbl .zwen,
+ div#cpla4 .csbr .zwen {font:14px "SimSun","宋体"; color:#333; width:800px; margin:14px auto 0;}
+ div#cpla4 .csbl .info,
+ div#cpla4 .csbr .info {font:12px/18px Arial,"Microsoft YaHei","微软雅黑"; color:#999; margin:20px auto 0; width:800px;  padding-bottom:10px;}
+ div#cpla5 ul#vsvi li p.zsff span.zan,
+ div#cpla4 .csbl .info span.zan,
+ div#cpla4 .csbr .info span.zan {display:inline-block; height:18px; padding-left:20px; background:url(../images/icon/zan.png) no-repeat left center; line-height:18px; font-family:"SimSun"; }
+ div#cpla5 ul#vsvi li p.zsff span.comment,
+ div#cpla4 .csbl .info span.comment,
+ div#cpla4 .csbr .info span.comment {display:inline-block; height:15px; padding-left:20px; background:url(../images/icon/comment.png) no-repeat left center; margin-left:13px; vertical-align:middle; font-family:"SimSun"; line-height:12px;}
+ div#cpla5 { margin-top:20px; padding-bottom:70px; background:#fff;}
+ div#cpla5 ul#vsvi { width:920px; margin:44px auto 0;}
+ div#cpla5 ul#vsvi li.son {border-bottom:1px dotted #ccc;}
+ div#cpla5 ul#vsvi li.son > a > img {display:block; width:60px; height:60px; float:left; margin-top:17px;}
+ div#cpla5 ul#vsvi li.son > dl {float:left; margin-left:17px; margin-top:17px;}
+ div#cpla5 ul#vsvi li.son > dl dt {font:12px/18px Arial,"Microsoft YaHei","微软雅黑"; color:#999;}
+ div#cpla5 ul#vsvi li.son > dl dt a {font-size:14px; font-family:"SimSun","宋体"; margin-right:10px;}
+ div#cpla5 ul#vsvi li.son > dl dd {font:14px "SimSun","宋体"; color:#333; width:800px; margin:5px auto 0;margin-bottom:15px;}
+ div#cpla5 ul#vsvi li.son > p.zsff {margin-left:17px; font:12px/18px "SimSun","宋体"; color:#999; margin-top:20px; margin-left:102px; width:800px;  padding-bottom:10px; clear:both;}
+ div#cpla5 a.hotcom {display:block; width:120px; height:26px; background:#DCDCDC; margin:30px auto 0; font: 12px/26px "SimSun","宋体"; color:#656565; text-align:center; text-decoration:none;}
+
+ /*  26.ApplyCheck
+ ------------------------------------------------------------------ *//*#EB6147*/
+ /* 26.1 CONTENT PRIMARY ------------ */
+div#applycheck {background:#fff; padding-bottom:102px; padding-top:89px;}
+div#applycheck div#mc-in {border:1px solid #e5e5e5; height:1230px;}
+div#applycheck div#mc-in p.ts{ padding:0 30px;font: 14px "Microsoft YaHei","微软雅黑"; color:#333; text-align:center; margin-top:30px;}
+div#applycheck div#ac-in {margin:0 auto; width:832px;}
+div#applycheck div#ac-in div.l{ position:relative; float:left; width:219px; height:270px; border:1px solid #e5e5e5; padding:16px 6px 16px 16px; }
+div#applycheck div#ac-in div.l hr {border:0; height:0; border-bottom: 1px dotted #D4D4D4; margin-top:12px;}
+div#applycheck div#ac-in div.l img {width:88px; height:88px;}
+div#applycheck div#ac-in div.l .rwbt {display:inline-block; width:113px; margin-left:13px; font:bold 13px "Microsoft YaHei","微软雅黑"; color:#434343; vertical-align:3px;}
+div#applycheck div#ac-in div.r{float:right; font: 13px "SimSun","宋体"; color:#949494;}
+div#applycheck div#ac-in div.l p.gdg {font:bold 13px "Microsoft YaHei","微软雅黑"; color:#434343; margin-top:11px;}
+div#applycheck div#ac-in div.l p.gdg span.redb {font:bold 18px "Microsoft YaHei","微软雅黑"; color:#E50011;}
+div#applycheck div#ac-in div.l p.gdg > span:first-child {display:inline-block; width: 68px; vertical-align:top;}
+div#applycheck div#ac-in div.l p.gdg > span:last-child {display:inline-block; width: 151px; font-weight:300; vertical-align:top;}
+div#applycheck div#ac-in div.r p {font: 14px "Microsoft YaHei","微软雅黑"; color:#434343; font-weight:normal; font-size:13px;}
+div#applycheck div#ac-in div.l .page{ position:absolute; width:22px; height:22px; background:#fff url(../images/RNG/page.png) no-repeat; right:-1px; top:-1px;}
+div#applycheck div#ac-in div.r table {border-collapse:separate; border-spacing: 0 24px; margin-top:-24px;}
+div#applycheck div#ac-in div.r table td span.ts {margin-left:10px;}
+div#applycheck div#ac-in div.r table th span.clip{display:inline-block; width:88px; text-align:left;}
+div#applycheck div#ac-in div.r table input { height:31px; width:236px; padding-left:20px; background:#F5F5F5; border:1px solid #E5E5E5;}
+div#applycheck div#ac-in div.r table th{text-align:right; font: 14px "Microsoft YaHei","微软雅黑"; color:#999;}
+div#applycheck div#ac-in div.r  textarea { border:1px solid #E5E5E5; resize:none; width:434px; height:130px;  font: 13px "SimSun","宋体"; color:#949494; background:#F5F5F5 url(../images/RNG/pen.png) no-repeat 2px 2px; text-indent:13px;}
+div#applycheck div#ac-in div.r .textarea .wxts {font: 12px "SimSun","宋体"; color:#6F6F6F; margin-left:7px; margin-top:-3px;}
+div#applycheck div#ac-in div.r .textarea .wxts span {font:bold 13px "Microsoft YaHei","微软雅黑"; color:#303030;}
+div#applycheck div#ac-in a.file {display:inline-block; height:13px; padding-left:18px; font: 12px "SimSun","宋体"; color:#1FB5EF; background: url(../images/icon/file.png) no-repeat center left;}
+div#applycheck div#ac-in button.cc_btn,
+div#applycheck div#ac-in button.pl_btn {width:80px; height:28px; background:#20B6F0; font:bold 14px "Microsoft YaHei","微软雅黑"; color:#fff; margin-top:39px;}
+div#applycheck div#ac-in button.cc_btn {background:#CBCBCB;  margin-left:20px;}
+
+ /*  27.TradingHalt
+ ------------------------------------------------------------------ *//*#EB6147*/
+ /* 27.1 CONTENT PRIMARY ------------ */
+div#tradinghalt {background:#fff; padding-bottom:67px; padding-top:65px;}
+div#tradinghalt div#mc-in {border:1px solid #e5e5e5; height:1230px;}
+div#tradinghalt div#mc-in p.ts{ padding:0 30px;font: 14px "Microsoft YaHei","微软雅黑"; color:#333; text-align:center; margin-top:30px;}
+div#tradinghalt div#th-in {margin:0 auto; width:890px;}
+div#tradinghalt div#wxts {width:245px; height:189px; border:1px solid #E5E5E5; margin-top:15px;}
+div#tradinghalt div.infos{position:relative; width:223px; height:270px; border:1px solid #e5e5e5; padding:16px 6px 16px 16px; }
+div#tradinghalt div#wxts div {height:30px; background:#F5F5F5 url(../images/icon/flag.png) no-repeat 10px center; padding-left:26px;font: 14px/30px "Microsoft YaHei","微软雅黑"; color:#353535;}
+div#tradinghalt div#wxts ul {width:226px; height:137px; font: 12px/20px "SimSun","宋体"; color:#949494; margin-top:9px; margin-left:11px;}
+div#tradinghalt div#wxts ul li{list-style:decimal; list-style-position:inside;}
+div#tradinghalt div#th-in div.infos hr {border:0; height:0; border-bottom: 1px dotted #D4D4D4; margin-top:12px;}
+div#tradinghalt div#th-in div.infos img {width:88px; height:88px;}
+div#tradinghalt div#th-in div.infos .rwbt {display:inline-block; width:113px; margin-left:13px; font:bold 13px "Microsoft YaHei","微软雅黑"; color:#434343; vertical-align:3px;}
+div#tradinghalt div#th-in div.r{float:right; font: 13px "SimSun","宋体"; color:#949494;}
+div#tradinghalt div#th-in div.infos p.gdg {font:bold 13px "Microsoft YaHei","微软雅黑"; color:#434343; margin-top:11px;}
+div#tradinghalt div#th-in div.infos p.gdg span.redb {font:bold 18px "Microsoft YaHei","微软雅黑"; color:#E50011;}
+div#tradinghalt div#th-in div.infos p.gdg > span:first-child {display:inline-block; width: 68px; vertical-align:top;}
+div#tradinghalt div#th-in div.infos p.gdg > span:last-child {display:inline-block; width: 151px; font-weight:300; vertical-align:top;}
+div#tradinghalt div#th-in div.r p {font: 14px "Microsoft YaHei","微软雅黑"; color:#434343; font-weight:normal; font-size:13px;}
+div#tradinghalt div#th-in div.infos .page{ position:absolute; width:22px; height:22px; background:#fff url(../images/RNG/page.png) no-repeat; right:-1px; top:-1px;}
+div#tradinghalt div#th-in div.r table {border-collapse:separate; border-spacing: 4px 0; margin-top:29px; margin-right:-15px;}
+div#tradinghalt div#th-in div.r table caption {font:bold 14px "Microsoft YaHei","微软雅黑"; color:#1FB5EF; background: url(../images/icon/wran.png) no-repeat 31px center; line-height:27px; margin-bottom:26px; margin-left:-30px;}
+div#tradinghalt div#th-in div.r table caption span {margin-left:-59px;}
+div#tradinghalt div#th-in div.r table td span.ts {margin-left:10px;}
+div#tradinghalt div#th-in div.r table th span.clip{display:inline-block; width:88px; text-align:left;}
+div#tradinghalt div#th-in div.r table input { height:26px; width:153px; padding-left:5px; background:#F5F5F5; border:1px solid #E5E5E5;}
+div#tradinghalt div#th-in div.r table input.date{background: #F5F5F5 url(../images/icon/date.png) no-repeat 140px center;}
+div#tradinghalt div#th-in div.r table th{text-align:right; font: 14px/30px "Microsoft YaHei","微软雅黑"; color:#303030; vertical-align:-5px;}
+div#tradinghalt div#th-in div.r table td label {color:#656565;}
+div#tradinghalt div#th-in div.r table td p.red {margin-top:6px; margin-bottom:13px; color:red; width:472px; font: 12px "SimSun","宋体";}
+div#tradinghalt div#th-in div.r  textarea { border:1px solid #E5E5E5; resize:none; width:462px; height:182px;  font: 13px "SimSun","宋体"; color:#949494; background:#F5F5F5; text-indent:13px;}
+div#tradinghalt div#th-in div.r  .textzhongzi{ border:1px solid #E5E5E5; resize:none; width:462px; height:218px;  font: 13px "SimSun","宋体"; color:#949494; background:#F5F5F5; text-indent:13px;}
+div#tradinghalt div#th-in div.r  .textyuanyin { border:1px solid #E5E5E5; resize:none; width:462px; height:91px;  font: 13px "SimSun","宋体"; color:#949494; background:#F5F5F5; text-indent:13px;}
+div#tradinghalt div#th-in div.r .textarea .wxts {font: 12px "SimSun","宋体"; color:#6F6F6F; margin-left:7px; margin-top:-3px;}
+div#tradinghalt div#th-in div.r .textarea .wxts span {font:bold 13px "Microsoft YaHei","微软雅黑"; color:#303030;}
+div#tradinghalt div#th-in a.file {display:inline-block; height:13px; padding-left:18px; font: 12px "SimSun","宋体"; color:#1FB5EF; background: url(../images/icon/file.png) no-repeat center left;}
+div#tradinghalt div#th-in button.cc_btn,
+div#tradinghalt div#th-in button.pl_btn {width:80px; height:28px; background:#20B6F0; font:bold 14px "Microsoft YaHei","微软雅黑"; color:#fff; margin-top:39px;}
+div#tradinghalt div#th-in button.cc_btn2,
+div#tradinghalt div#th-in button.pl_btn2 {width:100px; height:28px; background:#20B6F0; font:bold 14px "Microsoft YaHei","微软雅黑"; color:#fff; margin-top:39px;}
+div#tradinghalt div#th-in button.cc_btn {background:#CBCBCB;  margin-left:20px;}
+.mr20{margin-left:20px;}
+ /*  20.CreditPay
+ /*  28.rePlazza
+ ------------------------------------------------------------------ *//*#EB6147*/
+ /* 28.1 CONTENT PRIMARY ------------ */
+ div#replazza {}
+ div#rpl-in {padding-top:30px; background:#fff; margin-top:19px; padding-bottom:40px;}
+ div#rpl1,
+ div#rpl2,
+ div#rpl3,
+ div#rpl4,
+ div#rpl5 {position:relative; width:1000px; margin:0 auto; border:1px solid #E5E5E5;}
+ div#rpl2 dd,
+ div#rpl1 {font:12px "Sim Su","宋体"; color:#656565; background: #F9F9F9;}
+  div#rpl2 dd { background: transparent;}
+ div#rpl1 textarea.shur {width:971px; height:58px; border:1px solid #CBCBCB; margin: 60px auto 0; display:block; resize:none; font:bold 18px/58px "Microsoft YaHei","微软雅黑"; color:#656565; text-align:center; overflow-y:hidden;}
+ div#rpl1 div.zwen {margin-bottom:10px;width:971px; height:400px; margin-left:12px; margin-top:10px;}
+ div#rpl1 .date,
+ div#rpl1 .compler {color:#333; margin-left:28px; margin-top:24px;}
+ div#rpl1 .date {margin-top:10px;}
+ div#rpl1 .date .tj{letter-spacing:3px;}
+ div#rpl1 div.article {width:947px; margin:21px auto 28px;}
+ div#rpl1 div.article p{line-height:24px; text-indent:2em;}
+ div#rpl2 {height:260px; margin-top:20px; background:#F0F0F0;}
+ div#rpl2 img {display:block; width:200px; height:200px; margin-top:29px; margin-left:29px; float:left;}
+ div#rpl2 dl {display:block; float:left; margin-left:16px; margin-top:33px;}
+ div#rpl2 dt {font:bold 18px/24px "Microsoft YaHei","微软雅黑"; color:#333;}
+ div#rpl2 dt .red{color:#DF4541; font-weight:normal; font-family: Arial;margin-bottom:5px; margin-left:10px;}
+ div#rpl2 dd {margin-top:24px;}
+ div#rpl2 dd .neir{display:inline-block; width:674px;vertical-align:text-top; line-height:20px; }
+ div#rpl3 {position:relative; margin-top:37px; border:0;}
+ div#rpl3 .vs1{font:bold 40px Arial; color:#333; text-align:center; line-height:25px; background:url(../images/RNG/mcrossline.png) no-repeat center 7px;}
+ div#rpl3 .bssr,
+ div#rpl3 .ssr {float:left; width:280px; height:40px; background:#DE4441; position:relative;font: 18px/40px "Microsoft YaHei","微软雅黑"; color:#fff; text-align:center;}
+ div#rpl3 .bssr {float:right; background:#0067B5;}
+ div#rpl3 .bssr:after,
+ div#rpl3 .ssr:after {content:""; position:absolute; width:0; height:0; right:-18px; bottom:0; border-style:solid; border-color:transparent transparent #C73028 transparent; border-width: 0 18px 18px 0; }
+ div#rpl3 .bssr:after {left:-18px; bottom:0; border-color:transparent transparent #004B84 transparent; border-width: 0 0 18px 18px; }
+ div#rpl3 .jssr {margin-top:15px; padding-bottom:10px; background:url(../images/RNG/sline.png) repeat-y center 0;}
+ div#rpl3 .jssr .jtssr {float:left;}
+ div#rpl3 .jssr .jtbss {float:right;}
+ div#rpl3 ul.jtbss li,
+ div#rpl3 .jssr .ssrcard {width:296px; border:2px solid #DF4541; height:156px; background:#fff;}
+ div#rpl3 ul.jtbss li img,
+ div#rpl3 .jssr .ssrcard img {display:block; width:120px; height:120px; margin-top:18px; margin-left:18px; float:left;}
+ div#rpl3 ul.jtbss li dl,
+ div#rpl3 .jssr .ssrcard dl {float:right; padding-left:12px; background:#ECECEC; height:100%; width:126px;}
+ div#rpl3 ul.jtbss li dl dt a,
+ div#rpl3 .jssr .ssrcard dl  dt a {display: inline-block; padding-right:20px; font:bold 14px "Microsoft YaHei","微软雅黑"; color:#333; background: url(../images/RNG/msg.png) no-repeat center right;}
+ div#rpl3 ul.jtbss li dl dd,
+ div#rpl3 .jssr .ssrcard dl dd {font:12px "SimSun","宋体"; color:#656565; margin-top:9px;}
+ div#rpl3 .jssr .ssrcard dl dd .redb {font-weight:700; color:#FF6565; margin-right:5px; font-size:12px;}
+ div#rpl3 .jssr a.ccbtn {display:block; width:300px; height:40px; text-align:center; background:#DF4541; font:18px/40px "Microsoft YaHei","微软雅黑"; color:#fff; text-decoration:none; margin-top:8px;}
+ div#rpl3 ul.jtbss{float: right; /*border-left:1px solid #CBCBCB; width:50%;*/}
+ div#rpl3 ul.jtbss li {position:relative; border:2px solid #0067B5;}
+ div#rpl3 ul.jtbss li:after {content:""; position:absolute; width:12px; height:12px; background:#CBCBCB; border-radius:50%; top:45%; left:-208px;}
+ div#rpl3 ul.jtbss li:nth-child(n+2) {margin-top:7px;}
+ div#rpl3 div.zchil { margin:40px auto 0; width:418px; font:bold 40px/100px Arial; text-align:center; color:#CBCBCB;}
+ div#rpl3 div.scbar{position:relative; width:850px; height:20px; margin:20px auto 0;}
+ div#rpl3 div.scbar .rbar {float:left; height:inherit; background:#FD5956; border-right:1px solid #fff;}
+ div#rpl3 div.scbar .bbar {float:right; height:inherit; background:#007FDF;}
+ div#rpl3 div.scbar span { font:30px Aparajita; color:#999; top:-10px;}
+ div#rpl3 div.scbar span.rnum {position:absolute; left: -62px; top:-5px;}
+ div#rpl3 div.scbar span.bnum {position:absolute; right: -62px; top:-5px;}
+ div#rpl3 div.zchil div.blue,
+ div#rpl3 div.zchil div.red {float:left; width:140px;}
+ div#rpl3 div.zchil div.blue {float:right;}
+ div#rpl3 .ccomments {position:absolute; width:100%; bottom:0; left:0; height:210px; background:#EFEFEF; font: 14px/40px "Microsoft YaHei","微软雅黑"; color:#d6d6d6;}
+ div#rpl3 .ccomments p {width:920px; margin:15px auto 0;}
+ div#rpl3 .ccomments textarea {display:block; width:920px; height:78px; background:#fff; resize:none; margin:0 auto; border:1px solid #CBCBCB;}
+ div#rpl3 .ccomments button {display:block; width:114px; height:40px; font: bold 18px "Microsoft YaHei","微软雅黑"; color:#fff; background:#1FB5EF; margin:15px auto; cursor:pointer;}
+ div.zchil div.blue div.num,
+ div.zchil div.red div.num{height:59px; background:#FB6663; text-align:center; font:30px/59px Arial; color:#fff; border-radius:6px 6px 0 0;}
+ div.zchil div.blue div.num {background:#2092EA;}
+ div.zchil div.blue a.name,
+ div.zchil div.red a.name{display:block; height:40px; margin-top:3px; background:#E44A46; text-align:center; font:bold 18px/40px "Microsoft YaHei","微软雅黑"; color:#fff; border-radius: 0 0 6px 6px; text-decoration:none;}
+ div.zchil div.blue a.name {background:#0177D1;}
+ div#rpl4 {margin-top:60px;background:#EFEFEF;}
+ div#rpl4 .chenshu {width:916px; margin:88px auto 0; position:relative;}
+ div#rpl4 .chenshus {width:916px; margin:44px auto 0; position:relative;}
+ div#rpl4 .chenshu .avatar {position:absolute; top:-29px; left:0;}
+ div#rpl4 .chenshus .avatar {position:absolute; top:-29px; right:0;}
+ div#rpl4 .chenshu .avatar a,
+ div#rpl4 .chenshus .avatar a{font:14px/30px "SimSun","宋体"; color:#1FB5EF;}
+ div#rpl4 .chenshu .avatar a:last-child,
+ div#rpl4 .chenshus .avatar a:last-child{display:block; width:60px; height:60px;}
+ div#rpl4 a.hotcom {display:block; width:120px; height:26px; background:#DCDCDC; margin:30px auto; font: 12px/26px "SimSun","宋体"; color:#656565; text-align:center; text-decoration:none;}
+ div#rpl4 .csbr {position:relative; width:831px; border:2px solid #F56761; float:right; background: #fff;}
+ div#rpl4 .csbl {position:relative; width:831px; border:2px solid #0177D1; float:left; background:#fff;}
+ div#rpl4 .csbr .brarrow {position:absolute; width:19px; height:32px; background:url(../images/RNG/rbarrow.png) no-repeat center left; left:-18px; top:12px;}
+ div#rpl4 .csbl .barrow {position:absolute; width:19px; height:28px; background:url(../images/RNG/barrow.png) no-repeat center right; right:-16px; top:12px;}
+ div#rpl4 .csbl .zwen,
+ div#rpl4 .csbr .zwen { font:14px "SimSun","宋体"; color:#333; width:800px; margin:14px auto 0;}
+ div#rpl4 .csbl .info,
+ div#rpl4 .csbr .info {font:12px/18px Arial,"Microsoft YaHei","微软雅黑"; color:#999; margin:20px auto 0; width:800px;  padding-bottom:10px;}
+ div#rpl5 ul#vsvi li p.zsff span.zan,
+ div#rpl4 .csbl .info span.zan,
+ div#rpl4 .csbr .info span.zan { display:inline-block; height:18px; padding-left:20px; background:url(../images/icon/zan.png) no-repeat left center; line-height:18px; font-family:"SimSun"; }
+ div#rpl5 ul#vsvi li p.zsff span.comment,
+ div#rpl4 .csbl .info span.comment,
+ div#rpl4 .csbr .info span.comment {display:inline-block; height:15px; padding-left:20px; background:url(../images/icon/comment.png) no-repeat left center; margin-left:13px; vertical-align:middle; font-family:"SimSun"; line-height:12px;}
+ div#rpl5 { margin-top:20px; padding-bottom:70px; background:#fff;}
+ div#rpl5 ul#vsvi { width:920px; margin:44px auto 0;}
+ div#rpl5 ul#vsvi li.son {border-bottom:1px dotted #ccc;}
+ div#rpl5 ul#vsvi li.son > a > img {display:block; width:60px; height:60px; float:left; margin-top:17px;}
+ div#rpl5 ul#vsvi li.son > dl {float:left; margin-left:17px; margin-top:17px;}
+ div#rpl5 ul#vsvi li.son > dl dt {font:12px/18px Arial,"Microsoft YaHei","微软雅黑"; color:#999;}
+ div#rpl5 ul#vsvi li.son > dl dt a {font-size:14px; font-family:"SimSun","宋体"; margin-right:10px;}
+ div#rpl5 ul#vsvi li.son > dl dd {font:14px "SimSun","宋体"; color:#333; width:800px; margin:5px auto 0;}
+ div#rpl5 ul#vsvi li.son > p.zsff {margin-left:17px; font:12px/18px "SimSun","宋体"; color:#999; margin-top:20px; margin-left:102px; width:800px;  padding-bottom:10px; clear:both;}
+ div#rpl5 a.hotcom {display:block; width:120px; height:26px; background:#DCDCDC; margin:30px auto 0; font: 12px/26px "SimSun","宋体"; color:#656565; text-align:center; text-decoration:none;}
+ div#rpl3 hr {border:0; border-bottom:2px solid #ccc; margin-top:60px;}
+ div#rpl3 button {width:120px; height:44px; background:#1FB5EF; font: bold 18px "Microsoft YaHei","微软雅黑"; color: #fff;}
+ div#rpl3 button.cancel {margin-left: 43px;}
+ /*  29.rePlazza
+ ------------------------------------------------------------------ *//*#EB6147*/
+ /* 29.1 CONTENT PRIMARY ------------ */
+ div#myt {margin-top:22px;}
+ div#traerinfo {float:left; width:248px; background:#fff;}
+ div#maininfo {float:right; width:852px; background:#fff;}
+ div#maininfo-in {margin:0 auto; width:812px;}
+ div#traerinfo div.oerinfo {position:relative; height:240px; background:#f5f5f5;}
+ div#traerinfo div.oerinfo .avatar img {float:left; width:94px; height:94px; margin-top:25px; margin-left:25px; padding:2px; background:#fff;}
+ div#traerinfo div.oerinfo .avatar .lxxx {float:left; margin-left:30px; margin-top:40px;}
+ .avatar .lxxx p.name{font:bold 18px "Microsoft YaHei","微软雅黑"; color: #656565;}
+ .avatar .lxxx p.xuanz {margin-top:12px;}
+ .avatar .lxxx p.xuanz span {display:inline-block; width:21px; height:21px;}
+ .avatar .lxxx p.xuanz span.phoner {background:url(../images/icon/phoners.png) no-repeat center center;}
+ .avatar .lxxx p.xuanz span.namer {background:url(../images/icon/namers.png) no-repeat center center; margin-left:6px;}
+ .avatar .lxxx p.xuanz span.mailr {background:url(../images/icon/mailrs.png) no-repeat center center; margin-left:6px;}
+ .lxxx p.name a {display:inline-block; width:14px; height:13px; margin-left:5px; background:url(../images/icon/dilog.png) no-repeat center center;}
+ div#traerinfo div.oerinfo .listr {position:absolute; left:0; bottom:0; width:248px; height:102px; font: 12px/18px "SimSun","宋体"; color: #fff; background:#999;}
+ div#traerinfo div.oerinfo ul {margin-top:18px; margin-left:20px;}
+ div#traerinfo div.oerinfo ul li .org {color:#FF5F00;}
+ div.flag {position: absolute; top:-6px; left:-9px; width:76px; height:37px; font:bold 18px/37px "Microsoft YaHei","微软雅黑"; text-align:center; color:#fff; background:#339900;}
+ div.flag:before {content:""; position: absolute; top:37px; left:0; width:0; height:0; border-style:solid; border-color:#297602 transparent transparent transparent; border-width:10px 0 0 9px;}
+ div.flag:after {content:""; position:absolute; top:0; right:-10px; width:0; height:0; border-style:solid; border-color:#339900 transparent #339900 #339900; border-width:18px 10px 19px 0;-webkit-transform: rotate(0.05deg);-moz-transform: scale(1.1);-o-transform: rotate(0.05deg); /* Didn't check Opera yet */transform: rotate(0.05deg);}
+ div.oerinfo div.red {background:#FF6565;}
+ div.oerinfo div.red:before{border-color:#D93A3A transparent transparent transparent;}
+ div.oerinfo div.red:after {border-color:#FF6565 transparent #FF6565 #FF6565;}
+ div#maininfo .box1 {margin-top:20px; }
+ div#maininfo .box1 img{float:left; width:92px; height:92px;}
+ div#maininfo .box1 dl{float:left; margin-left:12px;}
+ div#maininfo .box1 dl dt {font:bold 24px "Microsoft YaHei","微软雅黑"; color: #333;}
+ div#maininfo .box1 dl dt .org {font-family:Arial; font-size:24px; color: #FF5F00;}
+ div#maininfo .box1 dl dd {font:12px "SimSun","宋体"; margin-top:7px; color:#999;}
+ div#maininfo .box1 dl dd:last-child{margin-top:20px;}
+ div#maininfo .box1 dl dd .red {color: #f00;}
+ div#maininfo .box1 dl dd .black {color: #000;}
+ div#maininfo .box2 {position: relative; height: 164px; margin-top:23px; border: 1px solid #e5e5e5;}
+ div#maininfo .box2head {width:790px; margin: 0 auto; font:12px "SimSun","宋体"; height:33px; line-height: 33px; color: #656565; border-bottom: 1px solid #e5e5e5;}
+ div#maininfo .box2head .grey{color: #333;}
+ div#maininfo .box2head .org{color:#FF5F00;}
+ div#maininfo .box3 {position: relative; margin-top: 20px; border: 1px solid #e5e5e5;}
+ div#maininfo .box3 p.file{position: absolute; bottom: 10px; left: 10px; font:bold 14px "Microsoft YaHei","微软雅黑"; color: #999;}
+ div#maininfo .box3 p.file a {font:14px "SimSun","宋体";}
+ .task-title {width: 100%;height: 30px;background: #6699ff;font: bold 14px/30px "Microsoft YaHei","微软雅黑";color: #fff;}
+ .task-title span {padding-left: 20px;}
+ div#maininfo .box4 {position: relative;margin-top: 20px; height: 281px; background: #F1F1F1;}
+ div#maininfo .box4 p.tit{width: 780px; margin:0 auto; padding:21px 0 10px 0; font:bold 14px "Microsoft YaHei","微软雅黑"; color: #999;}
+ div#maininfo .box4 textarea {display:block; width:780px; height: 111px; border: 1px solid #CBCBCB; margin: 0 auto; padding-bottom: 49px; font: 12px "SimSun","宋体"; resize:none; text-indent: 1em;}
+ div#maininfo .box4 div.upfile {position: absolute; width:784px; height:49px; background: #f5f5f5; left: 14px; top:164px;}
+ .btn-file {position: relative;display: inline-block;width: 100px;height: 34px;background: #e4e4e4 url(../images/RNG/upfile.png) no-repeat center center;text-align: center;line-height: 68px;overflow: hidden; cursor: pointer;vertical-align: middle;}
+ .btn-file:hover {background-image: url(../images/RNG/upfile.png);}
+ .btn-file input {position: absolute;top: 0;left: 0;width: 100px;height: 34px;opacity: 0;filter: alpha(opacity: 0);cursor: pointer;}
+ div#maininfo .box4 p.ups {margin-top:8px; margin-left: 8px;}
+ div#maininfo .box4 p.ups span {font:12px "SimSun","宋体"; color: #999; }
+ div#maininfo button {display: block;width: 100px; height: 34px; margin:17px auto 0; background:#1FB5EF; font: bold 14px "Microsoft YaHei","微软雅黑"; color: #fff;}
+ div#maininfo .box5{border: 1px solid #E5E5E5; margin-top: 20px;}
+ div#maininfo .box5 ul {width: 783px; margin: 0 auto;}
+ div#maininfo .box5 ul li {display: block; border-bottom: 1px solid #e5e5e5;}
+ div#maininfo .box5 ul li:last-child {border: 0;}
+ div#maininfo .box5 ul li div#sideli{width: 82px; float: left;}
+ div#maininfo .box5 ul li div#sideli img {display: block; width: 82px; height: 82px; margin-top: 14px;}
+ div#maininfo .box5 ul li div#sideli a {display: block; width:80px; height: 25px; margin-top: 5px; background: #ADEAFF; border: 1px solid #1FB5EF; font:bold 14px/25px "Microsoft YaHei","微软雅黑"; text-decoration: none; text-align: center;}
+ div#maininfo .box5 ul li div#mainli{width: 684px; float: right; margin-top: 13px;}
+ div#maininfo .box5 ul li div#mainli p.name {font:bold 14px "Microsoft YaHei","微软雅黑"; color: #0065CB;}
+ div#maininfo .box5 ul li div#mainli p.annex {font: 12px "SimSun","宋体"; color: #999; margin-top: 30px;}
+ div#maininfo .box5 ul li div#mainli div.art {font: 12px/24px "SimSun","宋体"; color: #656565;}
+ div#maininfo .box5 ul li div#mainli p.time {margin-top:34px; font: 12px "SimSun","宋体"; color: #999999;}
+ .box5 ul li div#mainli p.time span{background: url(../images/icon/clock.png) no-repeat left center; padding-left: 25px;}
+ .box5 ul li div#mainli p.time a {display:inline-block; position: relative; top:-20px; width: 90px; height: 33px; background: #1FB5EF; font:bold 14px/33px "Microsoft YaHei","微软雅黑"; text-decoration: none; text-align: center; color: #fff;}
+ div#maininfo .box6 {margin-top:20px; border: 1px solid #e5e5e5; padding-bottom: 44px;}
+ div#maininfo .box6 ul li {position: relative;}
+ div#maininfo .box6 ul { margin-top:52px;}
+ div#maininfo .box6 ul li.green{background: #339800;}
+ div#maininfo .box6 ul li.red{background: #F55F59;}
+ div#maininfo .box6 ul li.black{background: #333;}
+ div#maininfo .box6 ul li {width: 95px; height: 95px; border-radius:50%; margin: 0 auto 5px; font: bold 14px "Microsoft YaHei","微软雅黑"; color: #fff;}
+ div#maininfo .box6 ul li p {text-align: center;}
+ div#maininfo .box6 ul li p:first-child {padding-top:31px;}
+ div#maininfo .box6 ul li div.rdire {position: absolute; left:244px; top: 40px; width:158px; text-align:left; color: #390; font:bold 14px/14px "Microsoft YaHei","微软雅黑";}
+ div#maininfo .box6 ul li div.rdire:after {content: ""; position: absolute; left:-20px; width: 17px; height: 17px; border-radius:50%; background: #390;}
+ div#maininfo .box6 ul li div.rdire:before {content: ""; position: absolute; left:-160px; top: 8px; width: 150px; height: 1px; background: #390;}
+ div#maininfo .box6 ul li div.ldire {position: absolute; right:264px; top: 40px; width:158px; text-align:right; color: #F45F59; font:bold 14px/14px "Microsoft YaHei","微软雅黑";}
+ div#maininfo .box6 ul li div.ldire:after {content: ""; position: absolute; right:-24px; width: 17px; height: 17px; border-radius:50%; background: #F45F59;}
+ div#maininfo .box6 ul li div.ldire:before {content: ""; position: absolute; right:-200px; top: 8px; width: 178px; height: 1px; background: #F45F59;}
+ div#maininfo .box6 ul li div.dark {color: #333;}
+ div#maininfo .box6 ul li div.dark:after{background: #333;}
+ div#maininfo .box6 ul li div.dark:before{background: #333;}
+ div#maininfo .box6 ul li div.sline{top:32px;}
+ div#maininfo .box6 ul li div.sline:after{top:5px;}
+ div#maininfo .box6 ul li div.sline:before{top:14px;}
+ div#maininfo .box7{border: 1px solid #E5E5E5; margin-top: 20px;background: url(../images/icon/greybg.png) repeat-y left 0;}
+ div#maininfo .box7 ul {width: 783px; margin: 0 auto; }
+ div#maininfo .box7 ul li {display: block; border-bottom: 1px solid #ccc; position: relative;}
+ div#maininfo .box7 ul li:last-child {border: 0;}
+ div#maininfo .box7 ul li div#sideli{width: 82px; float: left;}
+ div#maininfo .box7 ul li div#sideli img {display: block; width: 82px; height: 82px; margin-top: 14px;}
+ div#maininfo .box7 ul li div#sideli a {display: block; width:80px; height: 25px; margin-top: 5px; background: #ADEAFF; border: 1px solid #1FB5EF; font:bold 14px/25px "Microsoft YaHei","微软雅黑"; text-decoration: none; text-align: center;}
+ div#maininfo .box7 ul li div#mainli{width: 664px; float: right; margin-top: 13px;}
+ div#maininfo .box7 ul li div#mainli p.name {font:bold 14px "Microsoft YaHei","微软雅黑"; color: #0065CB;}
+ div#maininfo .box7 ul li div#mainli p.annex {font: 12px "SimSun","宋体"; color: #999; margin-top: 30px;}
+ div#maininfo .box7 ul li div#mainli div.art {font: 12px/24px "SimSun","宋体"; color: #656565;}
+ div#maininfo .box7 ul li div#mainli p.time {margin-top: 34px; font: 12px/46px "SimSun","宋体"; margin-top: 20px; color: #999999;}
+ .box7 ul li div#mainli p.time span{background: url(../images/icon/clock.png) no-repeat left center; padding-left: 25px;}
+ div.flags {position: absolute; top:6px; left:-6px; width:52px; height:26px; font:bold 12px/26px "SimSun","宋体"; text-align:center; color:#fff; background:#339900;}
+ div.flags:before {content:""; position: absolute; top:26px; left:0; width:0; height:0; border-style:solid; border-color:#297602 transparent transparent transparent; border-width:7px 0 0 6px;}
+ div.flags:after {content:""; position:absolute; top:0; right:-10px; width:0; height:0; border-style:solid; border-color:#339900 transparent #339900 #339900; border-width:13px 10px 13px 0;-webkit-transform: rotate(0.05deg);-moz-transform: scale(1.1);-o-transform: rotate(0.05deg); /* Didn't check Opera yet */transform: rotate(0.05deg);}
+ div.reds{background:#FF6565;}
+ div.reds:before{border-color:#D93A3A transparent transparent transparent;}
+ div.reds:after{border-color:#FF6565 transparent #FF6565 #FF6565;}
+/*div#cta-in table td  span.ts {display:inline-block; width:300px; font:12px "Sim Sun","宋体"; font-size:12px; color:#666;}*/
+/*SELECT-CENTER A*/
+
+ div#aselect-center {position:relative; padding:17px 0; background:rgba(255,255,255,.2); margin-top:3px;}
+ div#aselect-center ul{ width:910px; height:122px; margin:0 auto ; text-align:justify;}
+ div#aselect-center ul li {display:inline-block; width:110px; height:110px; border:6px solid rgba(0,0,0,.325);border-radius: 50%;cursor: pointer;vertical-align:top;}
+ div#aselect-center ul li > span {display:inline-block; width:110px; height:110px; border-radius:50%; background:rgba(0,0,0,.5); vertical-align:middle; text-align:center; color:#fff;}
+ div#aselect-center ul li > span span {display:inline-block; width:40px; margin-top:25px; line-height:30px; vertical-align:middle; text-align:center; font:bold 20px "Microsoft YaHei","微软雅黑";}
+ div#aselect-center ul li.current {border:6px solid #CDCBEB!important;}
+ div#aselect-center ul li.current >span {background:#fff!important; color:#82a0f2!important;}
+
+
+
+/*div#cta-in table td  span.ts {display:inline-block; width:300px; font:12px "Sim Sun","宋体"; font-size:12px; color:#666;}*/
+/*SELECT-CENTER A*/
+
+ div#aselect-center {position:relative; padding:17px 0; background:rgba(255,255,255,.2); margin-top:3px;}
+ div#aselect-center ul{ width:910px; height:122px; margin:0 auto ; text-align:justify;}
+ div#aselect-center ul li {display:inline-block; width:110px; height:110px; border:6px solid rgba(0,0,0,.325);border-radius: 50%;cursor: pointer;vertical-align:top;}
+ div#aselect-center ul li > span {display:inline-block; width:110px; height:110px; border-radius:50%; background:rgba(0,0,0,.5); vertical-align:middle; text-align:center; color:#fff;}
+ div#aselect-center ul li > span span {display:inline-block; width:40px; margin-top:25px; line-height:30px; vertical-align:middle; text-align:center; font:bold 20px "Microsoft YaHei","微软雅黑";}
+
+ div#aselect-center ul li.current {border:6px solid #CDCBEB!important;}
+ div#aselect-center ul li.current >span {background:#fff!important; color:#82a0f2!important;}
+
+/*翻页*/
+.pagination {
+	text-align: right;
+	margin-top: 20px;
+}
+.pagination li {
+	display: inline;
+}
+.pagination li a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0 5px;
+	font: normal 12px/30px "Sim Sun","宋体";
+	color: #333;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-decoration: none;
+	text-align: center;
+}
+.pagination li a:hover{
+	border: 1px solid #20b6f0;
+	color: #20b6f0;
+}
+/*选择页面 pagepicker*/
+ div#pagepick {
+ 	text-align: right;
+ 	margin-top: 40px;
+ 	margin-bottom: 30px;
+ }
+ div#pagepick span {
+ 	display: inline-block;
+ 	width: 29px;
+ 	height: 29px;
+ 	background: #e5e5e5;
+ 	font: normal normal 12px/28px "Microsoft YaHei";
+ 	color: #666;
+ 	text-align: center;
+ 	margin-left: 7px;
+ 	vertical-align: top;
+ 	cursor:pointer;
+ }
+ div#pagepick span:hover{
+	 border:solid 1px #20B6F0;
+	 width: 27px;
+ 	 height: 27px;
+	 }
+ div#pagepick span.dangq {background: #1FB5EF; color:#fff;}
+input:focus{border:solid 1px #20B6F0;}
+
+/*====================select li start================================*/
+ul,li {list-style-type:none;}
+.mn1{margin-left:-1px;}
+.select_box {width:201px; border:1px solid #E0E0E0; padding-right:20px; padding-left:10px; background:url(107.gif) no-repeat 160px center; position:relative; margin-top:4px;background:#f5f5f5;}
+.select_box span {cursor:pointer; display:block; line-height:35px; width:100%; height:35px; overflow:hidden; font: 14px "Sim Su","宋体"; color:#666; line-height:35px;}
+.select_box ul li {cursor:pointer; color:#a8a8a8; font-family: "Microsoft YaHei","微软雅黑"; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.son_ul {width:231px; position:absolute; left:0; top:36px; border:1px solid #ccc; border-top:0; background:#fff; z-index:500;}
+.son_ul li {display:block; line-height:25px; padding-left:10px; width:221px}
+.hovergray {background:#ccc;}
+.main_box{margin-left:4px;}
+.pulldown {background:url(../images/icon/downarrow.png) no-repeat scroll 50% 50% #20B6F0; display: inline-block;height: 37px;position: absolute;right: -1px;top: -1px;width: 37px;}
+/*====================select li end================================*/
+ .short-input {
+	box-sizing: border-box;
+	moz-box-sizing: border-box;
+	width: 50px;
+	height: 28px;
+	
+	border:1px solid #e5e5e5;
+}
+ #gege {display:inline-block;}
+ #gege:before {
+			content: "￥";
+			display: inline-block;
+			margin-left: 20px;
+			font-family: "Microsoft YaHei";
+			font-size: 14px;
+			color: #666;
+}
+#gege:after {
+	content: "";
+	margin-right: 10px;
+}
+.porticon {
+	position: absolute;
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(../images/RNG/search-g.png) no-repeat;
+	top: 12px;
+	left:21px;
+	margin-top:3px;
+}
+/*=================defaul phone弹框特效CSS===================*/
+.boxerro {
+        background-color:#fff;
+        height:117px;
+		width:467px;
+        position: absolute; 
+        display:block;
+        z-index:5;
+		padding:43px;
+    }
+.delTel-box{	
+	display:none;
+	}
+/*coment css end*/
+.box{
+	display:none;
+	}
+.boxFont{
+	font-size:18px;
+	font-family:微软雅黑;
+	}
+.boxbt{
+	/*margin: 0 auto;
+    padding: 27px 43px 24px;
+    width: 270px;*/
+	}
+.boxbtn,.boxbtn:hover {
+    background: none repeat scroll 0 0 #33CCFF;
+    cursor: pointer;
+    display: block;
+    padding:10px 20px;
+    text-align: center;
+    text-decoration: none;
+	max-width:78px;
+	white-space:nowrap;
+	width:53px;
+}
+.boxbtnFont{
+	font-size:18px;
+	font-family:微软雅黑;
+	color: #FFFFFF;
+	}
+.boxautoFont{
+	font-size:12px;
+	font-family: "宋体";	
+	}
+.boxauto{
+	 padding:10px 20px;
+	text-align: center;
+	}
+.center{
+	text-align:center;
+	}
+.centerFont{
+	font-size:18px;
+	font-family:微软雅黑;
+	}
+.boxbt2 {
+    margin: 0 auto;
+    padding: 65px 43px 24px;
+    width: 270px;
+} 
+.boxbt {
+    margin: 0 auto;
+    padding: 13px 43px 24px;
+    width: 270px;
+}
+.boxauto {
+    padding: 10px 20px;
+    text-align: center;
+}
+.boxautoFont {
+    font-family: "宋体";
+    font-size: 12px;
+}
+.center2{
+	line-height:25px;
+	}	
+.showDeck {
+        display:block;
+        top:0px;
+        left:0px;
+        margin:0px;
+        padding:0px;
+        width:100%;
+        height:100%;
+        position:fixed;
+        z-index:3;
+        background:#000;
+    }
+.showDlg {
+       background-color:#fff;
+        height:127px;
+		width:553px;
+        position: absolute; 
+        display:block;
+		padding:60px;
+        z-index:5;
+    }
+.delTel-box{	
+	display:none;
+	}
+
+	 /* 
+需求广场 -------------------- */
+.bodx{width:816px; padding:0; margin:20px auto; text-align: justify;}
+.dispro{width:175px; height:330px;display:inline-block;text-align:center;border: 1px solid #ccc;margin-bottom: 18px;padding:7px;vertical-align: top;}
+.ssjpg {
+	width: 100%;
+	height: 174px;
+	border: 0;
+}
+.font-tata {
+	font: bold 12px/20px "SimSun";
+	color: #333;
+	text-align: justify;
+	height:41px;
+	overflow:hidden;
+}
+.font-spider {
+	font: bold 18px/24px "Arial";
+	color: #f5605a; 
+}
+.font-vars {
+	font: normal normal 12px/12px "SimSun";
+	color: #666;
+}
+a.qy-btn {
+    background: none repeat scroll 0 0 #1DB4EF;
+    color: #FFFFFF;
+    display: inline-block;
+    font: bold 12px/26px "SimSun";
+    height: 26px;
+    text-align: center;
+    text-decoration: none;
+    width: 70px;
+}
+
+ul.process-line {
+	position: relative;
+	width: 706px;
+	height: 82px;
+	margin: 18px auto 0 auto;
+	text-align: justify;
+	z-index: 66;
+}
+ul.process-line > li {
+	position: relative;
+	display: inline-block;
+	width: 52px;
+	height: 82px;
+	text-align: center;
+	background-color: #fff;
+}
+ul.process-line > li span.bgreen {background:#2FA513;}
+ul.process-line > li span {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: #ccc;
+	font: normal 18px/36px Arial;
+	text-align: center;
+	color: #FFF;
+}
+ul.process-line > li em{
+	position: absolute;
+	display:block;
+	width:76px;
+	left:-12px;
+	bottom:20px;
+	text-align:center;
+	font: normal 14px "Microsoft YaHei","微软雅黑";
+	white-space:nowrap;
+	color: #999;
+}
+ul.process-line > li em.green{
+	color: #2fa613;
+	bottom: 0;
+}
+
+.processline{
+	position: absolute;
+	top: 70px;
+	left: 80px;
+	width: 654px;
+	height: 4px;
+	background: #ccc;
+	z-index: 20;
+}
+.processline > div {
+	height: inherit;
+	background: #2fa613;
+	width: 45%;
+}
+.ppsing {
+	padding: 10px 18px 50px 18px;
+}
+ /* 
+FLOAT CLEARING -------------------- */
+.box-close {
+    background:url(../images/icon/box-close.png) no-repeat scroll left center rgba(0, 0, 0, 0);
+    height: 20px;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    width: 20px;
+}
+.r{float:right;}
+.l{float:left;}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+.clearfix {display: inline-block;}
+.clearfix {display: block;}
+/*FIX justify*/
+.justify_fix{display:inline-block!important; width:100%!important; height:0!important; overflow:hidden;border: 0!important;}/*修复两端对齐*/
+.show {display:block!important;}

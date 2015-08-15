@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_full"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/ll_title"
+        style="@style/layout_vertical"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/field_title"
+            style="@style/layout_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="游乐项目选择"
+            android:gravity="center"
+            android:background="#FFC125"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="17pt" />
+
+    </LinearLayout>
+        
+    <LinearLayout
+        android:id="@+id/ll_content"
+        style="@style/layout_vertical"
+        android:layout_weight="9" >
+
+    	<GridView
+            android:id="@+id/gv_field"
+            style="@style/layout_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+        </GridView>
+    </LinearLayout>
+
+</LinearLayout >
+

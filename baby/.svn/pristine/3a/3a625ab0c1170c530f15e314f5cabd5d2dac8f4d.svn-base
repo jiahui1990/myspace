@@ -1,0 +1,102 @@
+/*--------------Base CSS----------------------*/
+@charset"utf-8";
+/*
+	名字:base;
+	作用：重置浏览器默认样式
+*/
+/*防止用户自定义背景颜色对网页的影响,用户可以自定义字体*/
+html{
+	background: #FFF;
+	color: #000;
+}
+/*内外边距通常让各浏览器样式的表现位置不同*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+	margin:0;
+	padding:0;
+}
+/*去除单元格边距，使其合并*/
+table{
+	border-collapse:collapse;border-spacing:0;
+}
+/*去除链接下划线*/
+a,a:link{
+	text-decoration: none;
+}
+/*over连接时，显示下划线*/
+a:hover{
+	text-decoration: underline;
+}
+/*去除默认边框*/
+fieldset,img{
+	border:0;
+}
+/*使用正常的字体和粗细*/
+address,caption,cite,code,dfn,em,strong,th,var{
+	font-style:normal;
+	font-weight:normal;
+}
+/*取消列表前标识*/
+li{
+	list-style:none;
+}
+/*让表格标题左对齐*/
+caption,th{
+	text-align:left;
+}
+/*自定义标题字体大小*/
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:normal;
+	}
+/*引语句加上引号*/
+q:before,q:after{
+	content:'';
+	}
+/*缩写提示无边框，字体默认*/
+abbr,acronym{
+	border:0;
+	font-variant:normal;
+	}
+/*上标*/
+sup{
+	vertical-align:text-top;
+}
+/*下标*/
+sub{
+	vertical-align:text-bottom;
+}
+/*继承父类文字样式*/
+input,textarea,select{
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+/*字体大小为100%,outline为0*/
+input,textarea,select{
+	font-size:100%;
+	outline: none;
+}
+/*button边为0*/
+button{
+	outline: none;
+	border: 0;
+}
+/*颜色为白色*/
+legend{
+	color:#000;
+}
+/*设置显示和隐藏，配合JS使用*/
+.hide{
+	display: none!important;
+	visibility: hidden;
+}
+.block{
+	display: block!important;
+}
+/*清除浮动代码*/
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}
+/*--------------ver:0.0.1-------------------------*/
+/*-----------------2014-3-26----------------------*/
+/*-------------借鉴了YUI和yjzhu-------------------*/
+/*--------------Base CSS END----------------------*/

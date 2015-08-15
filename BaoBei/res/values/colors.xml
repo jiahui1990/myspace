@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 进度条 -->
+    <integer-array name="colors">
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_yellow_dark</item>
+        <item>@color/holo_green_dark</item>
+        <item>@color/holo_purple_dark</item>
+        <item>@color/holo_red_dark</item>
+    </integer-array>
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <integer-array name="pocket_bar_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+
+    <integer-array name="pocket_background_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+
+    <color name="pocket_color_1">#85edb9</color>
+    <color name="pocket_color_2">#34bdb7</color>
+    <color name="pocket_color_3">#ee4458</color>
+    <color name="pocket_color_4">#fcb74d</color>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+
+    <color name="holo_blue_dark">#0099cc</color>
+    <color name="holo_yellow_dark">#ff8800</color>
+    <color name="holo_green_dark">#669900</color>
+    <color name="holo_purple_dark">#9933cc</color>
+    <color name="holo_red_dark">#cc0000</color>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <color name="material_blue_500">#009688</color>
+    <color name="material_blue_700">#00796B</color>
+    <color name="material_green_A200">#FD87A9</color>
+    
+    
+    
+    <color name="jve_color_purple">#3B224C</color>
+    <color name="jve_color_white">#FFFFFF</color>
+    <color name="jve_color_orange">#FA8F1F</color>
+    <color name="jve_color_lightpurple">#6D5CBC</color>
+    <color name="jve_color_lightpurple1">#7365CE</color>
+    <color name="jve_color_lightpurple2">#AD8ABD</color>
+    <color name="jve_color_lightgray">#5A5A5A</color>
+    <color name="jve_color_lightgraybg">#DDDDDB</color>
+    <color name="jve_color_blue">#7BA8C5</color>
+    <color name="jve_color_darkBlue">#20B6F0</color>
+   
+    <color name="jve_color_gray">#F0F0F0</color>
+    <color name="jve_color_gray_line">#ffdddddd</color>
+    <color name="jve_color_gray_line2">#ffdfdfdf</color>
+    <color name="jve_color_red">#D40421</color>
+    <color name="jve_color_red1">#C2001B</color>
+    <color name="jve_color_red2">#960012</color>
+    <color name="jve_color_red3">#F86579</color>
+    <color name="jve_color_black">#00000000</color>
+    <color name="jve_color_lightGreen">#8CB66B</color>
+    <color name="jve_color_green">#008A72</color>
+    <color name="jve_color_light_green">#243D24</color>
+    <color name="jve_color_light_pink">#AD9F9E</color>
+    <color name="jve_color_light_white">#F7F4F4</color>
+    <color name="jve_color_brown_bg">#3d252f</color>
+    <color name="jve_color_actionbar_bg">#FF0099CC</color>
+    <color name="jve_gray_holo_dark">#FF0099CC</color>
+    <color name="jve_gray_holo_light">#FF0099CC</color>
+    <color name="jve_color_white1">#FDFDFB</color>
+	
+	
+	<color name="holo_blue">#FF33E5B5</color>
+    
+    
+    
+    
+     <color name="jve_color_darkBlue1">#4FC1E9</color>
+     <color name="jve_color_darkBlue0">#48B0D5</color>
+     <color name="jve_color_gray0">#D6DAE0</color>
+     <color name="jve_color_gray1">#A4AAB2</color>
+     <color name="jve_color_gray2">#989FA9</color>
+     <color name="jve_color_gray3">#BEC2C6</color>
+     <color name="jve_color_gray4">#D3D5D8</color>
+     <color name="jve_color_gray5">#424242</color>
+     <color name="jve_color_green1">#CAD8A2</color>
+     <color name="jve_color_green2">#C5DC81</color>
+	 <color name="jve_color_green3">#19B193</color>
+	 <color name="jve_color_green4">#009688</color>
+	 <color name="jve_color_green5">#EEF5D9</color>
+	 <color name="jve_color_green6">#259b24</color>
+	 
+	 <color name="jve_color_blue1">#247AB0</color>
+	 <color name="jve_color_blue2">#345D7D</color>
+	 <color name="jve_color_blue3">#29b6f6</color>
+	 
+	 <color name="jve_color_yellow1">#FFF303</color>
+	 
+	 
+	 <color name="jve_color_blueGrey1">#78909c</color>
+</resources>

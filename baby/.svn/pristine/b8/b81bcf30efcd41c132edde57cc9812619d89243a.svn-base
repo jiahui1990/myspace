@@ -1,0 +1,98 @@
+@charset "utf-8";
+/*密保问题样式*/
+.font-st{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #666;
+	text-align: right;
+	line-height: 44px;
+}
+#user-qa{
+	margin-top: 30px;
+	position: relative;
+	left: 100px;
+}
+.inputs{
+	width: 245px;
+	height: 44px;
+	background: #e0e0e0;
+	border: 0;
+	margin-left: 20px;
+	padding-left: 5px;
+}
+.inputs:active,.inputs:focus{
+	outline: #bbb solid 1px;
+}
+.hspace{
+	height: 30px;
+}
+#selProvince{
+	si
+}
+.div1{
+	width: 120px;
+	height: 44px;
+	overflow: hidden;
+	background: #e0e0e0;
+	border: 0;
+}
+.select_style {
+	width:120px; 
+	height:44px; 
+	overflow:hidden; 
+	background:#e0e0e0;
+
+}
+.select_style select {
+	background:transparent; 
+	width:120px; 
+	line-height:44px;
+	border:none;
+	height:44px;
+	font-family: "宋体";
+	font-size: 14px;
+	color: #a1a1a1;
+	scrollbar-base-color:       #FFFFFF;
+	scrollbar-arrow-color:      #FFFFFF;
+	scrollbar-track-color:      #FFFFFF;
+	scrollbar-3dlight-color:    #ffffff;
+	scrollbar-highlight-color:  #FFFFFF;
+	scrollbar-face-color:       #FFFFFF;
+	scrollbar-shadow-color:     #FFFFFF;
+	scrollbar-darkshadow-color: #FFFFFF;
+}
+.select_style option{
+	width: 120px;
+	height: 44px;
+}
+
+
+
+
+#province_ul{
+	list-style: none;
+	height: 352px;
+	width: 120px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #e0e0e0;
+	scrollbar-arrow-color:#fff;            /*三角箭头的颜色*/
+scrollbar-face-color:#3399ff;       /*立体滚动条凸出部分的颜色*/
+scrollbar-3dlight-color:#fff;          /*立体滚动条亮边(上左)的颜色*/
+scrollbar-highlight-color:#fff;       /*滚动条空白部分(上左)的颜色*/
+scrollbar-shadow-color:#fff;        /*立体滚动条阴影(右下)的颜色*/
+scrollbar-darkshadow-color:#fff; /*立体滚动条强阴影(右下)的颜色*/
+scrollbar-track-color:#eee;         /*立体滚动条背景颜色*/
+scrollbar-base-color:#fff;            /*滚动条的基本颜色*/
+}
+#province_ul li{
+	height: 44px;
+	width: 75px;
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 44px;
+	background: #e0e0e0;
+}
+#province_ul li:hover{
+	background: #ffffff;
+}

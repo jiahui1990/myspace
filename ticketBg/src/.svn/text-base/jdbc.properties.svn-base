@@ -1,0 +1,6 @@
+jdbc.driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
+jdbc.url=jdbc\:sqlserver\://192.168.1.2\:1433;database\=beihuTicket
+jdbc.username=sl
+jdbc.password=scujb423
+hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+hibernate.show_sql=true

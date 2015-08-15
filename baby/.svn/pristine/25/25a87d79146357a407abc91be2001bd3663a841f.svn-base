@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+input:focus{
+	border:solid 1px #20B6F0;
+	}
+/*.f-text:focus{
+	border:solid 1px #20B6F0;
+	}*/
+.f-text{
+	border:solid 1px #e0e0e0;
+	background:#f5f5f5;
+	}
+.f-table{
+	margin:0 auto;
+	}
+.f-btncolor{
+	background:#20B6F0;
+	color:#fff;
+	font-weight:bold;
+	}
+.f-btncolorgray{
+	background:#e5e5e5;
+	color:#999;
+	font-weight:bold;
+	}
+.f-btnfont{
+	font-size:14px;
+	font-family:微软雅黑;
+	}
+.f-font{
+	font-size:14px;
+	font-family:微软雅黑;
+	color:#666;
+	}
+.f-fontr{
+	text-align:right;
+	}
+.f-lineheight{
+	height:20px;
+	}
+.f-songfontblue{
+	color:#20B6F0;
+	font-size:12px;
+	font-family:宋体;
+	}
+.f-songfontgray{
+	color:#666;
+	font-size:12px;
+	font-family:宋体;
+	}
+/*==========================form end=============================*/
+	.navfont{
+	font-size:14px;
+	font-family:微软雅黑;
+	}
+.font-w{
+	font-weight:bold;
+	}
+.fontblue{
+	color:#20b6f0;
+	}
+.fontsgray{
+	color:#636363;
+	}
+.fontsgary9{
+	color:#999;
+	}

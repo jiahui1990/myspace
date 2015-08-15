@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/x25"
+    android:paddingBottom="@dimen/x25"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+    
+	<EditText android:id="@+id/jve_id_login_code"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/y25"
+        android:paddingLeft="@dimen/x5"
+        android:singleLine="true"
+        android:textSize="@dimen/x10"
+        android:background="@drawable/box_icon"/>
+     <Button android:id="@+id/jve_id_login_getCodeBtn"
+	    android:layout_width="@dimen/x85"
+	    android:layout_height="@dimen/y25"
+	    android:layout_marginLeft="@dimen/x15"
+	    android:background="@drawable/button_selector_blue"
+	    android:text="@string/jve_str_findPswdPage_str7"
+	    android:textColor="@color/jve_color_white"
+	    android:textSize="@dimen/x12"/>
+</LinearLayout>

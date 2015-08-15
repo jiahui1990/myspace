@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="       
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd       
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd       
+      http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd       
+      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd       
+      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+      
+ 
+
+	<bean id="serviceI" class="javacommon.base.service.impl.BaseServiceImpl"
+		p:msgtipDao-ref="msgtipDao" 
+		p:globalvariableDao-ref="globalvariableDao"
+		/>
+	<bean id="loginService" class="com.ggy.baby.login.service.impl.LoginServiceImpl" parent="serviceI"
+		p:phoneCodeDao-ref="phoneCodeDao"
+		p:userRoleDao-ref="userRoleDao"
+		p:usersDao-ref="usersDao"
+		p:userTerminalDao-ref="userTerminalDao"
+		p:viewMonitorDao-ref="viewMonitorDao"
+		p:viewUserAreaDao-ref="viewUserAreaDao"/>
+	<bean id="userManageService" class="com.ggy.baby.userManage.service.impl.UserManageServiceImpl" parent="serviceI"
+		p:usersDao-ref="usersDao"
+		p:userAreaDao-ref="userAreaDao"
+		p:userRoleDao-ref="userRoleDao"
+		p:viewUserAreaDao-ref="viewUserAreaDao"
+		p:kindergartenDao-ref="kindergartenDao"
+		p:userKinderDao-ref="userKinderDao"
+		p:userTerminalDao-ref="userTerminalDao"/>
+	<bean id="monitorManageService" class="com.ggy.baby.monitorManage.service.impl.MonitorManageServiceImpl" parent="serviceI"
+		p:kindergartenAreaDao-ref="kindergartenAreaDao"
+		p:kindergartenDao-ref="kindergartenDao"
+		p:monitorDao-ref="monitorDao"
+		p:viewMonitorDao-ref="viewMonitorDao"
+		p:userKinderDao-ref="userKinderDao"/>
+	<bean id="personalCenterService" class="com.ggy.baby.personalCenter.service.impl.PersonalCenterServiceImpl" parent="serviceI"
+		p:userRoleDao-ref="userRoleDao"
+		p:usersDao-ref="usersDao"/>
+	<bean id="userMonitorService" class="com.ggy.baby.userMonitor.service.impl.UserMonitorServiceImpl" parent="serviceI"
+		p:kindergartenDao-ref="kindergartenDao"
+		p:kindergartenAreaDao-ref="kindergartenAreaDao"
+		p:viewMonitorDao-ref="viewMonitorDao"
+		p:userKinderDao-ref="userKinderDao"
+		p:userAreaDao-ref="userAreaDao"/>
+</beans>

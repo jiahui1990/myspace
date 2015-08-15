@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/jve_color_black"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/jve_id_popup_menu_biaoQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_menu_button"
+        android:text="@string/jve_str_videoPage_str2"
+        android:textColor="@color/jve_color_gray1"
+        android:textSize="@dimen/x10"/>
+
+
+    <Button
+        android:id="@+id/jve_id_popup_menu_gaoQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_menu_button"
+        android:text="@string/jve_str_videoPage_str1"
+        android:textColor="@color/jve_color_gray1"
+        android:textSize="@dimen/x10"/>
+
+
+</LinearLayout>

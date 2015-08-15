@@ -1,0 +1,1078 @@
+@charset "utf-8";
+/*CSS Document*/
+/*cssfonts*/
+body {
+	font:13px/1.231 arial,helvetica,clean,sans-serif,"Microsoft YaHei","微软雅黑";
+	*font-size:small;
+	*font:x-small
+}
+a{
+	-webkit-transition:all .08s ease-in-out;
+	moz-transition:all .08s ease-in-out;
+	transition:all .08s ease-in-out;
+}
+b {
+	color: #F77749;
+}
+h2 {
+	width: 100%;
+	height: 30px;
+	margin-top: 0;
+	font: bold 123.1%/30px "Microsoft YaHei","微软雅黑";
+	color: #fff;
+	text-align: center;
+	background: #2f253d;
+}
+h3 {
+	width: 100%;
+	height: 40px;
+	font: bold 14px/40px "Microsoft YaHei","微软雅黑";
+	background: #999999;
+	color: #fff;
+}
+h2.big {
+	height: 43px;
+	font-size: 16px;
+	line-height: 43px;
+}
+h3 span {
+	margin-left: 15px;
+}
+h4 {
+	font: bold 12px/30px "Sim Sun","宋体";
+	height: 30px;
+	margin-left: 20px;
+	color: #656565;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+h5 {
+	font: bold 14px/30px "Microsoft YaHei","微软雅黑";
+	color: #1DB5E6;
+	background: url(../images/icon/pao.png) no-repeat left center;
+	padding-left:22px;
+}
+hr.sl-hr {
+	display: block;
+	border: none;
+	margin: 0;
+	border-top: 1px dotted #656565;
+	color: #fff;
+	background-color: #fff;
+	height: 1px;
+	width:100%;
+}
+.red{color: red;}
+.skyblue {color: #20b6f0}
+#container{
+}
+/*container layout*/
+#container-side  {
+	width: 213px;
+	background: #ccc;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	float: left;
+}
+#container-main {
+	width: 809px;
+	float: right;
+}
+/*企业logo*/
+#enterprise-logo {
+	width: 140px;
+	padding: 21px;
+	background: #fff;
+	margin: 0 auto;
+}
+#enterprise-contact {
+	width: 182px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 21px;
+}
+#enterprise-member {
+	width: 182px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 21px;
+}
+/*企业联系方式*/
+.enterprise-logo-img {
+	display: block;
+	width: 133px;
+	height: 133px;
+	margin: 0px auto;
+	border: 1px solid #ccc;
+	padding: 1px;
+	background: #fff;
+}
+/*联系企业按钮*/
+a.enterprise-contact-btn {
+	display: block;
+	width: 135px;
+	height: 30px;
+	margin-top: 18px;
+	font: bold 14px/30px "Microsoft YaHei","微软雅黑";
+	color: #fff;
+	background: #20b6f0;
+	text-align: center;
+	text-decoration: none;
+}
+a.enterprise-contact-btn:active {
+	background: #25b3ea;
+}
+#container-main {
+	width: 809px;
+	background: #fff;
+}
+#footer {
+	bottom: 0;
+}
+.bottom {
+	position: absolute;
+	bottom: 0;
+}
+#member-manage {
+	padding: 20px;
+}
+.member-apply-title,
+.member-list {
+	font: normal 18px/18px "Microsoft YaHei","微软雅黑";
+	color: #333;
+}
+/*增加成员按钮*/
+.member-add {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-left: 10px;
+	background: url(../images/ironbron.png) no-repeat -18px -116px;
+	vertical-align: top;
+	text-indent: -9999px;
+}
+.member-add:hover,.member-add:active{
+	background: url(../images/ironbron.png) no-repeat -40px -116px;
+}
+
+/*成员管理表格*/
+.member-table {
+	width: 100%;
+	margin-top: 18px;
+}
+/*css3实现各方变色*/
+.member-table tbody tr {
+	background: #f3f3f3;
+}
+.member-table tbody tr:nth-of-type(even) {
+	background: #e7e7e7; /*IE9+ safari3.2+ Opera9+ Chrome Firefox*/
+}
+.member-table tbody td {
+	height: 69px;
+	border-bottom: 1px solid #ddd;
+}
+.member-table thead th {
+	height: 30px;
+	font: bold 108%/30px "Microsoft YaHei","微软雅黑";
+	text-align: left;
+	background: #6D98EF;
+	color: #fff;
+}
+.member-table-th1{width: 285px;}
+.member-table-th2{width: 280px;}
+.member-table-th3{width: 240px;}
+.member-table-th4{width: 238px;}
+
+.member-totalincome,
+.member-totalincome-num {
+	margin-left: 40px;
+}
+/*下拉按钮*/
+.member-drop-btn {
+	position: relative;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin-left: 7px;
+	font: normal 12px/24px "Sim Sun","宋体";
+	color: #ccc;
+	background: #fff url(../images/ironbron.png) no-repeat 0 -133px;
+	vertical-align: text-bottom;
+	cursor: pointer;
+}
+.member-drop-btn ul {
+	display: none;
+	width: 80px;
+	height: 82px;
+	position: absolute;
+	top: 18px;
+	left: 0;
+}
+.member-drop-btn:hover ul{
+	display: block;
+}
+.member-drop-btn ul li {
+	text-align: center;
+	width: 80px;
+	height: 24px;
+	background: #fff;
+}
+.member-drop-btn ul li span {
+	display: inline-block;
+	width: 8px;
+	height: 12px;
+	margin-right: 5px;
+	background: url(../images/ironbron.png) no-repeat -442px -151px;
+	vertical-align: text-top;
+}
+.member-drop-btn ul li:hover {
+	background: #1FB5EF;
+	color: #fff;
+}
+.member-drop-btn ul li:hover span{
+	background: url(../images/ironbron.png) no-repeat -442px -167px;
+}
+/*分割线*/
+.split-line {
+	display: inline-block;
+	width: 1px;
+	height: 18px;
+	margin-right: 4px;
+	background: #fff;
+	vertical-align: text-bottom;
+}
+/*成员头像*/
+.member-avatar {
+	display: inline-block;
+	width: 49px;
+	height: 49px;
+	border: 1px solid #ccc;
+	padding: 1px;
+	margin-left: 32px;
+	background: #fff;
+	vertical-align: middle;
+}
+/*数字格式*/
+.member-totalincome-num,
+.member-totalcost-num {
+	font: normal 108%/30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #656565;
+}
+.member-apply-new-avatar-info,
+.member-info {
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	margin-left: 10px;
+	vertical-align: top;
+}
+.member-admin {
+	padding-left: 20px;
+	font: bold 14px "Sim Sun","宋体";
+	color: #656565;
+	background: url(../images/ironbron.png) no-repeat -436px -185px;
+}
+.member-apply-new-name,
+.member-member {
+	padding-left: 20px;
+	font: bold 14px "Sim Sun","宋体";
+	color: #656565;
+	background: url(../images/ironbron.png) no-repeat -436px -204px;
+}
+.contact-me {
+	display: inline-block;
+	padding-left: 20px;
+	color: #999;
+	background: url(../images/ironbron.png) no-repeat -198px 0;
+	vertical-align: middle;
+}.member-change {
+	color: #20b6f0;
+}
+
+/*消息提示框*/
+.member-msg-box {
+	display: none;
+	position: absolute;
+	width: 500px;
+	height: 320px;
+}
+.member-msg-box-inner {
+	width: 500px;
+	height: 320px;
+	background: #fff;
+}
+a.closex {
+	font: normal 14px/30px "Microsoft YaHei","微软雅黑";
+	color: #fff;
+	float: right;
+	margin-right: 20px;
+	text-decoration: none;
+}
+a.closex:hover {
+	color: #fcc;
+}
+/*成员搜索框*/
+.search-input-inner {
+	position: relative;
+	width: 258px;
+	height: 30px;
+	margin: 20px auto 25px auto;
+}
+.member-search-input {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	display: block;
+	width: 258px;
+	height: 30px;
+	border: 0;
+	border-radius: 20px;
+	padding-left: 30px;
+	background: #f3f3f3;
+}
+.member-search-icon {
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	width: 16px;
+	height: 16px;
+	background: url(../images/RNG/search-g.png) no-repeat;
+}
+
+/*新增成员整体信息*/
+.member-generalinfo {
+	border: 1px solid #e5e5e5;
+	width: 320px;
+	height: 180px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.member-generalinfo-inner {
+	padding: 20px;
+	height: 100px;
+}
+.member-new-avatar {
+	display: inline-block;
+	width: 98px;
+	height: 98px;
+	padding: 1px;
+	border: 1px solid #ccc;
+	background: #fff;
+	vertical-align: top;
+}
+/*新增成员 list*/
+.member-apply {
+	margin-top: 43px;
+}
+.member-apply-new {
+	width: 334px;
+	height: 200px;
+	margin-top: 20px;
+	margin-right: 26px;
+	border: 1px solid #ccc;
+	float: left;
+}
+.member-apply-new:nth-of-type(3n+1) {
+	margin-right: 0px;
+}
+.member-apply-new-inner {
+	padding: 20px;
+}
+/*新增成员*/
+.member-new-add {
+	width: 100%;
+	height: 39px;
+	line-height: 40px;
+	border-top: 1px solid #e5e5e5;
+	background: #f3f3f3;
+	text-align: center;
+}
+/*新增成员的头像*/
+.member-apply-new-name {
+	background: url(../images/ironbron.png) no-repeat -436px -225px!important;
+}
+
+/*新增成员信息列表*/
+.member-new-infolist {
+	display: inline-block;
+	margin-left: 15px;
+	vertical-align: top;
+}
+.member-new-username {
+	font: bold 16px/30px "Microsoft YaHei","微软雅黑";
+	color: #656565;
+}
+.icon-male {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background: url(../images/ironbron.png) no-repeat 0 -151px;
+	margin-left: 5px;
+}
+.icon-female {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background: url(../images/ironbron.png) no-repeat -18px -151px;
+	margin-left: 5px;
+}
+.member-new-location {
+	margin-right: 5px;
+	font: normal 12px "Microsoft YaHei","微软雅黑";
+	color: #656565;
+}
+.member-apply-new-info-line,
+.member-new-splitLines {
+	display: inline-block;
+	height: 11px;
+	width: 1px;
+	background: #666;
+}
+.member-new-id {
+	margin-left: 5px;
+	font: normal 12px "Arial";
+	color: #666;
+}
+
+.member-apply-avatar-img {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+/*个人资料*/
+.member-new-personal {
+	display: inline-block;
+	font: normal 12px "Microsoft YaHei","微软雅黑";
+	color: #20b6f0;
+	margin-top: 8px;
+}
+/*新增按钮*/
+a.member-new-add-btn {
+	display: inline-block;
+	width: 50px;
+	height: 24px;
+	background: #20b6f0;
+	font: bold 14px/24px "Microsoft YaHei","微软雅黑";
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+/*企业联系方式*/
+.enterprise-contact-info {
+	margin-left: 20px;
+	font: normal 12px/25px "Sim Sun","宋体";
+	color: #656565;
+}
+.enterprise-member-avatar {
+	display: inline-block;
+	width: 135px;
+	height: 135px;
+	margin-left: 24px;
+	padding-bottom: 21px;
+	text-align: justify;
+}
+.enterprise-member-avatar-info {
+	position: relative;
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+}
+.enterprise-member-avatar-info-img {
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	background: url(../images/ironbron.png) no-repeat -91px -65px;
+}
+/*企业logo*/
+#enterprise-logo {
+	width: 140px;
+	padding: 21px;
+	background: #fff;
+	margin: 0 auto;
+}
+#enterprise-contact {
+	width: 182px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 21px;
+	padding-bottom: 10px;
+}
+#enterprise-member {
+	width: 182px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 21px;
+}
+/*企业联系方式*/
+.enterprise-logo-img {
+	display: block;
+	width: 133px;
+	height: 133px;
+	margin: 0px auto;
+	border: 1px solid #ccc;
+	padding: 1px;
+	background: #fff;
+}
+/*获得荣誉*/
+.enterprise-honour,
+.enterprise-contract {
+	width: 182px;
+	margin: 0px auto;
+	margin-top: 21px;
+	padding-bottom: 10px;
+	background: #fff;
+}
+
+.enterprise-more {
+	color: #236bb7;
+	float: right;
+	margin-right: 20px;
+}
+.enterprise-honour p,
+.enterprise-contract p{
+	padding: 0 20px;
+	font: normal 12px/25px "Sim Sun","宋体";
+	color: #236BB7;
+}
+/*浏览数量*/
+.enterprise-pv {
+	width: 140px;
+	padding: 21px;
+	margin: 21px auto 0 auto;
+	font: normal 12px/25px "Sim Sun","宋体";
+	color: #656565;
+	background: #fff;
+}
+/*企业基本信息*/
+.enterprise-homepage-info {
+	padding: 18px;
+	font: normal 12px/25px "Sim Sun","宋体";
+	color: #656565;
+}
+.enterprise-member-name {
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 45px;
+	height: 16px;
+	background: rgba(0,0,0,.5) url(../images/ironbron.png) no-repeat -198px 0;
+	padding-left: 18px;
+	font: normal 12px/16px "Sim Sun","宋体";
+	color: #fff;
+}
+/*交易记录表格*/
+.tradings-record-table {
+	border-collapse:separate;
+  	border-spacing:0 0;
+	border-top: 2px solid #2f253d;
+    width: 100%;
+}
+.tradings-record-table th {
+	color: #333;
+    background-color: #f9f5ee;
+    padding: 7px 10px;
+    font-weight: normal;
+    text-align: left
+}
+.tradings-record-table td {
+    padding: 7px 10px;
+    font-weight: normal;
+    text-align: left;
+    border-bottom: 1px solid #e6e6e6;
+    color: #999
+}
+.tradings-record-table td a{
+	color: #20b6f0;
+}
+/*设置不同的颜色*/
+.addmoney {
+	color: #f96900!important;
+    font-size: 14px;
+}
+.reducemoney {
+	color: #00f969!important;
+    font-size: 14px;
+}
+/*翻页*/
+.pagination {
+	text-align: right;
+	margin-top: 20px;
+}
+.pagination li {
+	display: inline;
+}
+.pagination li a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0 5px;
+	font: normal 12px/30px "Sim Sun","宋体";
+	color: #333;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-decoration: none;
+	text-align: center;
+}
+.pagination li a:hover{
+	border: 1px solid #20b6f0;
+	color: #20b6f0;
+}
+
+/*解散企业*/
+.enterprise-dissolution,
+.mytradings-history-inner {
+	padding: 19px;
+}
+.enterprise-dissolution-inner,
+.mytradings-history-inner {
+	border: 1px solid #ccc;
+	padding-left: 28px;
+	padding-right: 28px;
+}
+/*解散企业提示*/
+.enterprise-dissolution-tips {
+	margin-top: 51px;
+	font: bold 14px "Microsoft YaHei","微软雅黑";
+	color: #333;
+}
+.enterprise-dissolution-tips2 {
+	margin-top: 24px;
+	font: bold 14px "Microsoft YaHei","微软雅黑";
+	color: #333;
+}
+.enterprise-dissolution-cephone {
+	width:553px;
+	margin: 0 auto;
+}
+.enterprise-dissolution-cephone-number-title,
+.enterprise-dissolution-cephone-code-title {
+	display: inline-block;
+	width: 150px;
+	font: normal 14px/35px "Microsoft YaHei","微软雅黑";
+	color: #656565;
+	text-align: right;
+}
+.enterprise-dissolution-cephone-number-input,
+.enterprise-dissolution-cephone-code-input {
+	display: inline-block;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width: 231px;
+	height: 35px;
+	padding-left: 5px;
+	margin-left: 5px;
+	border: 1px solid #e5e5e5;
+	background: #F5F5F5;
+	line-height: 35px;
+	color:#666;
+}
+.enterprise-dissolution-cephone-code {
+	margin-top: 20px;
+}
+/*发送短信按钮*/
+.enterprise-dissolution-cephone-sendcode-btn {
+	display: inline-block;
+	width: 83px;
+	height: 35px;
+	margin-left: 10px;
+	font: bold 14px/35px "Microsoft YaHei","微软雅黑";
+	color: #fff;
+	text-align: center;
+	background: #20b6f0;
+	text-decoration: none;
+	cursor: pointer;
+}
+.enteremail{
+	margin-top:25px;}
+/*//Chrome Firefox Opera Safari IE9+*/
+button.enterprise-dissolution-cephone-sendcode-btn:disabled{
+	border: 1px solid #DDD;
+	background-color: #F5F5F5;
+	color:#ACA899;
+}
+/*//IE8-*/
+button.enterprise-dissolution-cephone-sendcode-btn[disabled]{
+	border: 1px solid #DDD;
+	background-color: #F5F5F5;
+	color:#ACA899;
+}
+/*提示*/
+.enterprise-dissolution-cephone-code-tips {
+	display: inline-block;
+	height: 20px;
+	margin-left: 10px;
+	padding-left: 25px;
+	font: #1FB5EF;
+	color: #666;
+	background: url(../images/RNG/lightbulb-s.png) no-repeat;
+	line-height:20px;
+}
+.tipserror,
+.msgerror {
+	background: url(../images/icon/errorIcon.png) no-repeat 0 center!important;
+	padding-left: 21px;
+}
+.tipssucess,
+.msgsucess {
+	background: url(../images/RNG/circle_ok.png) no-repeat 0 center!important;
+	padding-left: 21px;
+}
+/*验证手机提交按钮*/
+.popup-sure-btn,
+.enterprise-dissolution-cephone-submit-btn {
+	display: block;
+	width: 120px;
+	height: 44px;
+	background: #1FB5EF;
+	font: bold 18px "Microsoft YaHei","微软雅黑";
+	color: #fff;
+	margin: 30px auto 0 auto;
+	text-align: center;
+	text-decoration: none;
+}
+.enterprise-dissolution-faq {
+	border-top: 1px dashed #ccc;
+	padding: 15px 0 20px 0;
+}
+.enterprise-dissolution-faq2 {
+    border-top: 1px dashed #CCCCCC;
+    margin: 0 auto;
+    padding: 10px 0 20px;
+    width: 990px;
+}
+.enterprise-dissolution-faq-list {
+}
+.enterprise-dissolution-faq-list dt {
+	font-weight: bold;
+	line-height: 30px;
+	color: #333; 
+}
+.enterprise-dissolution-faq-list dt:before {
+	content:"问：";
+}
+.enterprise-dissolution-faq-list dd {
+	color: #626262; 
+	line-height:16px;
+}
+.enterprise-dissolution-faq-list p {
+	text-indent:2em;
+}
+.enterprise-dissolution-faq-list dd:before {
+	content:"答：";
+}
+.enterprise-dissolution-faq-list dd span {
+	margin-left:-4px;
+}
+/*.enterprise-dissolution-faq-list dd span.ma {
+	margin-left:-10px;
+}*/
+/*解散企业 end*/
+/*popup 弹出框*/
+#popup {
+	position: absolute;
+	display: none;
+	top: 500px;
+	left: 300px;
+	width: 350px;
+	height: 250px;
+	background: #fff;
+}
+.popuptitle {
+	width: 100%;
+	height: 30px;
+	font: normal 14px/30px "Microsoft YaHei","微软雅黑";
+	background: #2f253d;
+	color: #fff;
+}
+.popuptitle-msg {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 25px;
+	margin-top: 5px;
+	margin-left: 10px;
+	background: url(../images/ironbron.png) no-repeat -430px -25px;
+	float: left;
+}
+a.x {
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+	color: #fff;
+	text-decoration: none;
+}
+.popup-msg {
+	margin-top: 20px;
+	font: normal 14px/30px "Microsoft YaHei","微软雅黑";
+	text-align: center;
+}
+.member-apply-new-info {
+	font: normal 12px/25px "Microsoft YaHei","微软雅黑";
+	color: #333;
+	white-space: nowrap;
+}
+.member-apply-ps {
+	font: normal 12px/25px "Sim Sun","宋体";
+	color: #656565;
+}
+.member-apply-ps:after {
+	content: "”";
+}
+.member-apply-ps:before {
+	content: "“";
+}
+.member-apply-new-info-line {
+	margin: 0 5px;
+}
+.member-apply-chose {
+	width: 292px;
+	height: 40px;
+	margin-top: 15px;
+}
+a.member-apply-new-cancel-btn,
+a.member-apply-new-add-btn {
+	float: left;
+	display: block;
+	width: 136px;
+	height: 40px;
+	font: bold 16px/40px "Microsoft YaHei","微软雅黑";
+	color: #fff;
+	text-align: center;
+	background: #20b6f0;
+	text-decoration: none;
+}
+a.member-apply-new-cancel-btn {
+	float: right;
+	background: #ccc;
+}
+.member-apply-chosed {
+	width: 292px;
+	height: 40px;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	font: normal 14px/40px "Microsoft YaHei","微软雅黑";
+	color: #656565;
+	text-align: center;
+	background: #f3f3f3;
+}
+a.cxx {
+	display:block;
+	position:absolute;
+	right:-10px;
+	top:-10px;
+	width:20px;
+	height:20px;
+	background: url(../images/icon/errorIcon.png) no-repeat center center;
+}
+/*====================mofify password================================*/
+.setpassword{
+	background:#fff;
+	margin-top:20px;
+	width:100%;
+	}
+.setpassStep{
+	height:43px;
+	line-height:43px;
+	width:100%;
+	text-align:center;
+	background:#2F253D;
+	}
+.setStepFont{
+	color:#fff;
+	font-size:14px;
+	font-family: "微软雅黑";
+	font-weight:bold;
+	}
+.setStepone,.setSteptwo{
+	width:50%;
+	text-align:center;
+	}
+.setpassLableFont{
+	font-family: "微软雅黑";
+	font-size:14px;
+	color:#666666;
+	}
+.setpassLable{
+	width:120px;
+	text-align:right;
+	height:35px;
+	line-height:35px;
+	margin-right:15px;
+	}
+.setpassinput{
+	width:260px;
+	height:35px;
+	line-height:35px;
+	border:solid 1px #E5E5E5;
+	background:#f5f5f5;
+	
+	}
+.setpassExplain{
+	padding-left:398px;
+	}
+.verCodeinput{
+	border: 1px solid #E5E5E5;
+    height: 35px;
+    line-height:35px;
+    width: 121px;
+	vertical-align:top;
+	}
+.modifypassExplain{
+	padding-left:602px;
+	margin-top:10px;
+	}
+.mofifynewpass{
+	padding-left:398px;
+	margin-top:15px;
+	}
+.forgetpass{
+	padding-left:577px;
+	margin-top:10px;
+	font-size:12px;
+	font-family: "宋体";
+	}
+.sethuan{
+	font-size:12px;
+	font-family: "宋体";
+	text-decoration:underline;
+	}
+.explainFont{
+	color:#999;
+	font-size:12px;
+	font-family: "宋体";
+	}
+.setpassbtn,.setpassbtn:hover{
+	background: none repeat scroll 0 0 #20B6F0;
+    color: #FFFFFF;
+    display: block;
+    font-size: 18px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    text-decoration: none;
+    width: 259px;
+	cursor:pointer;
+	margin-top:35px;
+	margin-left:384px;
+	}
+.setpasscc{
+	margin-top:27px;
+	padding-left:263px;
+	}
+.setpasstop{
+	margin-top:60px;
+	}
+.setpass,.passStrength,.agreepass{
+	padding-left:263px;
+	}
+.passStrength,.agreepass,.verCode{
+	margin-top:20px;
+	}
+.errorinfo{
+	height:35px;
+	line-height:35px;
+	margin-left:20px;
+	}
+.cf2 {
+    margin: 0 auto;
+    width: 94px;
+}
+.errorinfo img{
+	vertical-align:middle;
+	}
+input:focus{
+	border:solid 1px #20B6F0;
+	}
+.verCode{
+	padding-left:393px;
+	}
+.strength{
+	height:35px;
+	line-height:35px;
+	}
+.strength1,.strength2,.strength3,.strengthgray{
+	width:87px;
+	height:10px;
+	margin-top:12px;
+	vertical-align:middle;
+	}
+.strength2,.strength3,.strengthgray{
+	margin-left:1px;
+	}
+.strength1{
+	background:#FFCC66;
+	}
+.strength2{
+	background:#FF9933;
+	}
+.strength3{
+	background:#FD6C0C;
+	}
+.strengthgray{
+	background:#E5E5E5;
+	}
+.box-errorFont {
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.blue, a.blue {
+    color: #20B6F0;
+}
+/*找回账户密码*/
+.enterway{
+	width:504px;
+	margin:0 auto;
+	margin-top:39px;
+	}
+.enterway span{
+	position: absolute;
+	text-align:center;
+	top: 70px;
+	white-space:nowrap;
+	font:bold 14px "微软雅黑","Microsoft YaHei";
+	color: #1BB5E9;
+	left: -20px;
+	}
+.enterwayone,.enterwaytwo,.enterwaythree{
+	position: relative;
+	height: 65px;
+	height:65px;
+	line-height:50px;
+	text-align: center;
+	float: left;
+	margin-right: 154px;
+	}
+.enterwayone a div,
+.enterwaytwo a div,
+.enterwaythree a div {width:65px; height:65px;  border-radius:50%;}
+.enterwayone a div {background:#7DCDF3 url(../images/icon/lockr.png) no-repeat center center; }
+.enterwaytwo a div {background:#7DCDF3 url(../images/icon/phoner.png) no-repeat 20px center; }
+.enterwaythree a div {background:#7DCDF3 url(../images/icon/mailr.png) no-repeat center center; }
+.enterwayone a:hover div {background:#1db5e7 url(../images/icon/lockr.png) no-repeat center center; }
+.enterwaytwo a:hover div {background:#1db5e7 url(../images/icon/phoner.png) no-repeat 20px center; }
+.enterwaythree a:hover div {background:#1db5e7 url(../images/icon/mailr.png) no-repeat center center; }
+.enterwaythree {margin-right:0;}
+.enterwayone div,.enterwaytwo div,.enterwaythree div{
+	vertical-align:middle;
+	}
+/*.enterwaytwo,.enterwaythree{
+	margin-left:80px;
+	width:65px;
+	height:65px;
+	}*/
+.enterwaytwo span,
+.enterwaythree span{left:-10px;}
+.enterzhaohui{
+	height:100px;
+	line-height:100px;
+	width:267px;
+	margin:15px auto;
+	}
+.entermima{
+	width:255px;
+	}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal|bottom"
+    android:background="@drawable/login_background_icon">
+    <RelativeLayout
+        android:layout_width="@dimen/x200"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x8"
+        android:layout_marginBottom="@dimen/y35">
+
+        <EditText android:id="@+id/jve_id_loginPage_username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y25"
+            android:background="@drawable/box_icon"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/user_icon"
+            android:drawablePadding="@dimen/x2"
+            android:textSize="@dimen/x20"
+            android:hint="@string/jve_str_loginPage_str6"/>
+        <EditText android:id="@+id/jve_id_loginPage_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y25"
+            android:layout_marginTop="@dimen/y2"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/key_icon"
+            android:drawablePadding="@dimen/x2"
+            android:layout_below="@id/jve_id_loginPage_username"
+            android:background="@drawable/box_icon"
+            android:inputType="textPassword"
+            android:textSize="@dimen/x20"
+            android:hint="@string/jve_str_loginPage_str7"/>
+        <RelativeLayout android:id="@+id/jve_id_loginPage_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y15"
+            android:layout_marginTop="@dimen/y7"
+            android:layout_marginBottom="@dimen/y7"
+            android:layout_below="@id/jve_id_loginPage_password">
+            <CheckBox android:id="@+id/jve_id_loginPage_keepPswd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CustomCheckboxTheme"/>
+
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@id/jve_id_loginPage_keepPswd"
+                android:layout_toRightOf="@id/jve_id_loginPage_keepPswd"
+                android:gravity="center"
+                android:text="@string/jve_str_loginPage_str2"
+                android:textSize="@dimen/x10" />
+            
+            <TextView
+                android:id="@+id/jve_id_loginPage_findPswd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_alignBaseline="@id/jve_id_loginPage_keepPswd"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:text="@string/jve_str_loginPage_str5"
+                android:textSize="@dimen/x10" />
+
+            
+
+        </RelativeLayout>
+
+
+        <Button android:id="@+id/jve_id_loginPage_loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y25"
+            android:layout_below="@id/jve_id_loginPage_layout"
+            android:background="@drawable/button_selector_blue"
+            android:text="@string/jve_str_loginPage_str3"
+            android:textSize="@dimen/x15"
+            android:textColor="@color/jve_color_white"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/jve_id_loginPage_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y2"
+        android:textColor="@color/jve_color_blue2"
+        android:textSize="@dimen/x10"/>
+</LinearLayout>

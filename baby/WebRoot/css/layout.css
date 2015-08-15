@@ -1,0 +1,17 @@
+/*layout css*/
+#header {
+	z-index: 99;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+#container {
+	margin: 82px auto 0 auto;
+	width: 1100px;
+	min-width: 1100px;
+}
+/*clear float*/
+.cf:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.cf{zoom:1}
+/*fix*/
+.justify_fix{display:inline-block!important; width:100%!important; height:0!important; overflow:hidden;border: 0!important;}/*修复两端对齐*/

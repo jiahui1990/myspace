@@ -1,0 +1,332 @@
+@charset "utf-8";
+/* 
+name:yihengyu 
+*/
+/*=================Reset CSS===================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,table {margin:0;padding:0;}
+body,input,select,button,textarea{font-size:12px; font-family:/*arial,*/'宋体',Tahoma,Geneva,sans-serif;}
+table {border-collapse:collapse;border-spacing:0;}
+button{cursor:pointer;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+q:before,q:after {content:'';}
+p{text-align:left;}
+abbr,acronym { border:0;}
+a,area,button{text-decoration:none;color:#000000;outline:none;blr:expression(this.onFocus=this.blur());}
+button {border: 0 none;outline: medium none;}
+.f12{font-size:12px;}
+.f13{font-size:13px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+.f20{font-size:20px;}
+.f22{font-size:22px;}
+.f24{font-size:24px;}
+.fb{font-weight:bold;}
+.fn{font-weight:normal;}
+.t2{text-indent:2em;}
+.red,a.red{color:#cc0031;}
+.blue,a.blue{color:#20B6F0;}
+.darkblue,a.darkblue{color:#039;}
+.gray,a.gray{color:#878787;}
+.black{color:#000;}
+.white{color:#FFF;}
+.lh150{line-height:150%;}
+.lh180{line-height:180%;}
+.lh200{line-height:200%;}
+.unl{text-decoration:underline;}
+.no_unl{text-decoration:none;}
+/*定位*/
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{height:0px;clear:both;font-size:0px;line-height:0px;zoom: 1;}
+.cl{clear:left;}
+.cr{clear:right;}
+.vm{vertical-align:middle;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.abs-right{position:absolute;right:0;}
+.zoom{zoom:1;}
+.hidden{visibility:hidden;}
+.none{display:none;}
+.block{display:block;}
+.fix:after {clear: both;content: "$";display: block;height: 0;overflow: hidden;visibility: hidden; font-size:0; height:0;}
+.fix{*zoom:1;}
+.oh{overflow:hidden;}
+.pointer{cursor:pointer;}
+/*=================conmon CSS===================*/
+.boxbtnboxFont{
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color:#fff;
+	}
+.btn,.btn:hover {
+    background: none repeat scroll 0 0 #3BABD0;
+    color: #FFFFFF;
+    display: block;
+    font-size: 18px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+	cursor:pointer;
+}
+.btnFontblod{
+	font-family: "微软雅黑";
+	}
+.inner-line {
+    border: 1px solid #DDDDDD;
+    position: relative;
+}
+.aFont {
+    font-size: 14px;
+	font-family: "微软雅黑";
+}
+.bFont {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+.delBox-buzouFont{
+	color:#3399CC;
+	font-size: 14px;
+	}
+.box-errorFont {
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+}
+.delBox-buzouFontg{
+	color:#999999;
+	font-size: 14px;
+	}
+.hide{
+	display:none;
+	}
+.boxSfone-lFont{
+	color:#666666;
+	font-size: 14px;
+}
+.box-errorFont{
+	color:#666666;
+	font-family: "宋体";
+	font-size:12px;
+	}
+.boxSftwoFont{
+	font-size:18px;
+	color:#282828;
+	font-family: "微软雅黑";
+	}
+.boxSfthreeFont{
+	font-size:18px;
+	color:#8CB64A;
+	font-family: "微软雅黑";
+	}
+.telNumberFont{
+	font-family: "微软雅黑";
+	font-size:14px;
+	color:#000000;
+	}
+/*=================header CSS===================*/
+.header {
+    background: none repeat scroll 0 0 #333;
+    height: 64px;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+.header-inner {
+    height: inherit;
+    margin: 0 auto;
+    position: relative;
+    width: 1100px;
+}
+.logo {
+    background:url(../images/RNG/logo.png) left center no-repeat;
+    height: 64px;
+    width: 200px;
+	display:inline-block;
+	text-indent:-9999px;
+	}
+.search {
+    display: inline-block;
+    height: 35px;
+    margin-top: 14px;
+    position: relative;
+    width: 396px;
+}
+.input-search {
+    background: none repeat scroll 0 0 #333;
+    border: 3px solid #5852F4;
+    color: #7D7C7C;
+    height: 29px;
+    width: 390px;
+}
+.btn-search {
+    background: none repeat scroll 0 0 #5852F4;
+    color: #FFFFFF;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 74px;
+}
+.icon-search {
+    background:url(../images/RNG/search.png) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    margin-right: 3px;
+    position: relative;
+    top: 4px;
+    width: 20px;
+}
+/*=================nav CSS===================*/
+.nav{
+	display: inline-block;
+	font-family: "宋体";
+	font-size:14px;
+	color: #FFF;
+}
+.nav a{
+	margin-right: 20px;
+	color: #FFF;
+	height:64px;
+	line-height:64px;
+}
+/*=================content CSS===================*/
+.content {
+    margin: 0 auto;
+    padding-top: 82px;
+    width: 1100px;
+}
+/*=================info CSS===================*/
+.info{
+	background: #FFF;
+	padding: 18px;
+}
+.modifyhead{
+	display: inline-block;
+	margin: 15px;
+	width: 120px;
+}
+.avatar{
+	width: 119px;
+	height: 119px;
+	overflow: hidden;
+	background:url(../images/RNG/head-portrait.png) no-repeat;
+	margin-bottom: 8px;
+}
+.accountinfo{
+	line-height: 30px;
+	display: inline-block;
+	position: absolute;
+	top: 40px;
+	left: 150px;
+}
+.certification{
+	position: absolute;
+	top: 40px;
+	right: 250px;
+}
+.certification span{
+	display: inline-block;
+	width: 84px;
+	padding-top: 85px;
+	text-align: center;
+	margin-right: 20px;
+}
+.icon-realname{
+	background:url(../images/RNG/icon1.png) no-repeat!important;
+	}
+.icon-clientsetup{
+	background: url(../images/RNG/icon2.png) no-repeat!important;
+}
+.icon-mobilebound{
+	background: url(../images/RNG/icon3.png) no-repeat!important;
+}
+.icon-mailboxbinding{
+	background: url(../images/RNG/icon4.png) no-repeat!important;
+}
+.changepassword{
+	position: absolute;
+	right: 18px;
+	top: 70px;
+}
+/*=================info CSS===================*/
+.info{
+	background: #FFF;
+	padding: 18px;
+}
+.modifyhead{
+	display: inline-block;
+	margin: 15px;
+	width: 120px;
+}
+.avatar{
+	width: 119px;
+	height: 119px;
+	overflow: hidden;
+	background:url(../images/RNG/head-portrait.png) no-repeat;
+	margin-bottom: 8px;
+}
+.accountinfo{
+	line-height: 30px;
+	display: inline-block;
+	position: absolute;
+	top: 40px;
+	left: 150px;
+}
+.certification{
+	position: absolute;
+	top: 40px;
+	right: 250px;
+}
+.certification span{
+	display: inline-block;
+	width: 84px;
+	padding-top: 85px;
+	text-align: center;
+	margin-right: 20px;
+}
+/*.icon-realname{
+	background: url(../images/headimg/icon1.png) no-repeat!important;
+	}
+.icon-clientsetup{
+	background: url(../images/headimg/icon2.png) no-repeat!important;
+}
+.icon-mobilebound{
+	background: url(../images/headimg/icon3.png) no-repeat!important;
+}
+.icon-mailboxbinding{
+	background: url(../images/headimg/icon4.png) no-repeat!important;
+}*/
+.changepassword{
+	position: absolute;
+	right: 18px;
+	top: 70px;
+}
+/*====================footer================================*/
+#footer,#footer:hover{
+	width: 100%;
+	height: 120px;
+/*	margin-top: 18px;*/
+	background: #333;
+	padding-top: 45px;
+}
+#footer p a,#footer p{
+	font-family: "宋体";
+	font-size:12px;
+	color: #999;
+	line-height: 30px;
+	text-align:center;
+}

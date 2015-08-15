@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.seebaobei.video.PlayView
+        android:id="@+id/jve_id_videoContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.seebaobei.video.PlayView>
+   <!--  <LinearLayout
+        android:id="@+id/jve_id_video_titleBar"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/y50"
+	    android:orientation="horizontal"
+	    android:background="@color/jve_color_red"
+	    android:gravity="bottom|right"> -->
+	    <TextView 
+	        android:id="@+id/jve_id_video_textView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:layout_marginTop="@dimen/y30"
+	        android:layout_marginRight="@dimen/x50"
+	        android:text="@string/jve_str_videoPage_str1"
+	        android:textColor="@color/jve_color_gray1"
+	        android:textSize="@dimen/x10"/>
+	<!-- </LinearLayout> -->
+</FrameLayout>

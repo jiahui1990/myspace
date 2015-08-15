@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<menuFilter> 
+  <menu numbers="MDACT1" content="注册" id="1">
+  	
+  </menu>  
+  <menu numbers="MDACT2" content="登录" id="2">
+  	<menuName numbers="OA登录按钮" content="backgroundLoginAction_backgroundUserLogin.action" id="2"/>
+  	<menuName numbers="OA登录获取菜单" content="backgroundLoginAction_initMenus.action" id="2"/>
+  </menu>  
+</menuFilter>

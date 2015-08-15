@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- <com.jve.util.view.guide.viewPager.JazzyViewPager
+	    android:id="@+id/jve_id_viewPager"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" /> -->
+	<com.seebaobei.video.PlayView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.seebaobei.video.PlayView>
+    <ImageView
+        android:id="@+id/jve_id_top_exit"
+        android:layout_width="@dimen/x20"
+        android:layout_height="@dimen/x20"
+        android:layout_marginTop="@dimen/x41"
+        android:layout_marginLeft="@dimen/x3"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/exit_video" />
+    <TextView 
+        android:id="@+id/jve_id_video_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/y30"
+        android:layout_marginRight="@dimen/x50"
+        android:text="@string/jve_str_videoPage_str1"
+        android:textColor="@color/jve_color_blue2"
+        android:textSize="@dimen/x15"/>
+</FrameLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">微幼看宝宝</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- 共用字符串变量 -->
+    <string name="jve_str_public_enter">点击进入</string>
+    <string name="jve_str_public_skip">跳过</string>
+    <string name="jve_str_public_loading">数据载入中&#8230;&#8230;</string>
+	<string name="jve_str_public_pull_refresh">下拉可以刷新</string>
+	<string name="jve_str_public_relese_refresh">松开可以刷新</string>
+	<string name="jve_str_public_reflashing_refresh">正在刷新&#8230;</string>
+	<string name="jve_str_public_bottom">已经拖到底了</string>
+	<string name="jve_str_public_download">下载</string>
+	<string name="jve_str_public_alert">提示!</string>
+	<string name="jve_str_public_confirm">确定</string>
+	<string name="jve_str_public_cancel">取消</string>
+	<string name="jve_str_public_appInstall">发现最新版本,是否立即更新?</string>
+	<string name="jve_str_public_login_out">请再按一次退出</string>
+	<string name="jve_str_public_exit_alert1">再按一次“确定”键退出!</string>
+	<string name="jve_str_public_exit_alert">确定要退出系统吗?</string>
+	<string name="jve_str_public_complete">完成</string>
+	<string name="jve_str_public_clear">清空所有</string>
+	<string name="jve_str_public_voice">语音输入</string>
+	<string name="jve_str_public_submit">提交</string>
+	<string name="jve_str_public_pass">通过</string>
+	<string name="jve_str_public_no_pass">不通过</string>
+	<string name="jve_str_public_descriptionHint">不超过200字</string>
+	<string name="jve_str_public_applyDescription">申请描述</string>
+	<string name="jve_str_public_auditDescription">审核描述</string>
+	
+	
+	<!-- message alert -->
+	<string name="jve_str_MSG1">当前没有网络连接</string>
+	<string name="jve_str_MSG2">用户名不能为空</string>
+	<string name="jve_str_MSG3">密码不能为空</string>
+	<string name="jve_str_MSG4">用户名和密码不能为空</string>
+	<string name="jve_str_MSG5">手机号码不能为空</string>
+	<string name="jve_str_MSG6">手机号码格式错误</string>
+	<string name="jve_str_MSG7">验证码不能为空</string>
+	<string name="jve_str_MSG8">新密码不能为空</string>
+	<string name="jve_str_MSG9">确认密码不能为空</string>
+	<string name="jve_str_MSG10">两次输入密码不一致</string>
+	<string name="jve_str_MSG11">密码修改成功</string>
+	<string name="jve_str_MSG12">当前网络可能在开小差</string>
+	<string name="jve_str_MSG13">为了您账号安全，请输入验证码</string>
+	<string name="jve_str_MSG14">有其他设备在线，是否确认登陆</string>
+	
+	
+	<!-- Login Page -->
+	<string name="jve_str_loginPage_str1">远程视频</string>
+	<string name="jve_str_loginPage_str2">记住密码</string>
+	<string name="jve_str_loginPage_str3">登&#160;&#160;录</string>
+	<string name="jve_str_loginPage_str4">注册</string>
+	<string name="jve_str_loginPage_str5">找回密码？</string>
+	<string name="jve_str_loginPage_str6">用户名</string>
+	<string name="jve_str_loginPage_str7">密码</string>
+	<string name="jve_str_loginPage_str8">版权归@四川伊尔根科技股份有限公司所有</string>
+	
+	<!-- Main Page -->
+	<string name="jve_str_mainPage_str1">首页</string>
+	<string name="jve_str_mainPage_str2">注销</string>
+	
+	<!-- Find Password -->
+	<string name="jve_str_findPswdPage_str1">密码找回</string>
+	<string name="jve_str_findPswdPage_str2">手机号码：</string>
+	<string name="jve_str_findPswdPage_str3">用&#160;&#160;户&#160;&#160;名：</string>
+	<string name="jve_str_findPswdPage_str4">验&#160;&#160;证&#160;&#160;码：</string>
+	<string name="jve_str_findPswdPage_str5">新&#160;&#160;密&#160;&#160;码：</string>
+	<string name="jve_str_findPswdPage_str6">确认密码：</string>
+	<string name="jve_str_findPswdPage_str7">获取验证码</string>
+	<string name="jve_str_findPswdPage_str8">下一步</string>
+	<string name="jve_str_findPswdPage_str9">提&#160;交</string>
+	<!-- Video Page -->
+	<string name="jve_str_record_time">00:00:00</string>
+	<string name="jve_str_videoPage_str1">高清</string>
+	<string name="jve_str_videoPage_str2">标清</string>
+	<string name="jve_str_videoPage_str3">已是第一个视频</string>
+	<string name="jve_str_videoPage_str4">已是最后一个视频</string>
+	
+	<string-array name="interpolators">
+        <item>Accelerate</item>
+        <item>Linear</item>
+        <item>AccelerateDecelerate</item>
+        <item>Decelerate</item>
+    </string-array>
+	
+</resources>

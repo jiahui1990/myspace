@@ -1,0 +1,73 @@
+.icon-blank{
+	background:url('../images/pagination/icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('../images/pagination/icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('../images/pagination/icons/pencil.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('../images/pagination/icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('../images/pagination/icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('../images/pagination/icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('../images/pagination/icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('../images/pagination/icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('../images/pagination/icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('../images/pagination/icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('../images/pagination/icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('../images/pagination/icons/print.png') no-repeat center center;
+}
+.icon-excel{
+	background:url('../images/pagination/icons/excel.png') no-repeat center center;
+}
+.icon-help{
+	background:url('../images/pagination/icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('../images/pagination/icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('../images/pagination/icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('../images/pagination/icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('../images/pagination/icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('../images/pagination/icons/tip.png') no-repeat center center;
+}
+
+.icon-mini-add{
+	background:url('../images/pagination/icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('../images/pagination/icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('../images/pagination/icons/mini_refresh.png') no-repeat center center;
+}
+
+
+
+.icon-remove-full{
+	background:url('../images/pagination/icons/remove_full.png') no-repeat center center;
+}

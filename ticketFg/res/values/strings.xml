@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">北湖刷卡端</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="BASE_URL">http://192.168.1.5:8080/ticketBg</string>
+	<string name="title_activity_main">北湖一卡通系统</string>
+	<string name="title_activity_ppc">碰碰船</string>
+	<string name="title_activity_ddc">电动船</string>
+	<string name="title_activity_qt">汽艇</string>
+	<string name="title_activity_jtc">脚踏船</string>
+	<string name="bt_shuaka">刷卡</string>
+	<string name="bt_query">查询</string>
+	<string name="bt_close">关闭</string>
+	<string name="card_title_default">刷卡</string>
+	<string name="card_content_default">无刷卡信息</string>
+</resources>

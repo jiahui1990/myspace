@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="fields"> 
+	    <item>游乐项目:脚踏船</item>
+	</string-array>  
+	<string-array name="count"> 
+	    <item>1次</item>
+	    <item>2次</item>
+	    <item>3次</item>
+	    <item>4次</item>
+	    <item>5次</item>
+	    <item>6次</item>
+	    <item>7次</item>
+	    <item>8次</item>
+	    <item>9次</item>
+	    <item>10次</item>
+	</string-array>
+</resources>
